@@ -1,0 +1,82 @@
+.custom-input-1 {
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+  .input_label {
+    display: flex;
+    color: #6b6b80;
+    margin-bottom: 10px;
+  }
+  .hide_label .asterisk {
+    display: none;
+  }
+  .usersform_textfield {
+    width: 240px;
+    text-align: start;
+    &::before {
+      border-bottom: 1.6px solid #c4c4cc !important;
+    }
+    .MuiSelect-icon {
+      top: calc(50% - 12px);
+    }
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+    &::after {
+      display: none !important;
+    }
+    .MuiSelect-select {
+      padding-left: 10px;
+    }
+
+    input {
+      padding: 4px 10px;
+      border: none;
+      .MuiInput-underline {
+        border: 0;
+      }
+    }
+  }
+  .textArea-common {
+    padding: 4px 10px;
+    font-family: inherit;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #c4c4cc;
+    font-style: normal;
+    font-weight: 400;
+    resize: none;
+    font-size: 16px;
+    line-height: 24px;
+    &::placeholder {
+      color: #a6a6b3;
+    }
+
+    &:focus-visible {
+      border-bottom: 1px solid black;
+      outline: 0;
+    }
+  }
+
+  &:hover {
+    font-weight: 600;
+    label {
+      font-weight: 600;
+    }
+    .usersform_textfield {
+      border-bottom: 1px solid black;
+      .MuiOutlinedInput-notchedOutline {
+        display: none;
+      }
+      input {
+        border: 0;
+        .MuiInput-underline {
+          border: 0;
+        }
+      }
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+}

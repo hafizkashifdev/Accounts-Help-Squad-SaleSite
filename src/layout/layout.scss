@@ -1,0 +1,53 @@
+@import "../styles/variables";
+
+.main-layout {
+  .app-bar {
+    position: fixed;
+    background-color: $white-color !important;
+    color: $black-color !important;
+    height: 70px !important;
+    box-shadow: 0 0.125rem 0rem rgba(0, 0, 0, 0.075) !important;
+    justify-content: center;
+  }
+
+  .drawer {
+    background-color: $black-color !important;
+    height: 100%;
+  }
+
+  .main-layout-body {
+    background-color: $white-color;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .body-outlet {
+    height: 100%
+  }
+
+  .body-footer {
+    position: sticky;
+    top: 100%;
+    background: $white-color;
+    margin-top: 34px;
+    z-index: 1200;
+  }
+}
+
+.main-layout {
+
+  .cards-width {
+    @media screen and (min-width: 397px) and (max-width: 600px) {
+      width: 270px !important
+    }
+
+    @media screen and (max-width: 396px) {
+      width: 216px !important
+    }
+  }
+}

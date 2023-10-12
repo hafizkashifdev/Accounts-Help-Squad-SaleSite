@@ -1,0 +1,37 @@
+@import "../../../styles/variables";
+
+.bill-card {
+  .bill-heading {
+    .bill-title {
+      color: var(--text-default, #40404d);
+      /* BodyText/Large/Regular - 18 */
+      font-size: 18px;
+      font-family: Exo 2;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+    .bill-number {
+      color: var(--text-default, #40404d);
+      /* BodyText/Large/Regular - 18 */
+      font-size: 18px;
+      font-family: Exo 2;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+  .bill-foter {
+    margin-top: 40px;
+    // background-color: #6b6b80;
+    .bill-price {
+      color: var(--theme-primary-p-20-main, #2b2b33);
+      /* Heading/Sub 1 - H3 - 24 */
+      font-size: 24px;
+      font-family: Exo 2;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+}

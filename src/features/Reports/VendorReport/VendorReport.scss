@@ -1,0 +1,71 @@
+.workflows-title {
+  margin-top: 60px;
+  margin-bottom: 58px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #40404d;
+}
+
+.pagination-style {
+  position: relative;
+  top: 250px;
+}
+
+.filter-heading {
+  display: flex;
+  justify-content: space-between;
+
+  .title-filter {
+    width: 544px;
+    height: 28px;
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #2b2b33;
+  }
+}
+.filter-below-btn {
+  /* Theme/Primary/P 30 */
+  .btn1,
+  .btn2 {
+    border: 1.5px solid #40404d;
+    border-radius: 8px;
+    width: 73px;
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    .btn1,
+    .btn2 {
+      width: 100%;
+    }
+  }
+
+  .btn1 {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #40404d;
+    background: #ffffff;
+  }
+  .btn2 {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #ffffff;
+    background: #2b2b33;
+  }
+}
+
+.field-label {
+  width: 240px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #6b6b80;
+}

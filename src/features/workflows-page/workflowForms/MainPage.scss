@@ -1,0 +1,241 @@
+.form-parent {
+  .tabbing-list {
+    .MuiTabs-indicator {
+      display: none !important;
+    }
+    .tabbing-item {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+      text-transform: capitalize;
+      /* Text/Light */
+
+      color: #6b6b80;
+
+      /* Inside auto layout */
+
+      &.active {
+        color: #40404d;
+        font-weight: 600;
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+  .form-main-body {
+    // width: 100%;
+    .tabbing {
+      margin-top: 40px;
+      border-right: 1px solid #e1e1e6;
+      height: 100%;
+      padding-right: 16px;
+      position: relative;
+      .tabbing-item {
+        display: flex;
+
+        justify-content: space-between;
+        min-height: 78px;
+        padding: 12px 16px;
+        text-align: left;
+        align-items: flex-start;
+        background: #d9d9d9;
+        cursor: pointer;
+        border-radius: 8px;
+
+        min-height: 44px;
+        text-align: left;
+        max-width: 100%;
+
+        width: 100%;
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 400;
+
+        font-size: 16px;
+        line-height: 24px;
+        color: #6b6b80;
+        .first-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h5 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            color: #ffffff;
+          }
+          p {
+            margin-top: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            /* Text/Disabled */
+
+            color: #a6a6b3;
+          }
+        }
+        &.active {
+          background: #40404d;
+          border-radius: 4px;
+          color: white;
+          border: 0;
+        }
+      }
+    }
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      row-gap: 10px;
+      column-gap: 40px;
+      margin-bottom: 52px;
+      .label-time {
+        margin-bottom: 20px;
+      }
+      //   width: 100%;
+      .attachment-box {
+        min-width: 220px;
+        p {
+          // font-family: "Exo 2";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          display: flex;
+          align-items: center;
+
+          /* Text/Light */
+
+          color: #6b6b80;
+          margin-bottom: 10px;
+        }
+        .attachment-checkbox {
+          display: flex;
+          cursor: pointer;
+          .span {
+            transition: 0.2s;
+            border-radius: 2px;
+            min-height: 44px;
+            text-align: left;
+            // padding-left: 32px;
+            max-width: 199px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // font-family: "Exo 2";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+            display: flex;
+            align-items: center;
+            /* Text/Default */
+            color: #40404d;
+            &.active {
+              background: #d9d9d9;
+            }
+          }
+          &:hover {
+            .not-active {
+              box-shadow: -2px 5px 5px 0px rgba(226, 217, 217, 0.75) !important;
+            }
+          }
+        }
+      }
+    }
+    .body-section {
+      background: #ffffff;
+      /* Theme/Primary/P 90 */
+      margin-top: 50px;
+      border: 1px solid #e1e1e6;
+      border-radius: 4px;
+      min-height: 410px;
+      max-height: 430px;
+      padding: 20px;
+      overflow: auto;
+      position: relative;
+      .tabbing-dropdowns {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .tabbing-created-at {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        gap: 10px;
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          display: flex;
+          align-items: center;
+
+          /* Text/Default */
+
+          color: #40404d;
+        }
+        .date-box {
+          min-width: 91px;
+          height: 32px;
+
+          /* Theme/Primary/P 95 */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background: #f0f0f2;
+          border-radius: 4px;
+
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Text/Default */
+
+          color: #40404d;
+        }
+      }
+      .tabbing-message-box {
+        margin-top: 44px;
+        .message-input {
+          min-height: 226px;
+
+          background: #f0f0f2;
+          border-radius: 4px;
+          border: 0;
+        }
+      }
+    }
+    .tabbing-form-button {
+      button {
+        background: #2b2b33;
+        border-radius: 8px;
+        min-width: 91px !important;
+        max-width: 91px !important;
+        min-height: 48px !important;
+        &.outlined {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

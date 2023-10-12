@@ -1,0 +1,47 @@
+.reuse-details-section {
+  .children-first-section {
+    position: relative;
+    margin: 30px 0;
+
+    text-align: center;
+    .image-box {
+      max-height: 179px;
+      overflow: auto;
+      img {
+        max-width: 100%;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .maximize-btn {
+      position: absolute;
+      right: 30px;
+      cursor: pointer;
+      top: 20px;
+    }
+  }
+  .children-second-section {
+    margin-top: 35px;
+  }
+  .inputClass {
+    width: 100%;
+    &.inputClass2 {
+      &:hover.usersform_textfield .MuiOutlinedInput-notchedOutline {
+        display: block;
+        border-bottom: 1px solid black !important;
+      }
+    }
+  }
+  .labelClass {
+    margin-bottom: 26px;
+    padding-left: 0 !important;
+  }
+  .label {
+    display: flex;
+    color: #6b6b80;
+    margin-bottom: 10px;
+  }
+}

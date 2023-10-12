@@ -1,0 +1,35 @@
+.parent-rules-category {
+  .first-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    .button-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @media screen and (max-width: 900px) {
+        margin-top: 20px;
+        margin-left: auto;
+      }
+      button {
+        min-width: 120px;
+        min-height: 21px;
+        border-radius: 8px;
+        border: 1.5px solid #40404d;
+        font-size: 12px;
+        background-color: #40404d;
+        font-weight: 400;
+        line-height: 18px;
+        color: white;
+        letter-spacing: 0em;
+        span {
+          height: 17px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

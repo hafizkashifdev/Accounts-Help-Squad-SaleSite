@@ -1,0 +1,76 @@
+  .add-vendor_container {
+      @media(max-width: 600px) {
+          .add-vendor_container {
+              margin: 0 1.5rem;
+          }
+      }
+
+      .vendor-add_btn {
+          display: flex;
+          justify-content: flex-end;
+          gap: 1rem;
+          margin-top: 7rem;
+          margin-bottom: 2rem;
+      }
+
+      .vendor-add_btn>Button:nth-child(1) {
+          color: rgba(43, 43, 51, 1);
+          border-color: rgba(43, 43, 51, 1);
+          border-radius: 8px;
+          font-family: "Exo 2";
+      }
+
+      .vendor-add_btn>Button:nth-child(2) {
+          font-family: "Exo 2";
+      }
+
+      .input_label {
+          display: flex;
+          color: #6B6B80;
+          margin-bottom: 1rem;
+      }
+
+      .add-vendor-textfield_bold {
+          height: 120px;
+      }
+
+      .add-vendor-textfield_bold:hover {
+          font-weight: 600;
+      }
+      
+      .add-vendor-textfield_bold:focus-within {
+          font-weight: 600;
+      }
+
+      .hide_label .asterisk {
+          display: none;
+      }
+
+      .MuiFormControl-root {
+          width: 90%;
+      }
+
+      @media(max-width: 900px) {
+          .MuiFormControl-root {
+              width: 100%;
+          }
+      }
+
+      .vendor_error-icon {
+        margin-right: 7px;
+        margin-bottom: -3px;
+        font-size: medium;
+        transform: rotate(180deg);
+        color: rgba(255, 85, 85, 1);
+    }
+
+    .MuiFormHelperText-root {
+        font-family: 'Exo 2', "Roboto", "sans-serif";
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+  }

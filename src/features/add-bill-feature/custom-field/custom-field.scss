@@ -1,0 +1,36 @@
+.custom-field-for-ap {
+    .MuiInputBase-input{
+        padding: 10px 14px;
+        font-family:"Exo 2";
+    }
+    .MuiOutlinedInput-notchedOutline{
+        border-bottom: 1.6px solid #C4C4CC !important;
+    }
+    &:hover {
+        .MuiOutlinedInput-notchedOutline {
+            border-bottom: 1.6px solid #2B2B33 !important;
+        }
+
+        .MuiInputBase-root {
+            background-color: #F0F0F2;
+        }
+
+        label {
+            color: #2B2B33 !important;
+            font-weight: 500;
+        }
+    }
+    &:focus-within {
+        label {
+            color: #2B2B33 !important;
+            font-weight: 500;
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+            border-bottom: 1.6px solid #2B2B33 !important;
+        }
+        .MuiInputBase-root {
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.add-workflow-parent {
+  .workflow-button {
+    button {
+      background: #2b2b33;
+      border-radius: 8px;
+      min-width: 91px !important;
+      max-width: 91px !important;
+      min-height: 48px !important;
+      &.outlined {
+        background: transparent;
+      }
+    }
+  }
+}

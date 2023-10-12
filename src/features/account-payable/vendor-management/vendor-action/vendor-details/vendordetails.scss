@@ -1,0 +1,58 @@
+  .vendor-details_container {
+
+      .vendor-details_btn {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 10rem;
+      }
+
+      .input_label {
+          display: flex;
+          color: #6B6B80;
+          margin-bottom: 1rem;
+      }
+
+      .vendor_error-icon {
+          margin-right: 7px;
+          margin-bottom: -3px;
+          font-size: medium;
+          transform: rotate(180deg);
+          color: rgba(255, 85, 85, 1);
+      }
+
+      .MuiFormHelperText-root {
+        font-family: 'Exo 2', "Roboto", "sans-serif";
+      }
+
+      .vendor-details-textfield_bold {
+          height: 120px;
+      }
+
+      .vendor-details-textfield_bold:hover {
+          font-weight: 600;
+      }
+
+      .vendor-details-textfield_bold:focus-within {
+          font-weight: 600;
+      }
+
+      .hide_label .asterisk {
+          display: none;
+      }
+
+      .MuiFormControl-root {
+          width: 100%;
+      }
+
+      @media(max-width: 900px) {
+          .MuiFormControl-root {
+              width: 100%;
+          }
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+  }

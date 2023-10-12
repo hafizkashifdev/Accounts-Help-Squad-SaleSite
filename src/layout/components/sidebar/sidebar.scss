@@ -1,0 +1,148 @@
+@import "../../../styles/variables";
+
+.sidebar {
+  box-shadow: inset -4px 0px 8px rgba(0, 0, 0, 0.25);
+
+  .portal-name {
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #A6A6B3;
+  }
+
+  .active-portal-btn {
+    background: #FFFFFF;
+    box-shadow: inset -2px 0px 2px 1px rgba(0, 0, 0, 0.33);
+    border-radius: 8px;
+  }
+
+  .sidebar-container {
+    height: 100%;
+    background: $white-color;
+    transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out,
+      margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+
+
+
+    .img-profile-box {
+      text-align: center;
+      padding-top: 15px;
+
+      .img-upload-type {
+        display: none;
+      }
+    }
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: $white-color;
+      text-align: center;
+      width: 100%;
+      height: 70px;
+
+      .logo-img-icon {
+        margin: 0.25rem 0;
+      }
+    }
+
+    .profile-icon-sidebar {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      padding-top: 22px;
+
+      .icon-hover {
+        &:hover {
+          filter: invert(35%) sepia(45%) saturate(5472%) hue-rotate(348deg) brightness(102%) contrast(101%);
+        }
+
+        &.active {
+          filter: invert(35%) sepia(45%) saturate(5472%) hue-rotate(348deg) brightness(102%) contrast(101%);
+          -webkit-filter: invert(35%) sepia(45%) saturate(5472%) hue-rotate(348deg) brightness(102%) contrast(101%);
+        }
+      }
+    }
+
+    .sideNav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 16px;
+    }
+
+    .side-nav-closed-height {
+      height: 100% !important;
+      margin-top: 14px;
+    }
+
+    .sidebar-scrollbar {
+      overflow-x: hidden;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: $black-color;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: $primary-color ;
+      }
+    }
+
+    .sidebarImageUpload {
+      border-radius: 10px;
+      width: 75px;
+      height: 75px;
+    }
+
+    .imageSlider-Profile-Error {
+      border: 2px solid $error-color !important;
+      border-radius: 10px;
+    }
+  }
+}
+
+.sidebar {
+  @media screen and (max-width:599px) {
+    overflow: hidden !important;
+  }
+
+  @media screen and (min-width:600px) {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .sidebar-container {
+    @media screen and (max-width:600px) {
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: $black-color !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: $primary-color !important;
+      }
+    }
+
+    .sideNav {
+      @media screen and (min-width: 600px) and (max-width: 1200px) {
+        height: 70.5vh !important;
+      }
+
+      @media screen and (min-width: 1201px) and (max-width: 1500px) {
+        height: 59vh !important;
+      }
+
+      @media screen and (min-width: 1500px) {
+        height: 69vh !important;
+      }
+    }
+  }
+}
+.cursor-default{
+  cursor: default;
+}

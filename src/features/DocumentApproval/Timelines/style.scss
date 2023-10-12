@@ -1,0 +1,22 @@
+.timeline-first-section {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+    margin-bottom: 20px;
+    .time-timeline {
+      //styleName: BodyText/Small/Regular - 12;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0em;
+      color: #6b6b80;
+    }
+    .time-description {
+      //styleName: BodyText/Small/Regular - 12;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0em;
+      color: #40404d;
+    }
+  }

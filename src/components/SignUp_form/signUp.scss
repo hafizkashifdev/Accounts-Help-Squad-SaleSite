@@ -1,0 +1,83 @@
+.signup_container {
+  .sign_heading {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-mute {
+    padding: 13px;
+    text-align: center;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-bottom: 35px;
+    color: #4C4C4C;
+  }
+
+  .signup_error-icon {
+    margin-right: 7px;
+    margin-bottom: -3px;
+    font-size: medium;
+    transform: rotate(180deg);
+    color: rgba(255, 85, 85, 1);
+}
+
+  .textfield_bold:hover {
+    font-weight: 600;
+  }
+
+  .textfield_bold:focus-within {
+    font-weight: 600;
+  }
+
+  .signup_label {
+    display: flex;
+    font-size: 16px;
+    font-family: 'Exo 2';
+    margin-bottom: 8px;
+    color: #4C4C4C;
+  }
+
+  .password__text {
+    margin-top: 8px;
+    font-family: 'Exo 2';
+    font-weight: 400;
+    font-size: 12px;
+    color: #4C4C4C;
+  }
+
+
+  @media (max-width: 1024px) {
+    .signup_container {
+      padding: 5px;
+    }
+
+    .sign_heading {
+      display: grid;
+      text-align: center;
+    }
+  }
+
+  .error_label {
+    color: red;
+  }
+
+  .hide_label .asterisk {
+    display: none;
+  }
+
+  .rotate_icon {
+    transform: scaleX(-1);
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+}

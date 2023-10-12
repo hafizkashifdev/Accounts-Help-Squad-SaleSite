@@ -1,0 +1,27 @@
+.workflow-speedometer {
+    z-index: 5;
+
+    .circle::before {
+        display: inline-flex;
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        z-index: 2;
+        left: 47%;
+        width: 40px;
+        height: 40px;
+        background-color: #F0F0F2;
+        border-radius: 50%;
+
+        @media screen and (max-width: 600px) {
+            bottom: 2%;
+            width: 30px;
+            left: 45%;
+            height: 30px;
+        }
+
+        @media screen and (max-width: 400px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.CategoriesModel-model-parent {
+  // background-color: white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  .model-body {
+    max-width: 980px;
+    width: 100%;
+    overflow: auto;
+    max-height: calc(100vh - 10%);
+    background-color: white;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    @media screen and (max-width: 900px) {
+      margin: 10px;
+    }
+
+    .documentApprovalModel-model {
+      .documentApprovalModel-model-body {
+        .inputClass {
+          width: 100%;
+        }
+        .condition-box {
+          background-color: #f0f0f2;
+          padding: 20px;
+          padding-bottom: 30px;
+          border-radius: 8px;
+          .button-section {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: auto;
+            justify-content: flex-end;
+            gap: 20px;
+            @media screen and (max-width: 900px) {
+              margin-top: 20px;
+              margin-left: auto;
+            }
+            button {
+              min-width: 120px;
+              min-height: 21px;
+              border-radius: 8px;
+              text-transform: none !important;
+              border: 1.5px solid #40404d;
+              font-size: 12px;
+              background-color: #40404d;
+              font-weight: 400;
+              line-height: 18px;
+              color: white;
+              letter-spacing: 0em;
+              span {
+                height: 17px;
+                margin-left: 10px;
+              }
+            }
+          }
+          .condition-box2 {
+            display: flex;
+            align-items: self-end;
+            gap: 30px;
+            @media screen and (max-width: 992px) {
+              flex-wrap: wrap;
+            }
+            .custom-input-1 {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        svg {
+          cursor: pointer;
+        }
+        h2 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          /* identical to box height, or 140% */
+
+          display: flex;
+          align-items: center;
+
+          /* Theme/Primary/P 20 Main */
+
+          color: #2b2b33;
+        }
+        .attachment-box {
+          margin-top: 24px;
+          margin-bottom: 52px;
+          min-width: 200px;
+
+          p {
+            // font-family: "Exo 2";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            display: flex;
+            align-items: center;
+
+            /* Text/Light */
+
+            color: #6b6b80;
+            margin-bottom: 10px;
+          }
+          .attachment-checkbox {
+            display: flex;
+            .span {
+              background: #d9d9d9;
+              border-radius: 2px;
+              min-height: 44px;
+              text-align: left;
+              // padding-left: 32px;
+              max-width: 199px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              // font-family: "Exo 2";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+              display: flex;
+              align-items: center;
+              /* Text/Default */
+              color: #40404d;
+            }
+          }
+        }
+      }
+      .documentApprovalModel-button-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        button {
+          min-height: 48px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          max-width: 105px;
+          justify-content: center;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0em;
+          color: white;
+          text-transform: capitalize;
+          padding: 0 10px;
+          &.outline {
+            border: 1px solid #40404d;
+            background: transparent;
+            color: black;
+          }
+          &.fill {
+            background: #40404d;
+          }
+        }
+      }
+    }
+  }
+}

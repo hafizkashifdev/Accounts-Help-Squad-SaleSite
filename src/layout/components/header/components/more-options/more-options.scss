@@ -1,0 +1,32 @@
+.header-profile-name{
+  margin-right: 16px;
+}
+.dropdown-menu {
+  width: 192px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding:10px;
+  padding-left:15px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-menu-row {
+  height: 39px;
+  gap: 15px;
+  color: #4e4b66;
+  font-size: 14px;
+  font-weight: 400;
+}
+.more-options{
+  margin-top: 7px;
+}
+.dropdown-menu .dropdown-menu-row:hover .dropdown-menu-row-icon{
+  filter: brightness(0) saturate(100%) invert(76%) sepia(8%) saturate(3737%)
+    hue-rotate(166deg) brightness(103%) contrast(88%);
+  -webkit-filter: brightness(0) saturate(100%) invert(76%) sepia(8%)
+    saturate(3737%) hue-rotate(166deg) brightness(103%) contrast(88%);
+}
+.dropdown-menu .dropdown-menu-row:hover .menu-title{
+  font-weight: 600;
+  color:#000;
+}

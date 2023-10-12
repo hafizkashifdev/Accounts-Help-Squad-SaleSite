@@ -1,0 +1,47 @@
+.alert-box {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 30px;
+  top: 100px;
+  right: 0;
+  z-index: 99999;
+  position: fixed;
+  &.error-box {
+    .MuiAlert-root {
+      //   border: 0 !important;
+      background: #ffffff;
+      /* Indication/Error */
+
+      border: 1px solid #ff3f3f;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+  .alert-heading {
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Indication/Error */
+    &.error-heading {
+      color: #ff3f3f;
+    }
+  }
+  .alert-text {
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 24px;
+    /* identical to box height, or 200% */
+
+    /* Text/Default */
+
+    color: #40404d;
+  }
+}

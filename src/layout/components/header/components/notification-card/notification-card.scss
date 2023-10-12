@@ -1,0 +1,82 @@
+.notification-card-parent {
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  width: 368px;
+  height: 427px;
+  padding: 22px 24px;
+}
+.notification-card-parent::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent !important;
+}
+.notifications-sub-container{
+  margin-bottom: 25px;
+}
+.notification-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 35px 14px 14px;
+  gap: 8px;
+  background: #f7f7fc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 9%);
+}
+.notification-row .profile-pic-and-notification {
+  display: flex;
+  gap: 8px;
+}
+.notification-row .profile-pic-and-notification .profile-pic {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+.profile-pic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: linear-gradient(
+    139.73deg,
+    #ee2e7e -1.16%,
+    #65cdf0 25.51%,
+    #4caf50 51.15%,
+    #f7b923 77.81%,
+    #ee2e7e 97.3%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.notification-row .profile-pic-and-notification .profile-pic img {
+  max-width: 42px;
+  height: 42px;
+}
+.notification-row .profile-pic-and-notification .notification-and-title {
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+}
+.notification-row .profile-pic-and-notification .notification-text {
+  font-size: 11px;
+  color: #4e4b66;
+}
+.notification-row .profile-pic-and-notification .notification-date {
+  font-size: 8px;
+  color: #6e7191;
+}
+.notification-row:hover {
+  background-color: #a6a6b329;
+}
+.day-stream {
+  font-size: 14px;
+  justify-content: space-between;
+  color: #14142b;
+  margin-bottom: 10px;
+}
+.day-stream .noti-length {
+  color: #40404D;
+}

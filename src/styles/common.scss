@@ -1,0 +1,390 @@
+@import "./variables";
+
+//fontfamilies
+.blue-color{
+  color:$blue-color;
+}
+.font-family-roboto {
+  font-family: $font-family-roboto !important;
+}
+.font-family-Exo {
+  font-family: $font-family-Exo !important;
+}
+.font-family-exo2 {
+  font-family: $font-family-Exo !important;
+}
+
+//font-sizes
+
+.primary-heading {
+  font-size: $primary-heading !important;
+}
+
+.secondary-heading {
+  font-size: $secondary-heading !important;
+}
+
+.tertiary-heading {
+  font-size: $tertiary-heading !important;
+}
+
+.super-heading {
+  font-size: $heading-48 !important;
+}
+
+.super-heading-42 {
+  font-size: $heading-42 !important;
+}
+
+.sub-heading {
+  font-size: $heading-18 !important;
+}
+.heading-20 {
+  font-size: $heading-20 !important;
+}
+.heading-22 {
+  font-size: $heading-22 !important;
+}
+
+
+.primary-title {
+  font-size: $primary-title !important;
+}
+
+.secondary-title {
+  font-size: $secondary-title !important;
+}
+
+.tertiary-title {
+  font-size: $tertiary-title !important;
+}
+
+.title-10 {
+  font-size: $title-10 !important;
+}
+
+//font-weights
+
+.font-weight-400 {
+  font-weight: $font-weight-400 !important;
+}
+
+.font-weight-500 {
+  font-weight: $font-weight-500 !important;
+}
+
+.font-weight-600 {
+  font-weight: $font-weight-600 !important;
+}
+
+.font-weight-700 {
+  font-weight: $font-weight-700 !important;
+}
+
+.font-weight-900 {
+  font-weight: $font-weight-900 !important;
+}
+
+//colors
+.mid-gray {
+  color: $mid-gray;
+}
+
+.primary-color {
+  color: $primary-color !important;
+}
+
+.tertiary-color{
+  color: $tertiary-color !important;
+}
+.yellow-color{
+  color:$yellow-color;
+}
+
+.link-color{
+  color:$link-color;
+}
+.bg-primary-color {
+  background-color: $primary-color !important;
+}
+
+.bg-solitude-color {
+  background-color: $solitude-color !important;
+}
+
+.secondary-color {
+  color: $secondary-color !important;
+}
+
+.bg-white-color {
+  background-color: $white-color !important;
+}
+
+.bg-black {
+  background-color: $black-color !important;
+}
+
+.white-color {
+  color: $white-color !important;
+}
+
+.black-color {
+  color: $black-color !important;
+}
+
+.error-color {
+  color: $error-color !important;
+}
+
+.success-color {
+  color: $success-color !important;
+}
+
+.grey-color {
+  color: $grey-color !important;
+}
+
+.selected-field-color {
+  color: $selected-field-color;
+}
+
+.dark-gray-color {
+  color: $dark-gray-color !important;
+}
+
+.orange-yellowish-color {
+  color: $orange-yellowish-color !important;
+}
+
+.orange-color-300 {
+  color: $orange-color-300 !important;
+}
+
+//bg-colors
+
+.orange-yellowish-bg-color {
+  background-color: $orange-yellowish-color !important;
+}
+
+.primary-bg-color {
+  background-color: $primary-color !important;
+}
+
+.secondary-bg-color {
+  background-color: $secondary-color !important;
+}
+
+.orange-color-bg-300 {
+  background-color: $orange-color-300 !important;
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
+.green-bg-color {
+  background-color: $green-color !important;
+}
+
+.light-gray-bg-color {
+  background-color: $light-gray-color !important;
+}
+
+.bg-card-white {
+  background-color: $white-color !important;
+  border-radius: $border-radius-10 !important;
+  box-shadow: -2px 4px 15px rgba(131, 164, 249, 0.25) !important;
+}
+
+.box-shadow-global {
+  box-shadow: -2px 4px 15px rgba(131, 164, 249, 0.25) !important;
+
+}
+
+.border-radius-20-left {
+  border-radius: $border-radius-20 0px 0px $border-radius-20 !important;
+}
+
+.border-radius-20-right {
+  border-radius: 0px $border-radius-20 $border-radius-20 0px !important;
+}
+
+.border-radius-50-left {
+  border-radius: 50px 0px 0px 50px !important;
+}
+
+.border-radius-50-right {
+  border-radius: 0px 50px 50px 0px !important;
+}
+
+
+.border-radius-20-top {
+  border-radius:$border-radius-20 $border-radius-20 0px 0px !important;
+}
+
+.border-radius-10 {
+  border-radius: $border-radius-10 !important;
+}
+
+.border-radius-5 {
+  border-radius: $border-radius-5 !important;
+}
+
+.border-radius-8 {
+  border-radius: $border-radius-8 !important;
+}
+.border-radius-15 {
+  border-radius: $border-radius-15 !important;
+}
+
+.border-radius-20 {
+  border-radius: $border-radius-20 !important;
+}
+
+.border-radius-rounded {
+  border-radius: $border-radius-rounded;
+}
+
+.border-dashed {
+  border: 1px dashed $icon-color !important;
+}
+
+.border-black {
+  border: 1px solid $black-color !important;
+}
+
+.border-gray {
+  border: 1px solid $icon-color !important;
+}
+
+.border-primary-active {
+  border: 1px solid $primary-color !important;
+}
+
+.border-dashed-white {
+  border: 1px dashed #fff !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-error {
+  border: 1px solid #d32f2f !important;
+}
+
+.border-success {
+  border: 1px solid $success-color !important;
+}
+
+.border-warning {
+  border: 1px solid $orange-yellowish-color !important;
+}
+
+//width
+
+.guest-rating-box-shadow {
+  box-shadow: 1px 1px 8px 0px #ecf2fe;
+}
+
+.center-text {
+  text-align: center !important;
+}
+
+.end-text {
+  text-align: end !important;
+} 
+
+.flex {
+  display: flex !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-space-between {
+  justify-content: space-between !important;
+}
+
+.justify-space-around {
+  justify-content: space-around !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.align-space-between {
+  align-items: space-between !important;
+}
+
+.align-end {
+  align-items: flex-end !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.text-decoration {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-transform {
+  text-transform: capitalize !important;
+}
+
+.height-40 {
+  height: 40px;
+}
+
+.width-40 {
+  width: 40px;
+}
+
+// scroll bar style
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  height:4px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hover{
+  &:hover{
+    background-color:rgba(255, 97, 29, 0.2) !important;
+  }
+}
+
+.lined-bg{
+  --w:1px; /* Thiclness of the line */
+  --n:12;   /* number of lines */
+  background: linear-gradient(90deg, #0000 calc(100% - var(--w)), #F0F0F2 0);
+  background-size: calc((100% - var(--n)*var(--w))/(var(--n) + 1) + var(--w)) 100%;
+}
