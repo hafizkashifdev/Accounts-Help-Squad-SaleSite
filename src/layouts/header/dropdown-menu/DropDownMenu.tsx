@@ -7,9 +7,11 @@ import { useState } from "react";
 import { MenuItemCard } from "../menu-item-card/MenuItemCard";
 import { menuItemsData } from "./DropDownMenu.data";
 import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
+import { useRouter } from "next/navigation";
 
 export const DropDownMenu = () => {
   //   const { ticketsActionDropdown } = props;
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -20,7 +22,7 @@ export const DropDownMenu = () => {
   };
 
   return (
-    <div>
+    <>
       <Button
         id="demo-positioned-button"
         aria-controls={open ? "demo-positioned-menu" : undefined}
@@ -53,21 +55,32 @@ export const DropDownMenu = () => {
         onClose={handleClose}
         sx={{
           ".MuiMenu-paper": {
-            maxWidth: { md: "500px" },
+            maxWidth: { md: "520px" },
             borderRadius: "10px",
+            padding: 1,
           },
         }}
       >
         <Grid container>
           {menuItemsData.map((x: any) => (
-            <Grid item xs={12} md={6}>
-              <MenuItemCard itemName={x?.name} itemId={x?.id} />
+            <Grid
+              key={x?.id}
+              item
+              xs={12}
+              md={6}
+              // onClick={() => router.push("/formation-book")}
+            >
+              <MenuItemCard
+                itemName={x?.name}
+                itemId={x?.id}
+                itemOnClick={() => router.push(x?.link)}
+              />
             </Grid>
           ))}
         </Grid>
         <hr />
-        <BookDemoMenuItem />
+        <BookDemoMenuItem btnClick={() => router.push("/book-a-demo")} />
       </Menu>
-    </div>
+    </>
   );
 };
