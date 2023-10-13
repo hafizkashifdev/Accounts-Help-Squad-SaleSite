@@ -1,5 +1,7 @@
+import AboutUs from "@root/sections/about-us";
+
 const AboutUsPage = () => {
-  return <>About Us</>;
+  return <AboutUs />;
 };
 
 export default AboutUsPage;
