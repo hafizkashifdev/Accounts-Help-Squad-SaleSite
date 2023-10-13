@@ -1,8 +1,8 @@
 "use client";
-import { useMediaQuery, useTheme } from "@mui/material";
 import { HeaderMobileUp } from "./HeaderMobileUp";
 import { HeaderMobile } from "./HeaderMobile";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 export const Header = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));

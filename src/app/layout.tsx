@@ -1,3 +1,4 @@
+import { Footer } from "@root/layouts/Footer/Footer";
 import { Header } from "@root/layouts/header/Header";
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
     description: "Your Trusted Accounting Solutions Partner",
     url: "https://accountanthelpsquad.co.uk/",
     siteName: "Accounts Help Sqad",
-    images: [{ url: "../assets/layout/og-logo.png", width: 800, height: 600 }],
+    images: [
+      { url: "../assets/layout/images/og-logo.png", width: 800, height: 600 },
+    ],
   },
 };
 
@@ -26,6 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

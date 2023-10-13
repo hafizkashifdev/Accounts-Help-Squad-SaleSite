@@ -1,23 +1,21 @@
 "use client";
-import { Box, Button, useTheme } from "@mui/material";
+
 import Image from "next/image";
-import Logo from "@root/assets/layout/logo.svg";
+import Logo from "@root/assets/layout/images/logo.svg";
 import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
 import { usePathname, useRouter } from "next/navigation";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 export const HeaderMobileUp = () => {
-  const theme = useTheme();
   const router = useRouter();
   const pathname = usePathname();
-  // console.log(pathname.startsWith("/services"));
-  // const matches = useMediaQuery(theme.breakpoints.down("md"));
-  // const [isVisible, setIsVisible] = useState("none");
-  // console.log(matches);
+
   return (
     <Box>
       <Box
         display={"flex"}
-        alignItems={"center" }
+        alignItems={"center"}
         flexDirection={{ xs: "column", lg: "row" }}
         justifyContent={{ xs: "center", lg: "space-between" }}
         flexWrap={"wrap"}

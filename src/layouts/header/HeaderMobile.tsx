@@ -1,12 +1,14 @@
 "use client";
-import { Box, Button, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
-import Logo from "@root/assets/layout/logo.svg";
+import Logo from "@root/assets/layout/images/logo.svg";
 import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 export const HeaderMobile = () => {
   const theme = useTheme();

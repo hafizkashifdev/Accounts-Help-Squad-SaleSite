@@ -1,8 +1,8 @@
 "use client";
 
-import { Typography, MenuItem, Menu, Button, Box } from "@mui/material";
+import { Typography, MenuItem, Box } from "@mui/material";
 import Image from "next/image";
-import LogoIcon from "@root/assets/layout/logo-icon.svg";
+import LogoIcon from "@root/assets/layout/images/logo-icon.svg";
 export const MenuItemCard = ({ itemOnClick, itemName, itemId }: any) => {
   return (
     <MenuItem key={itemId} onClick={() => itemOnClick?.()}>
