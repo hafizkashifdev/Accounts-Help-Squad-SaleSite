@@ -6,6 +6,7 @@ import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import { MenuItem } from "./menu-item/MenuItem";
 
 export const HeaderMobileUp = () => {
   const router = useRouter();
@@ -28,7 +29,7 @@ export const HeaderMobileUp = () => {
           alignItems={"center"}
           gap={2.5}
         >
-          <Button
+          {/* <Button
             onClick={() => router.push("/")}
             disableRipple
             sx={{
@@ -41,8 +42,29 @@ export const HeaderMobileUp = () => {
           >
             {" "}
             Home{" "}
-          </Button>
-          <Button
+          </Button> */}
+          <MenuItem
+            menuOnClick={() => router.push("/")}
+            isActive={pathname === "/"}
+            menuItemName="Home"
+          />
+          <MenuItem
+            menuOnClick={() => router.push("/about-us")}
+            isActive={pathname.startsWith("/about-us")}
+            menuItemName="About Us"
+          />
+          <DropDownMenu />
+          <MenuItem
+            menuOnClick={() => router.push("/pricing")}
+            isActive={pathname.startsWith("/pricing")}
+            menuItemName="Pricing"
+          />
+          <MenuItem
+            menuOnClick={() => router.push("/contact-us")}
+            isActive={pathname.startsWith("/contact-us")}
+            menuItemName="Contact Us"
+          />
+          {/* <Button
             onClick={() => {
               router.push("/about-us");
             }}
@@ -57,9 +79,9 @@ export const HeaderMobileUp = () => {
           >
             {" "}
             About Us{" "}
-          </Button>
-          <DropDownMenu />
-          <Button
+          </Button> */}
+          {/* <DropDownMenu /> */}
+          {/* <Button
             onClick={() => router.push("/pricing")}
             disableRipple
             sx={{
@@ -86,7 +108,7 @@ export const HeaderMobileUp = () => {
           >
             {" "}
             Contact Us{" "}
-          </Button>
+          </Button> */}
         </Box>
 
         <Box
@@ -98,29 +120,29 @@ export const HeaderMobileUp = () => {
         >
           <Button
             variant="outlined"
-            sx={{
-              color: "#2B2B33",
-              fontsize: "16px",
-              fontWeight: "500",
-              border: "1px solid #2B2B33",
-              backgroundColor: "transparent",
-              "&:hover": {
-                backgroundColor: "transparent",
-                border: "1px solid #2B2B33",
-              },
-            }}
+            // sx={{
+            //   color: "#2B2B33",
+            //   fontsize: "16px",
+            //   fontWeight: "500",
+            //   border: "1px solid #2B2B33",
+            //   backgroundColor: "transparent",
+            //   "&:hover": {
+            //     backgroundColor: "transparent",
+            //     border: "1px solid #2B2B33",
+            //   },
+            // }}
           >
             Sign In
           </Button>
           <Button
             variant="contained"
-            sx={{
-              color: "white",
-              fontsize: "16px",
-              fontWeight: "500",
-              backgroundColor: "#2B2B33",
-              "&:hover": { backgroundColor: "#2B2B33" },
-            }}
+            // sx={{
+            //   color: "white",
+            //   fontsize: "16px",
+            //   fontWeight: "500",
+            //   backgroundColor: "#2B2B33",
+            //   "&:hover": { backgroundColor: "#2B2B33" },
+            // }}
           >
             Sign Up
           </Button>
