@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 export default function Home() {
-  return <main>Home Page</main>;
+  return <Box minHeight={"100vh"}>100</Box>;
 }

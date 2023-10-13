@@ -14,7 +14,6 @@ export const HeaderMobile = () => {
   const theme = useTheme();
   const router = useRouter();
   const pathname = usePathname();
-  // console.log(pathname.startsWith("/services"));
   const [isVisible, setIsVisible] = useState(true);
   return (
     <Box>
@@ -39,18 +38,6 @@ export const HeaderMobile = () => {
             ) : (
               <CloseIcon onClick={() => setIsVisible((x) => !x)} />
             )}
-            {/* {matches ? (
-              isVisible === "none" ? (
-                <MenuIcon onClick={() => setIsVisible("flex")} />
-              ) : (
-                <CloseIcon onClick={() => setIsVisible("none")} />
-              )
-            ) : null} */}
-            {/* // {matches ? (
-            //   <MenuIcon onClick={() => setIsVisible("flex")} />
-            // ) : (
-            //   <CloseIcon onClick={() => setIsVisible("none")} />
-            // )} */}
           </Box>
         </Box>
         {!isVisible && (
@@ -132,29 +119,29 @@ export const HeaderMobile = () => {
           >
             <Button
               variant="outlined"
-              sx={{
-                color: "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                border: "1px solid #2B2B33",
-                backgroundColor: "transparent",
-                "&:hover": {
-                  backgroundColor: "transparent",
-                  border: "1px solid #2B2B33",
-                },
-              }}
+              // sx={{
+              //   color: "#2B2B33",
+              //   fontsize: "16px",
+              //   fontWeight: "500",
+              //   border: "1px solid #2B2B33",
+              //   backgroundColor: "transparent",
+              //   "&:hover": {
+              //     backgroundColor: "transparent",
+              //     border: "1px solid #2B2B33",
+              //   },
+              // }}
             >
               Sign In
             </Button>
             <Button
               variant="contained"
-              sx={{
-                color: "white",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "#2B2B33",
-                "&:hover": { backgroundColor: "#2B2B33" },
-              }}
+              // sx={{
+              //   color: "white",
+              //   fontsize: "16px",
+              //   fontWeight: "500",
+              //   backgroundColor: "#2B2B33",
+              //   "&:hover": { backgroundColor: "#2B2B33" },
+              // }}
             >
               Sign Up
             </Button>

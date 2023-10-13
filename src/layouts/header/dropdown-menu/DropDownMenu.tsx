@@ -1,12 +1,12 @@
 "use client";
 
-import { Typography, MenuItem, Menu, Button, Box, Grid } from "@mui/material";
+import { Menu, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useState } from "react";
-import Image from "next/image";
 import { MenuItemCard } from "../menu-item-card/MenuItemCard";
 import { menuItemsData } from "./DropDownMenu.data";
+import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
 
 export const DropDownMenu = () => {
   //   const { ticketsActionDropdown } = props;
@@ -51,7 +51,12 @@ export const DropDownMenu = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        sx={{ width: "600px" }}
+        sx={{
+          ".MuiMenu-paper": {
+            maxWidth: { md: "500px" },
+            borderRadius: "10px",
+          },
+        }}
       >
         <Grid container>
           {menuItemsData.map((x: any) => (
@@ -60,6 +65,8 @@ export const DropDownMenu = () => {
             </Grid>
           ))}
         </Grid>
+        <hr />
+        <BookDemoMenuItem />
       </Menu>
     </div>
   );

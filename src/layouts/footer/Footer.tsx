@@ -6,6 +6,7 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { socialMediaIcons } from "./Footer.data";
+
 export const Footer = () => {
   return (
     <>

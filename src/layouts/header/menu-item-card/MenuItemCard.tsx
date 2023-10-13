@@ -3,9 +3,9 @@
 import { Typography, MenuItem, Box } from "@mui/material";
 import Image from "next/image";
 import LogoIcon from "@root/assets/layout/images/logo-icon.svg";
-export const MenuItemCard = ({ itemOnClick, itemName, itemId }: any) => {
+export const MenuItemCard = ({ itemOnClick, itemName }: any) => {
   return (
-    <MenuItem key={itemId} onClick={() => itemOnClick?.()}>
+    <MenuItem onClick={() => itemOnClick?.()}>
       <Box display={"flex"} alignItems={"center"} gap={2}>
         <Box
           width={"30px"}
