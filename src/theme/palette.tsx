@@ -3,19 +3,21 @@ export function createGradient(color1: string, color2: string) {
 }
 
 const PRIMARY = {
-  lighter: "#EBFAF8",
-  light: "#D7F4F0",
-  main: "#38CAB5",
-  dark: "#16847f",
-  darker: "#278d7f",
+  lighter: "#444",
+  light: "#3c3c3c",
+  main: "#333",
+  dark: "#2b2b2b",
+  darker: "#222",
 };
+
 const SECONDARY = {
-  lighter: "#727d99",
-  light: "#5d6a8a",
-  main: "#35456D",
-  dark: "#2a3757",
-  darker: "#25304c",
+  lighter: "#777",
+  light: "#6f6f6f",
+  main: "#666",
+  dark: "#5e5e5e",
+  darker: "#555",
 };
+
 const SUCCESS = {
   lighter: "#E4FFEB;",
   light: "#AAF27F",
@@ -23,6 +25,7 @@ const SUCCESS = {
   dark: "#229A16",
   darker: "#08660D",
 };
+
 const WARNING = {
   lighter: "#ffda6e",
   light: "#ffd456",
@@ -30,28 +33,15 @@ const WARNING = {
   dark: "#cc9b0b",
   darker: "#b3880a",
 };
+
 const ERROR = {
-  lighter: "#ff8080",
-  light: "#ff6e6e",
-  main: "#FF4A4A",
-  dark: "#cc3b3b",
-  darker: "#b33434",
+  lighter: "#FF6161",
+  light: "#FF5050",
+  main: "#FF3F3F",
+  dark: "#FF2E2E",
+  darker: "#FF1D1D",
 };
-const BLUE = {
-  lighter: "#626e8e",
-  light: "#4c597d",
-  main: "#1F305D",
-  dark: "#19264a",
-  darker: "#162241",
-  dull_blue: "#111827",
-};
-const SLATE_BLUE = {
-  lighter: "#878d97",
-  light: "#5f6774",
-  main: "#374151",
-  dark: "#2c3441",
-  darker: "#272e39",
-};
+
 const INFO = {
   lighter: "#ceeff5",
   light: "#85d6e7",
@@ -59,6 +49,7 @@ const INFO = {
   dark: "#3bbdd9",
   darker: "#23b5d4",
 };
+
 const GREY: any = {
   0: "#D1D5DB",
   100: "#f9fafb",
@@ -70,18 +61,6 @@ const GREY: any = {
   700: "#E5E7EB",
   800: "#1F2937",
   900: "#9CA3AF",
-};
-
-const CUSTOM_COLORS = {
-  lighter: "#5C5C5C",
-  light: "#667085",
-  main: "#6B7280",
-  dark: "#D1D5DB",
-
-  bluish_gray: "#BCC1CE",
-  grayish_blue: "#6B7280",
-  aqua_breeze: "#A0E5DB80",
-  light_green: " #88DFD3",
 };
 
 const GRADIENTS = {
@@ -98,10 +77,7 @@ const COMMON = {
   success: { ...SUCCESS, contrastText: GREY[800] },
   warning: { ...WARNING, contrastText: GREY[800] },
   error: { ...ERROR, contrastText: GREY[800] },
-  blue: { ...BLUE, contrastText: GREY[800] },
   info: { ...INFO, contrastText: GREY[800] },
-  custom: { ...CUSTOM_COLORS, contrastText: GREY[800] },
-  slateBlue: { ...SLATE_BLUE, contrastText: GREY[800] },
   grey: GREY,
   gradients: GRADIENTS,
 
