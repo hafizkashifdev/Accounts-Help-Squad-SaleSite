@@ -5,6 +5,9 @@ import CustomLabel from "./Label";
 import ErrorIcon from "@mui/icons-material/Error";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import TextField from "@mui/material/TextField";
+import IconButton from "@mui/material/IconButton";
 
 export default function RHFDatePicker({
   name,
@@ -27,8 +30,7 @@ export default function RHFDatePicker({
             <DatePicker
               {...field}
               {...other}
-              fullWidth
-              variant={"standard"}
+              sx={{ width: "100%" }}
               slotProps={{
                 textField: {
                   helperText: (
@@ -47,13 +49,8 @@ export default function RHFDatePicker({
                     </Typography>
                   ),
                   error: error,
-                  fullWidth: other.fullWidth,
-                  size: other.size,
-                  label: "",
-                  inputProps: { style: { height: 27 } },
                 },
               }}
-              label={label}
             />
           </>
         )}
