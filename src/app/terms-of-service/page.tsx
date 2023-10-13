@@ -1,5 +1,7 @@
-const TermsOfService = () => {
-  return <>TermsOfService</>;
+import TermsOfService from "@root/sections/terms-of-service";
+
+const TermsOfServicePage = () => {
+  return <TermsOfService />;
 };
 
-export default TermsOfService;
+export default TermsOfServicePage;

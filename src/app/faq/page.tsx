@@ -1,5 +1,7 @@
-const FAQs = () => {
-    return <>FAQs</>;
-  };
+import FAQs from "@root/sections/faq";
 
-  export default FAQs;
+const FAQsPage = () => {
+  return <FAQs />;
+};
+
+export default FAQsPage;

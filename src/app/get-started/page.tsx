@@ -1,5 +1,7 @@
-const GetStarted = () => {
-    return <>GetStarted</>;
-  };
+import GetStarted from "@root/sections/get-started";
 
-  export default GetStarted;
+const GetStartedPage = () => {
+  return <GetStarted />;
+};
+
+export default GetStartedPage;
