@@ -1,24 +1,25 @@
-import React, { FC } from 'react';
-import { Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import React, { FC } from "react";
+import { Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const CustomLabel: FC<{ label: string; required?: boolean; error?: any }> = (
-  props,
+  props
 ) => {
-  const { label, required = false, error } = props;
+  const { label, error } = props;
   const { palette }: any = useTheme();
   return (
     <Typography
-      component={'span'}
+      variant="body1"
       sx={{
-        textTransform: 'capitalize',
-        '&::after': required
+        textTransform: "capitalize",
+        fontWeight: 500,
+        "&::after": error
           ? {
-              content: '"*"',
+              content: '" *"',
               color: palette?.error?.main,
             }
-          : '',
-        color: !!error ? palette?.error?.main : 'inherit',
+          : "",
+        color: !!error ? palette?.error?.main : "inherit",
       }}
     >
       {label}

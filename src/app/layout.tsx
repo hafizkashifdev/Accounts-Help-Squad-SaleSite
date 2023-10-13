@@ -1,7 +1,9 @@
+import ThemeProvider from "@root/theme";
 import { Footer } from "@root/layouts/Footer/Footer";
 import { Header } from "@root/layouts/header/Header";
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
+import Head from "next/head";
 
 const inter = Exo_2({ subsets: ["latin"] });
 
@@ -27,9 +29,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+              rel="stylesheet"
+            />
+          </Head>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
