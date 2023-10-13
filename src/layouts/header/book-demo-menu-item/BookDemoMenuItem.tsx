@@ -41,7 +41,7 @@ export const BookDemoMenuItem = ({
             </Typography>
           </Box>
         </Box>
-        <Button variant="contained" onClick={() => btnClick?.()}>
+        <Button variant="contained" type="button" onClick={() => btnClick?.()}>
           {btnText || "Request a Demo"}
         </Button>
       </Box>
