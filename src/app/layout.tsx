@@ -1,4 +1,6 @@
 import ThemeProvider from "@root/theme";
+import { Footer } from "@root/layouts/Footer/Footer";
+import { Header } from "@root/layouts/header/Header";
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import Head from "next/head";
@@ -13,7 +15,9 @@ export const metadata: Metadata = {
     description: "Your Trusted Accounting Solutions Partner",
     url: "https://accountanthelpsquad.co.uk/",
     siteName: "Accounts Help Sqad",
-    images: [{ url: "../assets/layout/og-logo.png", width: 800, height: 600 }],
+    images: [
+      { url: "../assets/layout/images/og-logo.png", width: 800, height: 600 },
+    ],
   },
 };
 
@@ -34,7 +38,9 @@ export default function RootLayout({
               rel="stylesheet"
             />
           </Head>
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
