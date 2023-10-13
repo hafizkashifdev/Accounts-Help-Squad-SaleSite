@@ -1,10 +1,10 @@
 import "./globals.scss";
 import ThemeProvider from "@root/theme";
-import { Footer } from "@root/layouts/footer/Footer";
 import { Header } from "@root/layouts/header/Header";
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import Box from "@mui/material/Box";
+import { Footer } from "@root/layouts/footers/Footer";
 
 const inter = Exo_2({ subsets: ["latin"] });
 
