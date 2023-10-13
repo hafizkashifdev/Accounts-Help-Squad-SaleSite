@@ -1,5 +1,7 @@
 import {
+  RHFCheckbox,
   RHFDatePicker,
+  RHFRadioGroup,
   RHFSelect,
   RHFTextField,
 } from "@root/components/react-hook-form";
@@ -10,6 +12,8 @@ export const defaultValues = {
   select: "",
   mulitSelect: [],
   datePicker: new Date(),
+  radioGroup: "",
+  checkbox: false,
 };
 
 export const validationSchema = Yup.object().shape({
@@ -17,6 +21,8 @@ export const validationSchema = Yup.object().shape({
   select: Yup.string().required("Required"),
   mulitSelect: Yup.mixed().required("Required"),
   datePicker: Yup.date().required("Required"),
+  radioGroup: Yup.string().required("Required"),
+  checkbox: Yup.boolean().oneOf([true], "Required"),
 });
 
 export const dataArray = [
@@ -59,6 +65,28 @@ export const dataArray = [
       label: "DatePicker",
     },
     component: RHFDatePicker,
+    md: 12,
+  },
+  {
+    id: 5,
+    componentProps: {
+      name: "radioGroup",
+      label: "RadioGroup",
+      options: [
+        { label: "Level 1", value: "Level 1" },
+        { label: "Level 2", value: "Level 2" },
+      ],
+    },
+    component: RHFRadioGroup,
+    md: 12,
+  },
+  {
+    id: 5,
+    componentProps: {
+      name: "checkbox",
+      label: "Checkbox",
+    },
+    component: RHFCheckbox,
     md: 12,
   },
 ];

@@ -3,7 +3,7 @@ import { TextField, Typography, useTheme } from "@mui/material";
 import ErrorIcon from "@mui/icons-material/Error";
 import CustomLabel from "./Label";
 
-export default function RHFTextField({ name, required, ...other }: any) {
+export default function RHFTextField({ name, ...other }: any) {
   const { control } = useFormContext();
   const theme: any = useTheme();
 

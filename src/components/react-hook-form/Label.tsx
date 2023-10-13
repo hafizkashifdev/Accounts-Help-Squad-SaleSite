@@ -9,7 +9,7 @@ const CustomLabel: FC<{ label: string; required?: boolean; error?: any }> = (
   const { palette }: any = useTheme();
   return (
     <Typography
-      component={"span"}
+      variant="body1"
       sx={{
         textTransform: "capitalize",
         fontWeight: 500,

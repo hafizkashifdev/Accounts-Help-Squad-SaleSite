@@ -1,5 +1,3 @@
-// eslint-disable-next-line react/jsx-key
-
 import { Fragment, useState } from "react";
 import { useFormContext, Controller } from "react-hook-form";
 import {
@@ -15,7 +13,6 @@ import ErrorIcon from "@mui/icons-material/Error";
 export default function RHFSelect({
   name,
   options,
-  required,
   noOptionsText = "Nothing in the List",
   multiple = false,
   ...other
@@ -78,13 +75,7 @@ export default function RHFSelect({
             {...other}
             renderInput={(params) => (
               <>
-                {other?.label && (
-                  <CustomLabel
-                    label={label}
-                    error={error}
-                    required={required}
-                  />
-                )}
+                {other?.label && <CustomLabel label={label} error={error} />}
                 <TextField
                   {...params}
                   label=""
