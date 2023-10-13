@@ -38,8 +38,8 @@ export const DropDownMenu = () => {
         }
         sx={{
           color: "#2B2B33",
-          fontsize: "16px",
-          fontWeight: "500",
+          fontsize: "18px",
+          fontWeight: "600",
           backgroundColor: "transparent",
           "&:hover": { backgroundColor: "transparent" },
         }}
@@ -54,7 +54,7 @@ export const DropDownMenu = () => {
         onClose={handleClose}
         sx={{
           ".MuiMenu-paper": {
-            maxWidth: { md: "520px" },
+            maxWidth: { md: "600px" },
             borderRadius: "10px",
             padding: 1,
           },

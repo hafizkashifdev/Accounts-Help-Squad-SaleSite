@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { MenuItem } from "./menu-item/MenuItem";
 
 export const HeaderMobile = () => {
   const theme = useTheme();
@@ -47,7 +48,28 @@ export const HeaderMobile = () => {
             alignItems={"center"}
             gap={2.5}
           >
-            <Button
+            <MenuItem
+              menuOnClick={() => router.push("/")}
+              isActive={pathname === "/"}
+              menuItemName="Home"
+            />
+            <MenuItem
+              menuOnClick={() => router.push("/about-us")}
+              isActive={pathname.startsWith("/about-us")}
+              menuItemName="About Us"
+            />
+            <DropDownMenu />
+            <MenuItem
+              menuOnClick={() => router.push("/pricing")}
+              isActive={pathname.startsWith("/pricing")}
+              menuItemName="Pricing"
+            />
+            <MenuItem
+              menuOnClick={() => router.push("/contact-us")}
+              isActive={pathname.startsWith("/contact-us")}
+              menuItemName="Contact Us"
+            />
+            {/* <Button
               onClick={() => router.push("/")}
               disableRipple
               sx={{
@@ -106,7 +128,7 @@ export const HeaderMobile = () => {
             >
               {" "}
               Contact Us{" "}
-            </Button>
+            </Button> */}
           </Box>
         )}
         {!isVisible && (
