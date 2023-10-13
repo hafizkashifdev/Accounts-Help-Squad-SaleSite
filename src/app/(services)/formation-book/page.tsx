@@ -1,5 +1,7 @@
-const FormationBook = () => {
-  return <>FormationBook</>;
+import FormationBook from "@root/sections/services/formation-book";
+
+const FormationBookPage = () => {
+  return <FormationBook />;
 };
 
-export default FormationBook;
+export default FormationBookPage;

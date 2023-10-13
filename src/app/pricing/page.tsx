@@ -1,5 +1,7 @@
+import Pricing from "@root/sections/pricing";
+
 const PricingPage = () => {
-  return <>Pricing</>;
+  return <Pricing />;
 };
 
 export default PricingPage;

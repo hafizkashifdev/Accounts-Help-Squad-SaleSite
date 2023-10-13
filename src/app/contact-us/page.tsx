@@ -1,5 +1,7 @@
+import ContactUs from "@root/sections/contact-us";
+
 const ContactUsPage = () => {
-  return <>Contact Us</>;
+  return <ContactUs />;
 };
 
 export default ContactUsPage;
