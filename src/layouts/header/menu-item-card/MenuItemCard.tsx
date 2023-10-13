@@ -29,7 +29,7 @@ export const MenuItemCard = ({ itemOnClick, itemName }: any) => {
         </Box>
         <Typography
           fontWeight={500}
-          sx={{ color: "#A6A6B3", fontSize: "14px" }}
+          sx={{ color: "#A6A6B3", fontsize: "16px", fontWeight: "500" }}
         >
           {itemName}
         </Typography>

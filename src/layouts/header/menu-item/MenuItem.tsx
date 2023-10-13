@@ -8,9 +8,9 @@ export const MenuItem = ({ menuOnClick, isActive, menuItemName }: any) => {
       disableRipple
       sx={{
         // color: pathname.startsWith("/pricing") ? "red" : "#2B2B33",
-        color: isActive ? "red" : "#2B2B33",
-        fontsize: "16px",
-        fontWeight: "500",
+        color: isActive ? "#2B2B33" : "#2B2B33",
+        fontsize: "18px",
+        fontWeight: "600",
         backgroundColor: "transparent",
         "&:hover": { backgroundColor: "transparent" },
       }}
