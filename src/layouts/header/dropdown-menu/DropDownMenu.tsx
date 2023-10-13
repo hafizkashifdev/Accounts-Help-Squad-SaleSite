@@ -10,7 +10,6 @@ import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
 import { useRouter } from "next/navigation";
 
 export const DropDownMenu = () => {
-  //   const { ticketsActionDropdown } = props;
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -73,13 +72,21 @@ export const DropDownMenu = () => {
               <MenuItemCard
                 itemName={x?.name}
                 itemId={x?.id}
-                itemOnClick={() => router.push(x?.link)}
+                itemOnClick={() => {
+                  router.push(x?.link);
+                  handleClose?.();
+                }}
               />
             </Grid>
           ))}
         </Grid>
         <hr />
-        <BookDemoMenuItem btnClick={() => router.push("/book-a-demo")} />
+        <BookDemoMenuItem
+          btnClick={() => {
+            router.push("/request-a-demo");
+            handleClose?.();
+          }}
+        />
       </Menu>
     </>
   );

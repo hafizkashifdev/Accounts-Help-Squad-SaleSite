@@ -5,8 +5,11 @@ import LogoWhite from "@root/assets/layout/images/logo-white.svg";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import { socialMediaIcons } from "./Footer.data";
+import { useRouter } from "next/navigation";
 
 export const Footer = () => {
+  const router = useRouter();
   return (
     <>
       <Box sx={{ backgroundColor: "#2B2B33", padding: 2 }}>
@@ -32,7 +35,9 @@ export const Footer = () => {
               color: "white",
               fontWeight: 500,
               fontSize: "16px",
+              cursor: "pointer",
             }}
+            onClick={() => router?.push("/privacy-policy")}
           >
             Privacy Policy
           </Typography>
@@ -44,12 +49,20 @@ export const Footer = () => {
               borderRight: "1px solid white",
               borderLeft: "1px solid white",
               paddingX: 3,
+              cursor: "pointer",
             }}
+            onClick={() => router?.push("/faq")}
           >
             FAQs
           </Typography>
           <Typography
-            sx={{ color: "white", fontWeight: 500, fontSize: "16px" }}
+            sx={{
+              color: "white",
+              fontWeight: 500,
+              fontSize: "16px",
+              cursor: "pointer",
+            }}
+            onClick={() => router?.push("/terms-of-service")}
           >
             Terms of Service
           </Typography>
