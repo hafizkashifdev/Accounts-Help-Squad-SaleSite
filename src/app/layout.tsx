@@ -31,22 +31,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            // minHeight={"100vh"}
-          >
+          <Box display={"flex"} flexDirection={"column"} minHeight={"100vh"}>
             <Box
               marginX={{ md: 5 }}
               // position={"sticky"}
               // top={0}
               // zIndex={50}
               paddingY={2}
+              marginBottom={{ xs: 2.5, md: 4 }}
             >
               <Header />
             </Box>
             <Box flexGrow={1}>{children}</Box>
-            <Box>
+            <Box marginTop={{ xs: 2.5, md: 4 }}>
               <Footer />
             </Box>
           </Box>
