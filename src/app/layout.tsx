@@ -37,14 +37,13 @@ export default function RootLayout({
               // position={"sticky"}
               // top={0}
               // zIndex={50}
-              paddingY={2}
-              borderBottom={"1px solid black"}
-              marginBottom={{ xs: 2, md: 2.5 }}
+              paddingY={{ xs: 1, md: 2 }}
+              marginBottom={{ xs: 2, md: 3 }}
             >
               <Header />
             </Box>
             <Box flexGrow={1}>{children}</Box>
-            <Box marginTop={{ xs: 2.5, md: 4 }}>
+            <Box marginTop={{ xs: 2.5, md: 4.5 }}>
               <Footer />
             </Box>
           </Box>
