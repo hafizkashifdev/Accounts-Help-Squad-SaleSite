@@ -33,12 +33,13 @@ export default function RootLayout({
         <ThemeProvider>
           <Box display={"flex"} flexDirection={"column"} minHeight={"100vh"}>
             <Box
-              marginX={{ md: 5 }}
+              marginX={{ xs: 1, md: 5 }}
               // position={"sticky"}
               // top={0}
               // zIndex={50}
               paddingY={2}
-              marginBottom={{ xs: 2.5, md: 4 }}
+              borderBottom={"1px solid black"}
+              marginBottom={{ xs: 2, md: 2.5 }}
             >
               <Header />
             </Box>

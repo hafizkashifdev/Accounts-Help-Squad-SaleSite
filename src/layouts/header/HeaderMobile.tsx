@@ -1,5 +1,4 @@
 "use client";
-import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import Logo from "@root/assets/layout/images/logo.svg";
 import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
@@ -10,17 +9,25 @@ import CloseIcon from "@mui/icons-material/Close";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { MenuItem } from "./menu-item/MenuItem";
+import { IconButton } from "@mui/material";
 
 export const HeaderMobile = () => {
-  const theme = useTheme();
   const router = useRouter();
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   return (
     <Box>
       <Box
+        // sx={{
+        //   ...(!isVisible && {
+        //     backgroundColor: "white",
+        //     position: "absolute",
+        //     width: "98%",
+        //     padding: 2,
+        //     zIndex: 50,
+        //   }),
+        // }}
         display={"flex"}
-        // alignItems={{ xs: "normal", md: "center" }}
         flexDirection={"column"}
         justifyContent={"space-between"}
         flexWrap={"wrap"}
@@ -34,11 +41,20 @@ export const HeaderMobile = () => {
         >
           <Image src={Logo} alt="brand-logo" />
           <Box sx={{ cursor: "pointer" }}>
-            {isVisible ? (
-              <MenuIcon onClick={() => setIsVisible((x) => !x)} />
-            ) : (
-              <CloseIcon onClick={() => setIsVisible((x) => !x)} />
-            )}
+            <IconButton
+              onClick={() => setIsVisible((x) => !x)}
+              sx={{
+                backgroundColor: "primary.main",
+                borderRadius: "10px",
+                "&:hover": { backgroundColor: "primary.main" },
+              }}
+            >
+              {isVisible ? (
+                <MenuIcon sx={{ color: "white" }} />
+              ) : (
+                <CloseIcon sx={{ color: "white" }} />
+              )}
+            </IconButton>
           </Box>
         </Box>
         {!isVisible && (

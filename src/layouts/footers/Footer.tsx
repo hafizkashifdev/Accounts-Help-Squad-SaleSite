@@ -10,9 +10,14 @@ import { useRouter } from "next/navigation";
 
 export const Footer = () => {
   const router = useRouter();
+  const currentYear = new Date()?.getFullYear();
   return (
     <>
-      <Box sx={{ backgroundColor: "#2B2B33", padding: 2 }}>
+      <Box
+        sx={{ backgroundColor: "#2B2B33" }}
+        paddingX={{ xs: 1, md: 5 }}
+        paddingY={{ xs: 1, md: 3 }}
+      >
         <Box
           display={"flex"}
           justifyContent={"center"}
@@ -72,6 +77,7 @@ export const Footer = () => {
           display={{ md: "flex" }}
           alignItems={"center"}
           justifyContent={"space-between"}
+          paddingTop={2}
         >
           <Typography
             sx={{
@@ -80,11 +86,19 @@ export const Footer = () => {
               fontSize: "16px",
             }}
           >
-            © 2023 Accounts Help Squad. All rights reserved.
+            © {currentYear} Accounts Help Squad. All rights reserved.
           </Typography>
           <Box>
             {socialMediaIcons?.map((singleIcon: any) => (
-              <IconButton>{singleIcon?.icon}</IconButton>
+              <IconButton
+                sx={{
+                  backgroundColor: "primary.main",
+                  margin: 0.5,
+                }}
+                key={singleIcon?.id}
+              >
+                {singleIcon?.icon}
+              </IconButton>
             ))}
           </Box>
         </Box>
