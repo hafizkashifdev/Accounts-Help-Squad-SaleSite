@@ -71,8 +71,7 @@ const GRADIENTS = {
 };
 
 const COMMON = {
-  common: { black: "#000", white: "#fff",main: "#2B2B33",light:'#6B7280' },
-  common: { black: "#000", white: "#fff", ghost: "#C4C4CC" },
+  common: { black: "#000", white: "#fff", ghost: "#C4C4CC",main: "#2B2B33",light:'#6B7280' },
   primary: { ...PRIMARY, contrastText: "#fff" },
   secondary: { ...SECONDARY, contrastText: "#fff" },
   success: { ...SUCCESS, contrastText: GREY[800] },
