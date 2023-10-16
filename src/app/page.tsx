@@ -1,4 +1,8 @@
-import Box from "@mui/material/Box";
+import { HomeSection } from "@root/sections/export";
 export default function Home() {
-  return <Box>100</Box>;
+  return (
+    <>
+      <HomeSection />
+    </>
+  );
 }
