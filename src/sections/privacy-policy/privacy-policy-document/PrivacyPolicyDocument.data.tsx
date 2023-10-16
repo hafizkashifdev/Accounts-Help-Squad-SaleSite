@@ -298,9 +298,23 @@ proceedings). `,
     component: Descriptors,
     componentProps: {
       listItem: " Blocking cookies in your browser.",
-      description: `Most browsers let you remove or reject cookies,
-including cookies used for interest based advertising. To do this, follow the instructions in your browser settings. Many browsers accept cookies by default until you change your settings.
-For more information about cookies, including how to see what cookies have been set on your device and how to manage and delete them, visit . www.allaboutcookies.org`,
+      description: (
+        <>
+          Most browsers let you remove or reject cookies, including cookies used
+          for interest based advertising. To do this, follow the instructions in
+          your browser settings. Many browsers accept cookies by default until
+          you change your settings. For more information about cookies,
+          including how to see what cookies have been set on your device and how
+          to manage and delete them, visit{" "}
+          <a
+            href=" www.allaboutcookies.org"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            www.allaboutcookies.org
+          </a>
+        </>
+      ),
     },
   },
   {
@@ -314,11 +328,23 @@ For more information about cookies, including how to see what cookies have been 
     component: Descriptors,
     componentProps: {
       listItem: "  Using privacy plug ins or browsers",
-      description: ` You can block our websites from setting cookies used for interest based ads by using a browser with privacy features, like Brave, or installing browser plugins like Privacy Badger, Ghostery,
-or uBlock Origin, and configuring them to block third party cookies/trackers. You can also opt out of Google Analytics by downloading and installing the browser plug in available at:
-. 
-https://
-tools.google.com/dlpage/gaoptout `,
+      description: (
+        <>
+          You can block our websites from setting cookies used for interest
+          based ads by using a browser with privacy features, like Brave, or
+          installing browser plugins like Privacy Badger, Ghostery, or uBlock
+          Origin, and configuring them to block third party cookies/trackers.
+          You can also opt out of Google Analytics by downloading and installing
+          the browser plug in available at:{" "}
+          <a
+            href=" https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            https://tools.google.com/dlpage/gaoptout`
+          </a>
+        </>
+      ),
     },
   },
   {
@@ -327,18 +353,52 @@ tools.google.com/dlpage/gaoptout `,
       listItem: "  Platform opt outs",
       description: (
         <>
-          <div>
+          <Typography
+            sx={{ fontWeight: 500, color: "primary.lighter", display: "block" }}
+            variant="body2"
+            component={"span"}
+          >
             {" "}
-            Google : <>www.adsettings.google.com </>{" "}
-          </div>
-          <div>
+            Google :{" "}
+            <a
+              href=" www.adsettings.google.com"
+              target="_blank"
+              style={{ textDecoration: "underline", fontWeight: "bold" }}
+            >
+              www.adsettings.google.com{" "}
+            </a>{" "}
+          </Typography>
+          <Typography
+            component={"span"}
+            sx={{ fontWeight: 500, color: "primary.lighter", display: "block" }}
+            variant="body2"
+          >
             {" "}
-            Facebook : <> www.facebook.com/about/ads </>{" "}
-          </div>
-          <div>
+            Facebook :{" "}
+            <a
+              href="www.facebook.com/about/ads"
+              target="_blank"
+              style={{ textDecoration: "underline", fontWeight: "bold" }}
+            >
+              {" "}
+              www.facebook.com/about/ads{" "}
+            </a>{" "}
+          </Typography>
+          <Typography
+            component={"span"}
+            sx={{ fontWeight: 500, color: "primary.lighter", display: "block" }}
+            variant="body2"
+          >
             {" "}
-            Twiiter : <>: www.twitter.com/settings/personalization</>{" "}
-          </div>
+            Twitter :{" "}
+            <a
+              href="www.twitter.com/settings/personalization"
+              target="_blank"
+              style={{ textDecoration: "underline", fontWeight: "bold" }}
+            >
+              : www.twitter.com/settings/personalization
+            </a>{" "}
+          </Typography>
         </>
       ),
     },
@@ -355,11 +415,36 @@ tools.google.com/dlpage/gaoptout `,
     componentProps: {
       style: { marginRight: 3 },
       items: [
-        "Digital Advertising Alliance for Websites: outout.aboutads.infZ",
         <>
-          Digital Advertising Alliance for Mobile Apps <b>www.google.com</b>
+          Digital Advertising Alliance for Websites:{" "}
+          <a
+            href=" outout.aboutads.info"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            outout.aboutads.info
+          </a>
         </>,
-        "Network Advertising Initiative: optout.networkadvertising.org",
+        <>
+          Digital Advertising Alliance for Mobile Apps:{" "}
+          <a
+            href="https://youradchoices.com/appchoices"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            https://youradchoices.com/appchoices
+          </a>
+        </>,
+        <>
+          Network Advertising Initiative:{" "}
+          <a
+            href="optout.networkadvertising.org"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            optout.networkadvertising.org
+          </a>
+        </>,
       ],
     },
   },
@@ -373,8 +458,21 @@ tools.google.com/dlpage/gaoptout `,
     component: Descriptors,
     componentProps: {
       heading: "Do Not Track",
-      description: `Some Internet browsers may be configured to send Do Not Track signals to the online services that you visit. We currently do not respond to Do Not Track or similar signals. To find out
-more about Do Not Track, please visit http://www.allaboutdnt.com.`,
+      description: (
+        <>
+          Some Internet browsers may be configured to send Do Not Track signals
+          to the online services that you visit. We currently do not respond to
+          Do Not Track or similar signals. To find out more about Do Not Track,
+          please visit{" "}
+          <a
+            href="http://www.allaboutdnt.com"
+            target="_blank"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            http://www.allaboutdnt.com.
+          </a>
+        </>
+      ),
     },
   },
   {
@@ -454,8 +552,19 @@ the website `,
   {
     component: Descriptors,
     componentProps: {
-      mainHeading: "How to Contact Us ",
-      description: `You can reach us by email at: legal@accountshelpsquad.co.uk  or at the following mailing address: The Square UB111FW`,
+      mainHeading: "How to Contact Us",
+      description: (
+        <>
+          You can reach us by email at:{" "}
+          <a
+            href="mailto:legal@accountshelpsquad.co.uk"
+            style={{ textDecoration: "underline", fontWeight: "bold" }}
+          >
+            legal@accountshelpsquad.co.uk{" "}
+          </a>
+          or at the following mailing address: <b>The Square UB111FW</b>
+        </>
+      ),
     },
   },
 ];

@@ -1,31 +1,34 @@
 import { RHFTextField } from "@root/components/react-hook-form";
 import * as Yup from "yup";
-export const requestADemoDefaultFormValues = {
+export const contactUsDefaultFormValues = {
   name: "",
   email: "",
   phoneNo: "",
+  officeAddress: "",
   comments: "",
 };
 
-export const requestADemoFormSchema: any = Yup.object().shape({
+export const contactUsFormSchema: any = Yup.object().shape({
   name: Yup.string().required("Name is Required"),
   email: Yup.string().required("Email is Required"),
   phoneNo: Yup.string().required("Phone No. is Required"),
+  officeAddress: Yup.string().required("Office Address is Required"),
   comments: Yup.string(),
 });
 
-export const requestADemoDefaultFormValuesFunction = (
-  data: any = requestADemoDefaultFormValues
+export const contactUsDefaultFormValuesFunction = (
+  data: any = contactUsDefaultFormValues
 ) => {
   return {
     name: data?.name,
     email: data?.email,
     phoneNo: data?.phoneNo,
     comments: data?.comments,
+    officeAddress: data?.officeAddress,
   };
 };
 
-export const requestADemoFormFieldsDataFunction = (isFieldDisable = false) => [
+export const contactUsFormFieldsDataFunction = (isFieldDisable = false) => [
   {
     id: 2,
     component: RHFTextField,
@@ -63,7 +66,19 @@ export const requestADemoFormFieldsDataFunction = (isFieldDisable = false) => [
     component: RHFTextField,
   },
   {
-    id: 150,
+    id: 43150,
+    componentProps: {
+      fullWidth: true,
+      name: "officeAddress",
+      label: "Office Address",
+      placeholder: "Enter Phone No",
+      disabled: isFieldDisable,
+    },
+    gridLength: 12,
+    component: RHFTextField,
+  },
+  {
+    id: 15052,
     componentProps: {
       fullWidth: true,
       name: "comments",

@@ -1,7 +1,7 @@
 "use client";
 import { Box, Typography } from "@mui/material";
 
-export const RequestADemoHeader = () => {
+export const ContactUsHeader = () => {
   return (
     <>
       <Box textAlign={"center"} marginBottom={5}>
@@ -12,7 +12,7 @@ export const RequestADemoHeader = () => {
           }}
           variant="h1"
         >
-          Request a Demo
+          Reach Out to Us
         </Typography>
         <Typography
           sx={{
@@ -23,8 +23,11 @@ export const RequestADemoHeader = () => {
             textAlign: "center",
           }}
         >
-          Welcome to Accounts Help Squad ! Book a demo to learn more about our
-          services and how we can assist your business
+          Thank you for your interest in Accounts Help Squad! We value your
+          feedback, questions, and inquiries. Our dedicated team is here to
+          assist you in any way we can. Please feel free to reach out to us
+          using the information below, and we'll get back to you as soon as
+          possible.
         </Typography>
       </Box>
     </>
