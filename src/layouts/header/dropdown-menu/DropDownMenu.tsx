@@ -62,13 +62,7 @@ export const DropDownMenu = () => {
       >
         <Grid container>
           {menuItemsData.map((x: any) => (
-            <Grid
-              key={x?.id}
-              item
-              xs={12}
-              md={6}
-              // onClick={() => router.push("/formation-book")}
-            >
+            <Grid key={x?.id} item xs={12} md={6}>
               <MenuItemCard
                 itemName={x?.name}
                 itemId={x?.id}

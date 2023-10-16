@@ -12,7 +12,11 @@ export const RequestADemoForm = () => {
     requestADemoFormFieldsData,
   } = useRequestADemoForm();
   return (
-    <Box boxShadow={2} sx={{ backgroundColor: "white" }} padding={6}>
+    <Box
+      boxShadow={3}
+      sx={{ backgroundColor: "white", borderRadius: "1rem" }}
+      padding={6}
+    >
       <FormProvider
         methods={methods}
         onSubmit={handleSubmit(submitRequestADemoForm)}
