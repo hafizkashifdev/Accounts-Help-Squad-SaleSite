@@ -1,7 +1,8 @@
+import SignIn from '@root/sections/sign-in'
 import React from 'react'
 
 export default function SignInPage() {
   return (
-    <div>SignInPage</div>
+    <div><SignIn /></div>
   )
 }
