@@ -3,7 +3,7 @@ export function createGradient(color1: string, color2: string) {
 }
 
 const PRIMARY = {
-  lighter: "#444",
+  lighter: "#898999",
   light: "#3c3c3c",
   main: "#333",
   dark: "#2b2b2b",
@@ -71,7 +71,7 @@ const GRADIENTS = {
 };
 
 const COMMON = {
-  common: { black: "#000", white: "#fff" },
+  common: { black: "#000", white: "#fff", ghost: "#C4C4CC" },
   primary: { ...PRIMARY, contrastText: "#fff" },
   secondary: { ...SECONDARY, contrastText: "#fff" },
   success: { ...SUCCESS, contrastText: GREY[800] },
