@@ -1,8 +1,13 @@
 import React from 'react'
-import SignInPage from './signin/page'
+import { FooterAuth } from './footer/footer'
+import { HeaderAuth } from './header/Header'
 
-export default function Layout() {
+export default function Layout({ children }: any) {
   return (
-    <div><SignInPage /></div>
+    <div>
+      <HeaderAuth/>
+      {children}
+      <FooterAuth/>
+    </div>
   )
 }

@@ -38,13 +38,13 @@ export const SignInForm = () => {
                     })}
                     <LoadingButton
                         fullWidth
-                        sx={{ marginTop: 10, marginLeft: 2, padding: '16px 32px', borderRadius: "8px", background: "" }}
+                        sx={{ marginTop: 4, marginLeft: 2, padding: '16px 32px', borderRadius: "8px",background:"#A6A6B3",color:"#FFF"}}
                         type="submit"
                         variant="contained"
                         onClick={handleSubmit(submitRequestADemoForm())}
 
                     >
-                        Submit
+                        Sign In
                     </LoadingButton>
                 </Grid>
             </FormProvider>
