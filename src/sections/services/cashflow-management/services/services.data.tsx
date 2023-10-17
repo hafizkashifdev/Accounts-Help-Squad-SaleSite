@@ -8,24 +8,24 @@ export const dataArray = [
     id: 1,
     src: Overview,
     title: "Overview",
-    desc: "Get a quick summary of your outstanding invoices, providing you with an instant snapshot of your current financial position.",
+    desc: "Get a quick summary of your cash inflows and outflows, providing you with an instant snapshot of your financial health.",
   },
   {
     id: 2,
     src: AgingAnalysis,
     title: "Aging Analysis",
-    desc: "Break down your receivables by age to identify where your cash is tied up and prioritize collections effectively.",
+    desc: "Analyze cash flow trends to identify patterns and make informed decisions about managing your finances.",
   },
   {
     id: 3,
     src: InvoiceManagement,
     title: "Invoice Management",
-    desc: "Track all your issued invoices in one place, making it easier than ever to manage your billing process efficiently.",
+    desc: "Forecast your future cash inflows and outflows, helping you plan for upcoming financial obligations and opportunities.",
   },
   {
     id: 4,
     src: PaymentReminders,
     title: "Payment Reminders",
-    desc: "Set up automated payment reminders to ensure your clients never miss a due date, reducing late payments.",
+    desc: "Receive alerts for cash flow gaps and surpluses, ensuring that you have the foresight to act proactively.",
   },
 ];

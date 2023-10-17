@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import FormationBookHeroImg from "@root/assets/services/images/formation-book/FormationBookHero.png";
+import AccountsPayableHeroImg from "@root/assets/services/images/accounts-payable/AccountsPayableHero.png";
 
 const Hero = () => {
   return (
@@ -13,9 +13,9 @@ const Hero = () => {
         paddingX={{ xs: 1, md: 5 }}
         color={"primary.main"}
       >
-        <Typography variant="h1">Formation Book</Typography>
+        <Typography variant="h1">Accounts Payable</Typography>
         <Typography variant="h5">
-          Your Gateway to Seamless Business Establishment
+          Revolutionize Your Expense Management
         </Typography>
         <Typography
           variant="body1"
@@ -23,16 +23,17 @@ const Hero = () => {
           width={"90%"}
           color={"primary.lighter"}
         >
-          Welcome to Formation Book, your all-in-one solution for starting and
-          managing your business journey. We understand that starting a company
-          can be daunting, and that's why we've crafted a service that
-          simplifies the process, saving you time and effort.
+          Welcome to the future of expense management with Accounts Help Squad's
+          Accounts Payable solution. We understand that staying on top of your
+          bills and payments is essential for business success. That's why we've
+          developed an innovative platform to simplify and enhance your accounts
+          payable process.
         </Typography>
       </Grid>
       <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
-          src={FormationBookHeroImg}
-          alt={"Formation Book"}
+          src={AccountsPayableHeroImg}
+          alt={"Accounts Payable"}
           width={0}
           height={0}
           style={{ width: "90%", height: "90%" }}

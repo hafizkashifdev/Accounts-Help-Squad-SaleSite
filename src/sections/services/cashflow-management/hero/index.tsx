@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import AccountsReceivableHeroImg from "@root/assets/services/images/accounts-receivable/AccountsReceivableHero.png";
+import CashflowManagementHeroImg from "@root/assets/services/images/cashflow-management/CashflowManagementHero.png";
 
 const Hero = () => {
   return (
@@ -13,24 +13,24 @@ const Hero = () => {
         paddingX={{ xs: 1, md: 5 }}
         color={"primary.main"}
       >
-        <Typography variant="h1">Accounts Receivable</Typography>
-        <Typography variant="h5">Our Comprehensive Services Include</Typography>
+        <Typography variant="h1">Cashflow Management</Typography>
+        <Typography variant="h5">Mastering Your Financial Stability</Typography>
         <Typography
           variant="body1"
           mt={1}
           width={"90%"}
           color={"primary.lighter"}
         >
-          Welcome to Accounts Help Squad's Accounts Receivable service, designed
-          to revolutionize your receivables management. We understand that
-          timely payments are crucial for your business's financial health. With
-          our innovative solution, you can take control like never before.
+          Welcome to the future of financial stability with Accounts Help
+          Squad's Cash Flow Management solution. We understand that cash is the
+          lifeblood of your business, and we're here to empower you with the
+          tools you need to manage it effectively.
         </Typography>
       </Grid>
       <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
-          src={AccountsReceivableHeroImg}
-          alt={"Accounts Receivable"}
+          src={CashflowManagementHeroImg}
+          alt={"Cashflow Management"}
           width={0}
           height={0}
           style={{ width: "90%", height: "90%" }}

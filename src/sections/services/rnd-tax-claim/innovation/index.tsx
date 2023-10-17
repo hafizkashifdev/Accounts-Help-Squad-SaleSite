@@ -1,6 +1,6 @@
 import { Grid, Typography, Button, Box } from "@mui/material";
 import Image from "next/image";
-import AccountsReceivableInnovation from "@root/assets/services/images/accounts-receivable/AccountsReceivableInnovation.png";
+import RNDTaxClaimInnovation from "@root/assets/services/images/rnd-tax-claim/RNDTaxClaimInnovation.png";
 import { Fragment } from "react";
 import { dataArray } from "./innovation.data";
 
@@ -9,7 +9,7 @@ const Innovation = () => {
     <Grid container spacing={4} paddingX={{ xs: 1, md: 5 }} marginY={5}>
       <Grid item xs={12} md={6}>
         <Image
-          src={AccountsReceivableInnovation}
+          src={RNDTaxClaimInnovation}
           alt={"Innovation"}
           width={0}
           height={0}
@@ -18,11 +18,11 @@ const Innovation = () => {
       </Grid>
       <Grid item xs={12} md={6} margin={"auto"}>
         <Typography variant="h3" color={"primary.main"}>
-          Innovation in Receivables Management - Unleash the Potential
+          Innovation Meets Financial Prosperity - Your Key to Growth
         </Typography>
         <Typography variant="body1" color={"primary.lighter"} my={1}>
-          Our commitment to innovation extends to the core of our Accounts
-          Receivable service. With us, you'll experience:
+          Our commitment to innovation extends to the core of our R&D Tax Claim
+          service. With us, you'll experience:
         </Typography>
 
         {dataArray?.map((item: any) => (
@@ -30,7 +30,7 @@ const Innovation = () => {
             <Box display={"flex"} alignItems={"center"}>
               <Box
                 height={"30px"}
-                border={"3px solid #FBCE66"}
+                border={"3px solid #8349FF"}
                 borderRadius={2}
               />
               <Typography variant="h6" fontWeight={600} ml={1} my={1}>
@@ -47,7 +47,7 @@ const Innovation = () => {
           type="button"
           sx={{ padding: "16px 32px", marginTop: 2 }}
         >
-          Master Your Expenses Today
+          Transform Your Financial Stability Today
         </Button>
       </Grid>
     </Grid>

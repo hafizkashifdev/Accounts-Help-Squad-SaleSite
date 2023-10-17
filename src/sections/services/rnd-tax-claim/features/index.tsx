@@ -20,7 +20,7 @@ const MoreFeatures = () => {
             type="button"
             sx={{ padding: "16px 32px", marginTop: 2 }}
           >
-            Optimize Your Receivables with Accounts Receivable
+            Optimize Your Innovation with R&D Tax Claim
           </Button>
         </Grid>
 
