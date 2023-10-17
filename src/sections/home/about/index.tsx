@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 
 const About = () => {
   return (
-    <>
+    <Box>
       <SectionHeading
         heading="About Accounts Help Squad"
         text="With a rich history of providing top-notch accounting solutions, we've been serving businesses of all sizes since 2021."
@@ -21,7 +21,7 @@ const About = () => {
       >
         <Mission />
       </Box>
-    </>
+    </Box>
   );
 };
 

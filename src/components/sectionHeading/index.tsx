@@ -8,7 +8,7 @@ const SectionHeading: FC<{ heading: string; text?: string }> = (props) => {
   const { palette }: any = useTheme();
 
   return (
-    <>
+    <Box>
       <Typography
         variant="h2"
         textAlign="center"
@@ -33,7 +33,7 @@ const SectionHeading: FC<{ heading: string; text?: string }> = (props) => {
           </Typography>
         </Typography>
       )}
-    </>
+    </Box>
   );
 };
 
