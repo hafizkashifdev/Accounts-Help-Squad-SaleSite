@@ -1,7 +1,9 @@
 "use client";
+
 import { PrivacyPolicyDocument } from "./privacy-policy-document/PrivacyPolicyDocument";
 import { PrivacyPolicyHeader } from "./privacy-policy-header/PrivacyPolicyHeader";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
+
 const PrivacyPolicy = () => {
   return (
     <Box
@@ -18,7 +20,6 @@ const PrivacyPolicy = () => {
       ></Box>
     </Box>
   );
-  // return <>Privacy Policy</>;
 };
 
 export default PrivacyPolicy;

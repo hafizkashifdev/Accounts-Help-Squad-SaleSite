@@ -71,7 +71,7 @@ export const contactUsFormFieldsDataFunction = (isFieldDisable = false) => [
       fullWidth: true,
       name: "officeAddress",
       label: "Office Address",
-      placeholder: "Enter Phone No",
+      placeholder: "Enter Office Address",
       disabled: isFieldDisable,
     },
     gridLength: 12,

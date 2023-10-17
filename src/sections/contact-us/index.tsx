@@ -4,11 +4,7 @@ import { ContactUsHeader } from "./contact-us-header/ContactUsHeader";
 import { ContactUsForm } from "./contact-us-form/ContactUsForm";
 const ContactUs = () => {
   return (
-    <Box
-    // sx={{
-    //   marginX: { xs: 1, md: 5 },
-    // }}
-    >
+    <Box>
       <ContactUsHeader />
       <Box
         display={"flex"}
@@ -17,8 +13,9 @@ const ContactUs = () => {
         sx={{
           backgroundImage: `url(${BgImage?.src})`,
           backgroundPositionY: "bottom",
-          backgroundSize: "50% 80%",
+          backgroundSize: "50% 75%",
           backgroundRepeat: "repeat-x",
+          paddingBottom: { xs: "1rem", md: "10rem" },
         }}
       >
         <ContactUsForm />

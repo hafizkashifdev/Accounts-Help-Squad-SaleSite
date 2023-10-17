@@ -11,11 +11,6 @@ const TermsOfService = () => {
     >
       <TermsOfServiceHeader />
       <TermsOfServiceDocument />
-      <Box
-        display={"flex"}
-        justifyContent={"center"}
-        alignItems={"center"}
-      ></Box>
     </Box>
   );
 };
