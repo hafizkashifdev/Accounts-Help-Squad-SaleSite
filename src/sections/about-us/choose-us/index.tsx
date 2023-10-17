@@ -1,19 +1,19 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
-import mssionimg from '../../../assets/about-us/mission.png';
+import chooseimg from '../../../assets/about-us/choose.png';
 import Image from 'next/image';
-import {missionData} from './mission-data';
+import {chooseUsData} from './choose-us-data';
 
-const OurMission = () => {
+
+const ChooseUs = () => {
   return (
-    <>
-    <div style={{background:'#FCFCFC'}}>
+   
       <Container maxWidth="xl">
-        <Grid container spacing={2} sx={{ pt: '117px' ,pb:'146px'}}>
+        <Grid container spacing={2} sx={{ mt: '180px'}}>
           <Grid item lg={6}>
             <Image
-              src={mssionimg}
-              alt="mission us img"
+              src={chooseimg}
+              alt="choose us img"
             />
           </Grid>
           <Grid item lg={6} sx={{ mt: '57px' }}>
@@ -22,10 +22,10 @@ const OurMission = () => {
                 color: '#1D293F',
                 fontSize: '32px',
                 fontWeight: 600,
-                mt:'30px'
+                mt:'60px'
               }}
             >
-              Our Mission
+            Why Choose Us
             </Typography>
             <Typography
               sx={{
@@ -34,9 +34,8 @@ const OurMission = () => {
                 fontWeight: 400,
               }}
             >
-              Our mission is clear: to make financial management accessible, efficient, and beneficial for every business. We are committed to:
-            </Typography>
-            {missionData.map((mission, index) => (
+             A collage of client testimonials and achievements.     </Typography>
+            {chooseUsData.map((choose, index) => (
               <Box key={index} sx={{ mt: '24px' }}>
                 <Typography component="span">
                   <span
@@ -60,7 +59,7 @@ const OurMission = () => {
                         fontWeight: 600,
                       }}
                     >
-                      {mission.title}
+                      {choose.title}
                     </Typography>
                   </span>
                 </Typography>
@@ -73,16 +72,15 @@ const OurMission = () => {
                     mt: '8px',
                   }}
                 >
-                  {mission.description}
+                  {choose.description}
                 </Typography>
               </Box>
             ))}
           </Grid>
         </Grid>
       </Container>
-      </div>
-    </>
-  );
-};
+     
+  )
+}
 
-export default OurMission;
+export default ChooseUs

@@ -4,7 +4,7 @@ import { Container, Grid, Typography ,Box} from '@mui/material'
 const OurStory = () => {
   return (
   <>
-  
+  <div style={{background:'#FCFCFC'}}>
 <Container maxWidth="lg">
 
         <Grid container sx={{mt:'150px'}}>
@@ -83,7 +83,7 @@ const OurStory = () => {
   </Grid>
 </Container>
 
-
+</div>
   </>
   )
 }
