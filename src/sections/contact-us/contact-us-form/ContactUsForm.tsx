@@ -18,7 +18,8 @@ export const ContactUsForm = () => {
         backgroundColor: "white",
         borderRadius: "1rem",
       }}
-      padding={6}
+      paddingX={{ xs: 2, md: 6 }}
+      paddingY={{ xs: 3, md: 6 }}
       marginX={{ xs: 1, md: 5 }}
     >
       <Typography
@@ -29,7 +30,7 @@ export const ContactUsForm = () => {
           marginBottom: { xs: 2, md: 4 },
           textAlign: "center",
         }}
-        variant="h4"
+        variant="h3"
       >
         Contact Us
       </Typography>
@@ -37,7 +38,7 @@ export const ContactUsForm = () => {
         methods={methods}
         onSubmit={handleSubmit(submitContactUsForm)}
       >
-        <Grid container spacing={3}>
+        <Grid container spacing={{ xs: 1, md: 4 }}>
           {contactUsFormFieldsData?.map((form: any) => {
             return (
               <Grid item xs={12} md={form?.gridLength} key={form?.id}>
@@ -57,7 +58,12 @@ export const ContactUsForm = () => {
           })}
           <LoadingButton
             fullWidth
-            sx={{ marginTop: 3, marginLeft: 2 }}
+            sx={{
+              marginTop: 3,
+              marginLeft: 2,
+              padding: 1,
+              borderRadius: "10px",
+            }}
             type="submit"
             variant="contained"
           >

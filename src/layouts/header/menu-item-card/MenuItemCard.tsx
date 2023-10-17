@@ -22,13 +22,22 @@ export const MenuItemCard = ({ itemOnClick, itemName }: any) => {
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          sx={{ backgroundColor: "common.ghost", borderRadius: "4px" }}
+          sx={{
+            backgroundColor: "common.ghost",
+            borderRadius: "4px",
+            padding: 1.5,
+          }}
         >
           <Image src={LogoIcon} alt="brand-logo" width={20} height={20} />
         </Box>
         <Typography
           fontWeight={500}
-          sx={{ color: "primary.lighter", fontsize: "14px", fontWeight: 500 }}
+          sx={{
+            color: "primary.lighter",
+            fontsize: "14px",
+            fontWeight: 500,
+            whiteSpace: "wrap",
+          }}
         >
           {itemName}
         </Typography>

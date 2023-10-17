@@ -15,6 +15,7 @@ export const HeaderMobile = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
+  // console.log({ isVisible });
   return (
     <Box>
       <Box
@@ -39,7 +40,13 @@ export const HeaderMobile = () => {
           justifyContent={"space-between"}
           gap={4}
         >
-          <Image src={Logo} alt="brand-logo" onClick={() => router.push("/")} />
+          <Image
+            src={Logo}
+            alt="brand-logo"
+            width={180}
+            onClick={() => router.push("/")}
+            style={{ cursor: "pointer" }}
+          />
           <Box sx={{ cursor: "pointer" }}>
             <IconButton
               onClick={() => setIsVisible((x) => !x)}
@@ -65,23 +72,35 @@ export const HeaderMobile = () => {
             gap={2.5}
           >
             <MenuItem
-              menuOnClick={() => router.push("/")}
+              menuOnClick={() => {
+                router.push("/");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname === "/"}
               menuItemName="Home"
             />
             <MenuItem
-              menuOnClick={() => router.push("/about-us")}
+              menuOnClick={() => {
+                router.push("/about-us");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/about-us")}
               menuItemName="About Us"
             />
-            <DropDownMenu />
+            <DropDownMenu setMenuClose={setIsVisible} setMenu={isVisible} />
             <MenuItem
-              menuOnClick={() => router.push("/pricing")}
+              menuOnClick={() => {
+                router.push("/pricing");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/pricing")}
               menuItemName="Pricing"
             />
             <MenuItem
-              menuOnClick={() => router.push("/contact-us")}
+              menuOnClick={() => {
+                router.push("/contact-us");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/contact-us")}
               menuItemName="Contact Us"
             />
@@ -95,10 +114,22 @@ export const HeaderMobile = () => {
             gap={2}
             flexWrap={"wrap"}
           >
-            <Button variant="outlined" onClick={() => router.push("/signin")}>
+            <Button
+              variant="outlined"
+              onClick={() => {
+                router.push("/signin");
+                setIsVisible((x) => !x);
+              }}
+            >
               Sign In
             </Button>
-            <Button variant="contained" onClick={() => router.push("/signup")}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                router.push("/signup");
+                setIsVisible((x) => !x);
+              }}
+            >
               Sign Up
             </Button>
           </Box>

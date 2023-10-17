@@ -17,15 +17,16 @@ export const RequestADemoForm = () => {
       sx={{
         backgroundColor: "white",
         borderRadius: "1rem",
-        marginX: { xs: 1, md: 5 },
       }}
-      padding={6}
+      marginX={{ xs: 1, md: 5 }}
+      paddingX={{ xs: 2, md: 6 }}
+      paddingY={{ xs: 3, md: 6 }}
     >
       <FormProvider
         methods={methods}
         onSubmit={handleSubmit(submitRequestADemoForm)}
       >
-        <Grid container spacing={3}>
+        <Grid container spacing={{ xs: 1.5, md: 4 }}>
           {requestADemoFormFieldsData?.map((form: any) => {
             return (
               <Grid item xs={12} md={form?.gridLength} key={form?.id}>
@@ -45,7 +46,12 @@ export const RequestADemoForm = () => {
           })}
           <LoadingButton
             fullWidth
-            sx={{ marginTop: 3, marginLeft: 2 }}
+            sx={{
+              marginTop: 3,
+              marginLeft: 2,
+              padding: 1,
+              borderRadius: "10px",
+            }}
             type="submit"
             variant="contained"
           >

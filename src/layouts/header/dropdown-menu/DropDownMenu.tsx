@@ -9,7 +9,8 @@ import { menuItemsData } from "./DropDownMenu.data";
 import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
 import { useRouter } from "next/navigation";
 
-export const DropDownMenu = () => {
+export const DropDownMenu = ({ setMenuClose, setMenu }: any) => {
+  // console.log(setMenu);
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -18,6 +19,7 @@ export const DropDownMenu = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    // setMenuClose?.((x: any): any => !x);
   };
 
   return (
@@ -56,7 +58,7 @@ export const DropDownMenu = () => {
           ".MuiMenu-paper": {
             maxWidth: { md: "600px" },
             borderRadius: "10px",
-            padding: 1,
+            padding: { xs: 0.1, md: 1 },
           },
         }}
       >
