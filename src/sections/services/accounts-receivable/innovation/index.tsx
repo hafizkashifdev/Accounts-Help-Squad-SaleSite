@@ -16,13 +16,13 @@ const Innovation = () => {
           style={{ width: "100%", height: "100%" }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6} margin={"auto"}>
         <Typography variant="h3" color={"primary.main"}>
           Innovation in Receivables Management - Unleash the Potential
         </Typography>
         <Typography variant="body1" color={"primary.lighter"} my={1}>
           Our commitment to innovation extends to the core of our Accounts
-          Receivable service. With us, you'll experience
+          Receivable service. With us, you'll experience:
         </Typography>
 
         {dataArray?.map((item: any) => (

@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <>
       <Box
-        sx={{ backgroundColor: "#2B2B33" }}
+        sx={{ backgroundColor: "primary.main" }}
         paddingX={{ xs: 1, md: 5 }}
         paddingY={{ xs: 1, md: 3 }}
       >
@@ -53,7 +53,7 @@ export const Footer = () => {
               fontSize: "16px",
               borderRight: "1px solid white",
               borderLeft: "1px solid white",
-              paddingX: 3,
+              paddingX: { xs: 1, md: 3 },
               cursor: "pointer",
             }}
             onClick={() => router?.push("/faq")}
@@ -77,6 +77,7 @@ export const Footer = () => {
           display={{ md: "flex" }}
           alignItems={"center"}
           justifyContent={"space-between"}
+          textAlign={"center"}
           paddingTop={2}
         >
           <Typography

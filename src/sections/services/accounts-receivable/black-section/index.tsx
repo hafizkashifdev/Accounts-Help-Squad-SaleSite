@@ -62,7 +62,7 @@ const BlackSection = () => {
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
             src={AccountsReceivableMagic}
-            alt={"Formation Book"}
+            alt={"Accounts Receivable"}
             width={0}
             height={0}
             style={{ width: "90%", height: "90%" }}

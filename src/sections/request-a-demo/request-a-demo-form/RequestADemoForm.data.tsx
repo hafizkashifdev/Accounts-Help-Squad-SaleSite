@@ -8,9 +8,9 @@ export const requestADemoDefaultFormValues = {
 };
 
 export const requestADemoFormSchema: any = Yup.object().shape({
-  name: Yup.string(),
-  email: Yup.string(),
-  phoneNo: Yup.string(),
+  name: Yup.string().required("Name is Required"),
+  email: Yup.string().required("Email is Required"),
+  phoneNo: Yup.string().required("Phone No. is Required"),
   comments: Yup.string(),
 });
 
@@ -63,7 +63,7 @@ export const requestADemoFormFieldsDataFunction = (isFieldDisable = false) => [
     component: RHFTextField,
   },
   {
-    id: 150,
+    id: 850,
     componentProps: {
       fullWidth: true,
       name: "comments",
