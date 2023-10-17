@@ -5,6 +5,7 @@ import OurMission from "./our-mission";
 import OurTeam from "./our-team";
 import ChooseUs from "./choose-us";
 import JoinUs from "./join-us";
+import OurValues from "./our-values";
 
 const AboutUs = () => {
   return (
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <OurMission />
       <div style={{ background: 'linear-gradient(0deg, rgba(246, 252, 255, 0.00) 0%, #F7F7F7 100%)' }}>
         <OurTeam />
+        <OurValues/>
         <ChooseUs/>
         <JoinUs/>
       </div>

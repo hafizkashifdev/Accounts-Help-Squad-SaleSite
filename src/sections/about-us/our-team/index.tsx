@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import teamceo from '../../../assets/about-us/teamceo.png';
 import Image from 'next/image';
+import {teamtData} from './our-team-data'
+import ProfileCard from '@root/components/profileCard';
 
 
 const OurTeam = () => {
@@ -74,7 +76,30 @@ Founder
 
 </Grid>
 
+
         </Grid>
+      </Container>
+      <Container maxWidth='xl'>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 2.4,
+          flexWrap: "wrap",
+          mt: 6.8,
+        }}
+      >
+        {teamtData?.map(({ image, title, text }) => (
+          <ProfileCard
+            key={title}
+            image={image}
+            name={title}
+            desgination={text}
+            textAlign="center"
+          />
+        ))}
+      </Box>
       </Container>
     </>
   );
