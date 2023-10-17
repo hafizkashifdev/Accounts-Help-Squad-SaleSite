@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { Fragment } from "react";
-import FormationBookHero from "./hero";
-import FormationBookServices from "./services";
+import Hero from "./hero";
+import Services from "./services";
 import BlackSection from "./black-section";
 import Image from "next/image";
 import Boxes from "@root/assets/services/images/Boxes.png";
@@ -9,9 +9,9 @@ import Boxes from "@root/assets/services/images/Boxes.png";
 const FormationBook = () => {
   return (
     <Fragment>
-      <FormationBookHero />
+      <Hero />
 
-      <FormationBookServices />
+      <Services />
 
       <BlackSection />
 

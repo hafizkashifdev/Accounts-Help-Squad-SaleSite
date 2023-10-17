@@ -15,6 +15,7 @@ export const HeaderMobile = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
+  // console.log({ isVisible });
   return (
     <Box>
       <Box
@@ -39,7 +40,13 @@ export const HeaderMobile = () => {
           justifyContent={"space-between"}
           gap={4}
         >
-          <Image src={Logo} alt="brand-logo" />
+          <Image
+            src={Logo}
+            alt="brand-logo"
+            width={180}
+            onClick={() => router.push("/")}
+            style={{ cursor: "pointer" }}
+          />
           <Box sx={{ cursor: "pointer" }}>
             <IconButton
               onClick={() => setIsVisible((x) => !x)}
@@ -65,86 +72,38 @@ export const HeaderMobile = () => {
             gap={2.5}
           >
             <MenuItem
-              menuOnClick={() => router.push("/")}
+              menuOnClick={() => {
+                router.push("/");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname === "/"}
               menuItemName="Home"
             />
             <MenuItem
-              menuOnClick={() => router.push("/about-us")}
+              menuOnClick={() => {
+                router.push("/about-us");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/about-us")}
               menuItemName="About Us"
             />
-            <DropDownMenu />
+            <DropDownMenu setMenuClose={setIsVisible} setMenu={isVisible} />
             <MenuItem
-              menuOnClick={() => router.push("/pricing")}
+              menuOnClick={() => {
+                router.push("/pricing");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/pricing")}
               menuItemName="Pricing"
             />
             <MenuItem
-              menuOnClick={() => router.push("/contact-us")}
+              menuOnClick={() => {
+                router.push("/contact-us");
+                setIsVisible((x) => !x);
+              }}
               isActive={pathname.startsWith("/contact-us")}
               menuItemName="Contact Us"
             />
-            {/* <Button
-              onClick={() => router.push("/")}
-              disableRipple
-              sx={{
-                color: pathname === "/" ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Home{" "}
-            </Button>
-            <Button
-              onClick={() => {
-                router.push("/about-us");
-                setIsVisible(false);
-              }}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/about-us") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              About Us{" "}
-            </Button>
-            <DropDownMenu />
-            <Button
-              onClick={() => router.push("/pricing")}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/pricing") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Pricing{" "}
-            </Button>
-            <Button
-              onClick={() => router.push("/contact-us")}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/contact-us") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Contact Us{" "}
-            </Button> */}
           </Box>
         )}
         {!isVisible && (
@@ -157,29 +116,19 @@ export const HeaderMobile = () => {
           >
             <Button
               variant="outlined"
-              // sx={{
-              //   color: "#2B2B33",
-              //   fontsize: "16px",
-              //   fontWeight: "500",
-              //   border: "1px solid #2B2B33",
-              //   backgroundColor: "transparent",
-              //   "&:hover": {
-              //     backgroundColor: "transparent",
-              //     border: "1px solid #2B2B33",
-              //   },
-              // }}
+              onClick={() => {
+                router.push("/signin");
+                setIsVisible((x) => !x);
+              }}
             >
               Sign In
             </Button>
             <Button
               variant="contained"
-              // sx={{
-              //   color: "white",
-              //   fontsize: "16px",
-              //   fontWeight: "500",
-              //   backgroundColor: "#2B2B33",
-              //   "&:hover": { backgroundColor: "#2B2B33" },
-              // }}
+              onClick={() => {
+                router.push("/signup");
+                setIsVisible((x) => !x);
+              }}
             >
               Sign Up
             </Button>

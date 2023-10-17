@@ -2,7 +2,7 @@ import { Grid, Typography, Box } from "@mui/material";
 import Image from "next/image";
 import { dataArray } from "./services.data";
 
-const FormationBookServices = () => {
+const Services = () => {
   return (
     <Box paddingX={{ xs: 1, md: 5 }} color={"primary.main"}>
       <Typography variant="h2" textAlign={"center"}>
@@ -25,4 +25,4 @@ const FormationBookServices = () => {
   );
 };
 
-export default FormationBookServices;
+export default Services;

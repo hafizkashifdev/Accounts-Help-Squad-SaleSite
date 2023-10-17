@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import FormationBookHeroImg from "@root/assets/services/images/formation-book/FormationBookHero.png";
 
-const FormationBookHero = () => {
+const Hero = () => {
   return (
     <Grid container>
       <Grid
@@ -42,4 +42,4 @@ const FormationBookHero = () => {
   );
 };
 
-export default FormationBookHero;
+export default Hero;

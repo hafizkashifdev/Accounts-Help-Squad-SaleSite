@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import AccountsReceivableHeroImg from "@root/assets/services/images/accounts-receivable/AccountsReceivableHero.png";
 
-const AccountsReceivableHero = () => {
+const Hero = () => {
   return (
     <Grid container>
       <Grid
@@ -30,7 +30,7 @@ const AccountsReceivableHero = () => {
       <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
           src={AccountsReceivableHeroImg}
-          alt={"Formation Book"}
+          alt={"Accounts Receivable"}
           width={0}
           height={0}
           style={{ width: "90%", height: "90%" }}
@@ -40,4 +40,4 @@ const AccountsReceivableHero = () => {
   );
 };
 
-export default AccountsReceivableHero;
+export default Hero;

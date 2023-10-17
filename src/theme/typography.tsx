@@ -1,6 +1,7 @@
 import { pxToRem, responsiveFontSizes } from "@root/utils/getFontValue";
+import { Exo_2 } from "next/font/google";
 
-const FONT_FAMILY = "'Exo 2', sans-serif";
+const FONT_FAMILY = Exo_2({ subsets: ["latin"] });
 
 const typography = {
   fontFamily: FONT_FAMILY,
