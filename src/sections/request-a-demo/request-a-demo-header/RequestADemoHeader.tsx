@@ -18,12 +18,12 @@ export const RequestADemoHeader = () => {
           sx={{
             color: "primary.lighter",
             fontSize: "1rem",
-            width: { xs: "98%", md: "50%" },
+            width: { xs: "95%", md: "50%" },
             margin: "auto",
             textAlign: "center",
           }}
         >
-          Welcome to Accounts Help Squad ! Book a demo to learn more about our
+          Welcome to Accounts Help Squad! Book a demo to learn more about our
           services and how we can assist your business
         </Typography>
       </Box>

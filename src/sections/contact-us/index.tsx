@@ -17,8 +17,9 @@ const ContactUs = () => {
         sx={{
           backgroundImage: `url(${BgImage?.src})`,
           backgroundPositionY: "bottom",
-          backgroundSize: "50% 80%",
+          backgroundSize: "50% 75%",
           backgroundRepeat: "repeat-x",
+          paddingBottom: { xs: "1rem", md: "10rem" },
         }}
       >
         <ContactUsForm />

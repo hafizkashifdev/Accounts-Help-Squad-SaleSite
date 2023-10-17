@@ -22,7 +22,12 @@ export const HeaderMobileUp = () => {
         flexWrap={"wrap"}
         gap={2}
       >
-        <Image src={Logo} alt="brand-logo" onClick={() => router.push("/")} />
+        <Image
+          src={Logo}
+          alt="brand-logo"
+          onClick={() => router.push("/")}
+          style={{ cursor: "pointer" }}
+        />
         <Box
           display={{ xs: "none", md: "flex" }}
           flexDirection={{ xs: "column", md: "row" }}
