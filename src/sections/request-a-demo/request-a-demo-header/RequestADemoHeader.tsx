@@ -8,14 +8,21 @@ export const RequestADemoHeader = () => {
         <Typography
           sx={{
             color: "primary.main",
-            fontSize: "3rem",
-            fontWeight: 600,
             marginBottom: 2,
           }}
+          variant="h1"
         >
           Request a Demo
         </Typography>
-        <Typography sx={{ color: "primary.lighter", fontSize: "1rem" }}>
+        <Typography
+          sx={{
+            color: "primary.lighter",
+            fontSize: "1rem",
+            width: { xs: "95%", md: "50%" },
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
           Welcome to Accounts Help Squad! Book a demo to learn more about our
           services and how we can assist your business
         </Typography>

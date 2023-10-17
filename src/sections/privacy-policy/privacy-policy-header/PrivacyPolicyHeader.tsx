@@ -1,4 +1,3 @@
-"use client";
 import { Box, Typography } from "@mui/material";
 export const PrivacyPolicyHeader = () => {
   return (
@@ -7,13 +6,24 @@ export const PrivacyPolicyHeader = () => {
         <Typography
           sx={{
             color: "primary.main",
-            fontSize: "3rem",
-            fontWeight: 600,
+            // fontSize: "3rem",
+            // fontWeight: 600,
+            marginX: 1,
+            marginBottom: { xs: 1, md: 2 },
           }}
+          variant="h1"
         >
           Privacy Policy
         </Typography>
-        <Typography sx={{ color: "#6B7280", fontSize: "1.2rem" }}>
+        <Typography
+          sx={{
+            color: "primary.lighter",
+            fontSize: "1.2rem",
+            width: { xs: "98%", md: "90%" },
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
           This Privacy Policy explains how Accounts Help Squad ("we," "our," or
           "us") collects, uses, discloses, and safeguards your personal
           information in compliance with the applicable data protection laws in
@@ -23,7 +33,16 @@ export const PrivacyPolicyHeader = () => {
           pertaining to individuals acting as business representatives, rather
           than in their personal capacity.
         </Typography>
-        <Typography sx={{ color: "#6B7280", fontSize: "1.2rem" }}>
+        <Typography
+          sx={{
+            color: "primary.lighter",
+            fontSize: "1.2rem",
+            width: { xs: "98%", md: "90%" },
+            margin: "auto",
+            textAlign: "center",
+            marginBottom: 3,
+          }}
+        >
           As part of our Services, we process consumer personal information on
           behalf of our business customers as a service provider, pursuant to
           our agreements with those businesses. This Privacy Policy does not

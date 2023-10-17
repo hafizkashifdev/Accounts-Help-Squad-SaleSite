@@ -9,7 +9,8 @@ import { menuItemsData } from "./DropDownMenu.data";
 import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
 import { useRouter } from "next/navigation";
 
-export const DropDownMenu = () => {
+export const DropDownMenu = ({ setMenuClose, setMenu }: any) => {
+  // console.log(setMenu);
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -18,6 +19,7 @@ export const DropDownMenu = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    // setMenuClose?.((x: any): any => !x);
   };
 
   return (
@@ -31,13 +33,13 @@ export const DropDownMenu = () => {
         disableRipple
         endIcon={
           open ? (
-            <KeyboardArrowUpIcon sx={{ color: "#2B2B33" }} />
+            <KeyboardArrowUpIcon sx={{ color: "primary.main" }} />
           ) : (
-            <KeyboardArrowDownIcon sx={{ color: "#2B2B33" }} />
+            <KeyboardArrowDownIcon sx={{ color: "primary.main" }} />
           )
         }
         sx={{
-          color: "#2B2B33",
+          color: "primary.main",
           fontsize: "18px",
           fontWeight: "600",
           backgroundColor: "transparent",
@@ -56,12 +58,12 @@ export const DropDownMenu = () => {
           ".MuiMenu-paper": {
             maxWidth: { md: "600px" },
             borderRadius: "10px",
-            padding: 1,
+            padding: { xs: 0.1, md: 1 },
           },
         }}
       >
-        <Grid container>
-          {menuItemsData.map((x: any) => (
+        <Grid container paddingBottom={1}>
+          {menuItemsData?.map((x: any) => (
             <Grid key={x?.id} item xs={12} md={6}>
               <MenuItemCard
                 itemName={x?.name}
