@@ -7,7 +7,6 @@ export const MenuItemCard = ({ itemOnClick, itemName }: any) => {
   return (
     <MenuItem
       onClick={() => {
-        console.log("click");
         itemOnClick?.();
       }}
     >
@@ -23,13 +22,13 @@ export const MenuItemCard = ({ itemOnClick, itemName }: any) => {
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          sx={{ backgroundColor: "#F0F0F2", borderRadius: "4px" }}
+          sx={{ backgroundColor: "common.ghost", borderRadius: "4px" }}
         >
           <Image src={LogoIcon} alt="brand-logo" width={20} height={20} />
         </Box>
         <Typography
           fontWeight={500}
-          sx={{ color: "#A6A6B3", fontsize: "16px", fontWeight: "500" }}
+          sx={{ color: "primary.lighter", fontsize: "14px", fontWeight: 500 }}
         >
           {itemName}
         </Typography>

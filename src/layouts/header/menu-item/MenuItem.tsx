@@ -7,8 +7,8 @@ export const MenuItem = ({ menuOnClick, isActive, menuItemName }: any) => {
       onClick={() => menuOnClick?.()}
       disableRipple
       sx={{
-        // color: pathname.startsWith("/pricing") ? "red" : "#2B2B33",
-        color: isActive ? "#2B2B33" : "#2B2B33",
+        // color: pathname.startsWith("/pricing") ? "red" : "primary.main",
+        color: isActive ? "primary.main" : "primary.main",
         fontsize: "18px",
         fontWeight: "600",
         backgroundColor: "transparent",

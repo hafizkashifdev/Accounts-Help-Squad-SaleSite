@@ -1,20 +1,27 @@
 "use client";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import { RequestADemoForm } from "./request-a-demo-form/RequestADemoForm";
 import { RequestADemoHeader } from "./request-a-demo-header/RequestADemoHeader";
-import Logo from "@root/assets/layout/images/logo.svg";
+import BgImage from "../../assets/sections/request-a-demo/images/bg.svg";
 const RequestDemo = () => {
   return (
     <Box
-      sx={{
-        backgroundImage: `url("@root/assets/layout/images/logo.svg")`,
-        backgroundSize: "cover",
-        backgroundRepeat: "repeat",
-        marginX: { xs: 1.5, md: 5 },
-      }}
+    // sx={{
+    //   marginX: { xs: 1, md: 5 },
+    // }}
     >
       <RequestADemoHeader />
-      <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        sx={{
+          backgroundImage: `url(${BgImage?.src})`,
+          backgroundPositionY: "bottom",
+          backgroundSize: "50% 80%",
+          backgroundRepeat: "repeat-x",
+        }}
+      >
         <RequestADemoForm />
       </Box>
     </Box>

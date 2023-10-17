@@ -1,4 +1,3 @@
-"use client";
 import { Box } from "@mui/material";
 
 export const ListsItems = ({ items, ...props }: any) => {
@@ -8,15 +7,12 @@ export const ListsItems = ({ items, ...props }: any) => {
       sx={{ fontSize: ".9rem", fontWeight: 500, color: "primary.lighter" }}
     >
       <ul>
-        {items?.map((x: any, index: any) => {
-          // console.log(x);
-          return (
-            <li key={x?.id + index} style={{ marginBottom: 8 }}>
-              {" "}
-              {x?.value}
-            </li>
-          );
-        })}
+        {items?.map((x: any) => (
+          <li {...props} key={x} style={{ marginBottom: 8 }}>
+            {" "}
+            {x}
+          </li>
+        ))}
       </ul>
     </Box>
   );

@@ -1,32 +1,44 @@
 "use client";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
-import { useRequestADemoForm } from "./useRequestADemoForm";
+import { useContactUsForm } from "./useContactUsForm";
 import { LoadingButton } from "@mui/lab";
 // import logo from "../../../assets/sections/request-a-demo/images/bg.svg";
-export const RequestADemoForm = () => {
+export const ContactUsForm = () => {
   const {
     methods,
     handleSubmit,
-    submitRequestADemoForm,
-    requestADemoFormFieldsData,
-  } = useRequestADemoForm();
+    submitContactUsForm,
+    contactUsFormFieldsData,
+  } = useContactUsForm();
   return (
     <Box
       boxShadow={3}
       sx={{
         backgroundColor: "white",
         borderRadius: "1rem",
-        marginX: { xs: 1, md: 5 },
       }}
       padding={6}
+      marginX={{ xs: 1, md: 5 }}
     >
+      <Typography
+        sx={{
+          color: "primary.main",
+          // fontSize: "2.5rem",
+          // fontWeight: 600,
+          marginBottom: { xs: 2, md: 4 },
+          textAlign: "center",
+        }}
+        variant="h4"
+      >
+        Contact Us
+      </Typography>
       <FormProvider
         methods={methods}
-        onSubmit={handleSubmit(submitRequestADemoForm)}
+        onSubmit={handleSubmit(submitContactUsForm)}
       >
         <Grid container spacing={3}>
-          {requestADemoFormFieldsData?.map((form: any) => {
+          {contactUsFormFieldsData?.map((form: any) => {
             return (
               <Grid item xs={12} md={form?.gridLength} key={form?.id}>
                 <form.component {...form.componentProps} size="small">

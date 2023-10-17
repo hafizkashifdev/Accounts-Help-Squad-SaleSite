@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-export const PrivacyPolicyHeader = () => {
+export const TermsOfServiceHeader = () => {
   return (
     <>
       <Box textAlign={"center"}>
@@ -13,7 +13,7 @@ export const PrivacyPolicyHeader = () => {
           }}
           variant="h1"
         >
-          Privacy Policy
+          Terms of Service
         </Typography>
         <Typography
           sx={{
@@ -31,7 +31,11 @@ export const PrivacyPolicyHeader = () => {
           (GDPR). We treat all personal information covered by this Privacy
           Policy, including information about any visitors to our website, as
           pertaining to individuals acting as business representatives, rather
-          than in their personal capacity.
+          than in their personal capacity. As part of our Services, we process
+          consumer personal information on behalf of our business customers as a
+          service provider, pursuant to our agreements with those businesses.
+          This Privacy Policy does not apply to our handling of consumer
+          personal information.
         </Typography>
         <Typography
           sx={{

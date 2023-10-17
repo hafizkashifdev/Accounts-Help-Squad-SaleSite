@@ -21,6 +21,7 @@ export const BookDemoMenuItem = ({
         justifyContent: "space-between",
         flexWrap: "wrap",
         gap: 2,
+        paddingY: 1,
       }}
     >
       <Box display={"flex"} alignItems={"center"} flex={1} gap={1}>
@@ -30,18 +31,22 @@ export const BookDemoMenuItem = ({
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          sx={{ backgroundColor: "#F0F0F2", borderRadius: "4px" }}
+          sx={{ backgroundColor: "common.ghost", borderRadius: "4px" }}
         >
           <Image src={LogoIcon} alt="brand-logo" width={20} height={20} />
         </Box>
         <Box>
           <Typography
-            sx={{ color: "#6B6B80", fontsize: "16px", fontWeight: "600" }}
+            sx={{ color: "primary.main", fontsize: "16px", fontWeight: "600" }}
           >
             {itemName || "Book a Demo"}
           </Typography>
           <Typography
-            sx={{ color: "#A6A6B3", fontsize: "16px", fontWeight: "500" }}
+            sx={{
+              color: "primary.lighter",
+              fontsize: "14px",
+              fontWeight: "500",
+            }}
           >
             {itemDescription || "Discover AccountHelpSquad with our experts"}
           </Typography>

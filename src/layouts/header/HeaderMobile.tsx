@@ -39,7 +39,7 @@ export const HeaderMobile = () => {
           justifyContent={"space-between"}
           gap={4}
         >
-          <Image src={Logo} alt="brand-logo" />
+          <Image src={Logo} alt="brand-logo" onClick={() => router.push("/")} />
           <Box sx={{ cursor: "pointer" }}>
             <IconButton
               onClick={() => setIsVisible((x) => !x)}
@@ -85,66 +85,6 @@ export const HeaderMobile = () => {
               isActive={pathname.startsWith("/contact-us")}
               menuItemName="Contact Us"
             />
-            {/* <Button
-              onClick={() => router.push("/")}
-              disableRipple
-              sx={{
-                color: pathname === "/" ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Home{" "}
-            </Button>
-            <Button
-              onClick={() => {
-                router.push("/about-us");
-                setIsVisible(false);
-              }}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/about-us") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              About Us{" "}
-            </Button>
-            <DropDownMenu />
-            <Button
-              onClick={() => router.push("/pricing")}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/pricing") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Pricing{" "}
-            </Button>
-            <Button
-              onClick={() => router.push("/contact-us")}
-              disableRipple
-              sx={{
-                color: pathname.startsWith("/contact-us") ? "red" : "#2B2B33",
-                fontsize: "16px",
-                fontWeight: "500",
-                backgroundColor: "transparent",
-                "&:hover": { backgroundColor: "transparent" },
-              }}
-            >
-              {" "}
-              Contact Us{" "}
-            </Button> */}
           </Box>
         )}
         {!isVisible && (
@@ -155,32 +95,10 @@ export const HeaderMobile = () => {
             gap={2}
             flexWrap={"wrap"}
           >
-            <Button
-              variant="outlined"
-              // sx={{
-              //   color: "#2B2B33",
-              //   fontsize: "16px",
-              //   fontWeight: "500",
-              //   border: "1px solid #2B2B33",
-              //   backgroundColor: "transparent",
-              //   "&:hover": {
-              //     backgroundColor: "transparent",
-              //     border: "1px solid #2B2B33",
-              //   },
-              // }}
-            >
+            <Button variant="outlined" onClick={() => router.push("/signin")}>
               Sign In
             </Button>
-            <Button
-              variant="contained"
-              // sx={{
-              //   color: "white",
-              //   fontsize: "16px",
-              //   fontWeight: "500",
-              //   backgroundColor: "#2B2B33",
-              //   "&:hover": { backgroundColor: "#2B2B33" },
-              // }}
-            >
+            <Button variant="contained" onClick={() => router.push("/signup")}>
               Sign Up
             </Button>
           </Box>
