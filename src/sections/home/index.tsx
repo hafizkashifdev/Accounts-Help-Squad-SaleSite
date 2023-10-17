@@ -15,7 +15,7 @@ const HomeSection = () => {
         justifyContent: "center",
         alignItems: "space-between",
         flexDirection: "column",
-        gap: 15,
+        gap: { xs: 3.5, md: 5, lg: 8, xl: 15 },
       }}
     >
       <Header />

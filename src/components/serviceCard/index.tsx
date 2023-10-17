@@ -1,6 +1,5 @@
-import { Avatar, Box, Typography } from "@mui/material";
-import Image from "next/image";
 import React, { FC } from "react";
+import { Avatar, Box, Typography } from "@mui/material";
 
 const ServiceCard: FC<{ icon: any; heading: string; text: string }> = (
   props
@@ -13,10 +12,10 @@ const ServiceCard: FC<{ icon: any; heading: string; text: string }> = (
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        boxShadow: "0 17px 30px 0 rgba(0, 0, 0, 0.2)",
-        p: 3.2,
+        boxShadow: "0 17px 30px 0 rgba(0, 0, 0, 0.05)",
+        p: { xs: 1.6, md: 2.4, xl: 3.2 },
         borderRadius: "12px",
-        width: { xs: "100%", xl: "30%" },
+        width: { xs: "100%", md: "40%", xl: "30%" },
       }}
     >
       <Box

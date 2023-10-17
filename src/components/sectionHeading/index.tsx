@@ -12,8 +12,8 @@ const SectionHeading: FC<{ heading: string; text?: string }> = (props) => {
       <Typography
         variant="h2"
         textAlign="center"
-        fontSize={40}
-        mb={1.6}
+        fontSize={{ xs: 24, xl: 40 }}
+        mb={{ xs: 1, xl: 1.6 }}
         color={palette?.primary?.main}
       >
         {heading}
