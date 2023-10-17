@@ -31,13 +31,13 @@ export const DropDownMenu = () => {
         disableRipple
         endIcon={
           open ? (
-            <KeyboardArrowUpIcon sx={{ color: "#2B2B33" }} />
+            <KeyboardArrowUpIcon sx={{ color: "primary.main" }} />
           ) : (
-            <KeyboardArrowDownIcon sx={{ color: "#2B2B33" }} />
+            <KeyboardArrowDownIcon sx={{ color: "primary.main" }} />
           )
         }
         sx={{
-          color: "#2B2B33",
+          color: "primary.main",
           fontsize: "18px",
           fontWeight: "600",
           backgroundColor: "transparent",
@@ -60,8 +60,8 @@ export const DropDownMenu = () => {
           },
         }}
       >
-        <Grid container>
-          {menuItemsData.map((x: any) => (
+        <Grid container paddingBottom={1}>
+          {menuItemsData?.map((x: any) => (
             <Grid key={x?.id} item xs={12} md={6}>
               <MenuItemCard
                 itemName={x?.name}

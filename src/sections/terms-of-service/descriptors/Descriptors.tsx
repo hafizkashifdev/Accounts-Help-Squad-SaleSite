@@ -1,4 +1,3 @@
-"use client";
 import { Box, Typography } from "@mui/material";
 
 export const Descriptors = ({
@@ -44,12 +43,14 @@ export const Descriptors = ({
           }}
         >
           <ul>
-            <li>{listItem}</li>
+            <li key={listItem} style={{ marginBottom: 1, marginTop: 1 }}>
+              {listItem}
+            </li>
           </ul>
         </Box>
       )}
       <Typography
-        sx={{ fontWeight: 500, color: "primary.lighter" }}
+        sx={{ fontWeight: 500, color: "primary.lighter", marginY: 1 }}
         variant="body2"
       >
         {description}

@@ -8,12 +8,15 @@ export const ListsItems = ({ items, ...props }: any) => {
       sx={{ fontSize: ".9rem", fontWeight: 500, color: "primary.lighter" }}
     >
       <ul>
-        {items?.map((x: any) => (
-          <li {...props} key={x}>
-            {" "}
-            {x}
-          </li>
-        ))}
+        {items?.map((x: any, index: any) => {
+          // console.log(x);
+          return (
+            <li key={x?.id + index} style={{ marginBottom: 8 }}>
+              {" "}
+              {x?.value}
+            </li>
+          );
+        })}
       </ul>
     </Box>
   );

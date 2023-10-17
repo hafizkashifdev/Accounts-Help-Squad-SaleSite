@@ -4,12 +4,14 @@ import { Descriptors } from "../descriptors/Descriptors";
 
 export const termsOfServiceDocumentData = [
   {
+    id: 1,
     component: Descriptors,
     componentProps: {
       mainHeading: "OBJECT",
     },
   },
   {
+    id: 2,
     component: ListsItems,
     componentProps: {
       items: [
@@ -19,6 +21,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 3,
     component: Descriptors,
     componentProps: {
       mainHeading: "DEFINITIONS",
@@ -27,6 +30,7 @@ export const termsOfServiceDocumentData = [
   },
 
   {
+    id: 4,
     component: Descriptors,
     componentProps: {
       listItem: "Systems Administrator",
@@ -35,6 +39,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 5,
     component: Descriptors,
     componentProps: {
       listItem: "Application",
@@ -43,6 +48,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 6,
     component: Descriptors,
     componentProps: {
       listItem: "Cloud",
@@ -51,6 +57,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 7,
     component: Descriptors,
     componentProps: {
       listItem: "Company Interface",
@@ -58,6 +65,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 8,
     component: Descriptors,
     componentProps: {
       listItem: "Package",
@@ -65,6 +73,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 9,
     component: Descriptors,
     componentProps: {
       listItem: "Application Services",
@@ -72,6 +81,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 10,
     component: ListsItems,
     componentProps: {
       items: [
@@ -82,6 +92,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 11,
     component: Descriptors,
     componentProps: {
       listItem: "Parties",
@@ -89,6 +100,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 12,
     component: Descriptors,
     componentProps: {
       listItem: "User",
@@ -96,12 +108,14 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 13,
     component: Descriptors,
     componentProps: {
       description: ` All references made in the singular shall include the plural and vice versa. `,
     },
   },
   {
+    id: 14,
     component: Descriptors,
     componentProps: {
       mainHeading: "CONTRACTUALIZATION",
@@ -110,6 +124,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 15,
     component: Descriptors,
     componentProps: {
       listItem: "Registration",
@@ -117,6 +132,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 16,
     component: Descriptors,
     componentProps: {
       listItem: "Navigation in the Application",
@@ -124,6 +140,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 17,
     component: Descriptors,
     componentProps: {
       listItem: "Order placement",
@@ -131,6 +148,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 18,
     component: Descriptors,
     componentProps: {
       listItem: "Final order confirmation",
@@ -138,6 +156,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 19,
     component: Descriptors,
     componentProps: {
       listItem: "Order summary ",
@@ -145,6 +164,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 20,
     component: Descriptors,
     componentProps: {
       listItem: "General information",
@@ -152,6 +172,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 21,
     component: Descriptors,
     componentProps: {
       mainHeading: "SERVICES",
@@ -159,6 +180,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 22,
     component: Descriptors,
     componentProps: {
       listItem: " Provision of the Application ",
@@ -167,6 +189,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 23,
     component: Descriptors,
     componentProps: {
       listItem: "Technical support ",
@@ -174,6 +197,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 24,
     component: Descriptors,
     componentProps: {
       heading: "Other Services",
@@ -181,6 +205,7 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 25,
     component: Descriptors,
     componentProps: {
       listItem: "CLIENT OBLIGATIONS",
@@ -188,13 +213,13 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 26,
     component: ListsItems,
     componentProps: {
       items: [
         `Submit complete, accurate information when placing an order and to update that information in event of any changes`,
         `Designate a competent point of contact for ACCOUNT HELP SQUAD, for the duration of the Services`,
         `Make sure the necessary instructions reach ACCOUNT HELP SQUAD in due time, to allow it to fulfil its Services as per normal`,
-        `Submit or have its partners submit all of the working documents, files and other elements required for the performance of the Services, by the agreed deadlines`,
         `Submit or have its partners submit all of the working documents, files and other elements required for the performance of the Services, by the agreed deadlines`,
         `Refrain from impersonating any other person or logging into an account other than its own`,
         `Refrain from performing systems analyses which are akin to reverse engineering`,
@@ -204,12 +229,14 @@ export const termsOfServiceDocumentData = [
     },
   },
   {
+    id: 27,
     component: Descriptors,
     componentProps: {
       description: `If ACCOUNT HELP SQUAD closes the Client's account for failure to comply with their obligations under these Terms of Service, ACCOUNT HELP SQUAD will have the right to terminate the Contract, as stipulated in Article 14.2, without prejudice to any damages which it may be entitled to claim or to any legal action if the behaviour in question qualifies as a criminal offence.`,
     },
   },
   {
+    id: 28,
     component: Descriptors,
     componentProps: {
       mainHeading: "LICENSE AND RIGHTS GRANTED TO THE CLIENT",

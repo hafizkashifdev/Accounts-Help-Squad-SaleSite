@@ -1,4 +1,3 @@
-"use client";
 import { Box, Typography } from "@mui/material";
 export const PrivacyPolicyHeader = () => {
   return (
@@ -10,6 +9,7 @@ export const PrivacyPolicyHeader = () => {
             // fontSize: "3rem",
             // fontWeight: 600,
             marginX: 1,
+            marginBottom: { xs: 1, md: 2 },
           }}
           variant="h1"
         >

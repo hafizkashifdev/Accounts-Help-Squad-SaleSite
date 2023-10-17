@@ -4,13 +4,14 @@ import { Descriptors } from "../descriptors/Descriptors";
 
 export const privacyPolicyDocumentData = [
   {
-    heading: "Information you provide to us:",
+    id: 1,
     component: Descriptors,
     componentProps: {
       mainHeading: "Information you provide to us:",
     },
   },
   {
+    id: 2,
     component: Descriptors,
     componentProps: {
       heading: "Contact Details",
@@ -19,28 +20,46 @@ export const privacyPolicyDocumentData = [
     },
   },
   {
+    id: 3,
     component: Descriptors,
     componentProps: {
       heading: "Usage Information",
     },
   },
   {
-    heading:
-      " Such as your first and last name, email address, state, and phone number.",
+    id: 4,
     component: ListsItems,
     componentProps: {
-      style: { marginRight: 3 },
       items: [
-        "IP address",
-        "Browser type and version",
-        "Operating system",
-        "Date and time of access",
-        "Pages visited",
-        "Referring URL",
+        {
+          id: 1,
+          value: "IP address",
+        },
+        {
+          id: 2,
+          value: "Browser type and version",
+        },
+        {
+          id: 3,
+          value: "Operating system",
+        },
+        {
+          id: 4,
+          value: "Date and time of access",
+        },
+        {
+          id: 5,
+          value: "Pages visited",
+        },
+        {
+          id: 6,
+          value: "Referring URL",
+        },
       ],
     },
   },
   {
+    id: 5,
     component: Descriptors,
     componentProps: {
       mainHeading: "Cloud Infrastructure",
@@ -49,6 +68,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 6,
     component: Descriptors,
     componentProps: {
       heading: "Communications",
@@ -57,6 +77,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 7,
     component: Descriptors,
     componentProps: {
       heading: "Marketing data",
@@ -65,6 +86,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 8,
     component: Descriptors,
     componentProps: {
       heading: "Other data",
@@ -73,6 +95,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 9,
     component: Descriptors,
     componentProps: {
       heading: "Third party sources",
@@ -81,6 +104,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 10,
     component: Descriptors,
     componentProps: {
       listItem: "Third party sources",
@@ -88,6 +112,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 11,
     component: Descriptors,
     componentProps: {
       listItem: "Public Sources",
@@ -95,6 +120,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 12,
     component: Descriptors,
     componentProps: {
       heading: "Automatic data collection",
@@ -103,6 +129,7 @@ security measures to protect our infrastructure and are compliant with most cert
     },
   },
   {
+    id: 13,
     component: Descriptors,
     componentProps: {
       listItem: "Device data",
@@ -112,6 +139,7 @@ general location information such as city, state or geographic area.`,
     },
   },
   {
+    id: 14,
     component: Descriptors,
     componentProps: {
       listItem: "Online activity data",
@@ -120,6 +148,7 @@ information about your activity on a page or screen, access times, and duration 
     },
   },
   {
+    id: 15,
     component: Descriptors,
     componentProps: {
       listItem: "Cookies",
@@ -128,6 +157,7 @@ between pages efficiently, remembering your preferences, enabling functionality,
     },
   },
   {
+    id: 16,
     component: Descriptors,
     componentProps: {
       listItem: "Local storage technologies",
@@ -136,6 +166,7 @@ beacons, also known as pixel tags or clear GIFs, which are used to demonstrate t
     },
   },
   {
+    id: 17,
     component: Descriptors,
     componentProps: {
       listItem: "Public sources",
@@ -143,6 +174,7 @@ beacons, also known as pixel tags or clear GIFs, which are used to demonstrate t
     },
   },
   {
+    id: 18,
     component: Descriptors,
     componentProps: {
       mainHeading: "How We Use Your Personal Information",
@@ -150,6 +182,7 @@ beacons, also known as pixel tags or clear GIFs, which are used to demonstrate t
     },
   },
   {
+    id: 19,
     component: Descriptors,
     componentProps: {
       heading: "Service delivery",
@@ -157,17 +190,29 @@ beacons, also known as pixel tags or clear GIFs, which are used to demonstrate t
     },
   },
   {
+    id: 20,
     component: ListsItems,
     componentProps: {
-      style: { marginRight: 3 },
       items: [
-        "Provide, operate and improve the Services and our business",
-        "Communicate with you about the Services, including by sending announcements, updates, security alerts, and support and administrative messages; and",
-        "Provide support for the Services, and respond to your requests, questions and feedback.",
+        {
+          id: 1,
+          value: "Provide, operate and improve the Services and our business",
+        },
+        {
+          id: 2,
+          value:
+            "Communicate with you about the Services, including by sending announcements, updates, security alerts, and support and administrative messages; and",
+        },
+        {
+          id: 3,
+          value:
+            "Provide support for the Services, and respond to your requests, questions and feedback.",
+        },
       ],
     },
   },
   {
+    id: 21,
     component: Descriptors,
     componentProps: {
       heading: "Research and development",
@@ -176,6 +221,7 @@ parties for our lawful business purposes, including to analyze and improve the S
     },
   },
   {
+    id: 22,
     component: Descriptors,
     componentProps: {
       heading: "Marketing and advertising",
@@ -183,6 +229,7 @@ parties for our lawful business purposes, including to analyze and improve the S
     },
   },
   {
+    id: 23,
     component: Descriptors,
     componentProps: {
       listItem: "Direct marketing",
@@ -191,6 +238,7 @@ communications section below. `,
     },
   },
   {
+    id: 24,
     component: Descriptors,
     componentProps: {
       listItem: "Interest based advertising",
@@ -201,25 +249,47 @@ advertising in the Online tracking opt out section below.`,
     },
   },
   {
+    id: 25,
     component: Descriptors,
     componentProps: {
       heading: "Compliance and protection",
     },
   },
   {
+    id: 26,
     component: ListsItems,
     componentProps: {
-      style: { marginRight: 3 },
       items: [
-        "Comply with applicable laws, lawful requests, and legal process, such as to respond to subpoenas or requests from government authorities",
-        "Protect our, your or others rights, privacy, safety or property (including by making and defending legal claims)",
-        "Audit our internal processes for compliance with legal and contractual requirements and internal policies",
-        "Enforce the terms and conditions that govern our website and Services; and",
-        " Prevent, identify, investigate and deter fraudulent, harmful, unauthorized, unethical or illegal activity, including cyberattacks and identity theft.",
+        {
+          id: 1,
+          value:
+            "Comply with applicable laws, lawful requests, and legal process, such as to respond to subpoenas or requests from government authorities",
+        },
+        {
+          id: 2,
+          value:
+            "Protect our, your or others rights, privacy, safety or property (including by making and defending legal claims)",
+        },
+        {
+          id: 3,
+          value:
+            "Audit our internal processes for compliance with legal and contractual requirements and internal policies",
+        },
+        {
+          id: 4,
+          value:
+            "Enforce the terms and conditions that govern our website and Services; and",
+        },
+        {
+          id: 5,
+          value:
+            " Prevent, identify, investigate and deter fraudulent, harmful, unauthorized, unethical or illegal activity, including cyberattacks and identity theft.",
+        },
       ],
     },
   },
   {
+    id: 27,
     component: Descriptors,
     componentProps: {
       mainHeading: "How We Can Share Your Personal Information",
@@ -227,6 +297,7 @@ advertising in the Online tracking opt out section below.`,
     },
   },
   {
+    id: 28,
     component: Descriptors,
     componentProps: {
       listItem: " Affiliates",
@@ -235,6 +306,7 @@ advertising in the Online tracking opt out section below.`,
     },
   },
   {
+    id: 29,
     component: Descriptors,
     componentProps: {
       listItem: " Service providers",
@@ -243,6 +315,7 @@ and website analytics services)`,
     },
   },
   {
+    id: 30,
     component: Descriptors,
     componentProps: {
       heading: "Advertising partners",
@@ -251,6 +324,7 @@ technologies. `,
     },
   },
   {
+    id: 31,
     component: Descriptors,
     componentProps: {
       listItem: " Professional advisors",
@@ -258,6 +332,7 @@ technologies. `,
     },
   },
   {
+    id: 32,
     component: Descriptors,
     componentProps: {
       listItem: "Authorities and others",
@@ -265,6 +340,7 @@ technologies. `,
     },
   },
   {
+    id: 33,
     component: Descriptors,
     componentProps: {
       listItem: " Business transferees",
@@ -274,6 +350,7 @@ proceedings). `,
     },
   },
   {
+    id: 34,
     component: Descriptors,
     componentProps: {
       mainHeading: "Business Continuity and Disaster Recovery ",
@@ -281,6 +358,7 @@ proceedings). `,
     },
   },
   {
+    id: 35,
     component: Descriptors,
     componentProps: {
       heading: " Opt out of marketing communications",
@@ -288,6 +366,7 @@ proceedings). `,
     },
   },
   {
+    id: 36,
     component: Descriptors,
     componentProps: {
       heading: " Online tracking opt out",
@@ -295,6 +374,7 @@ proceedings). `,
     },
   },
   {
+    id: 37,
     component: Descriptors,
     componentProps: {
       listItem: " Blocking cookies in your browser.",
@@ -307,8 +387,8 @@ proceedings). `,
           including how to see what cookies have been set on your device and how
           to manage and delete them, visit{" "}
           <a
-            href=" www.allaboutcookies.org"
-            target="_blank"
+            // href=" http://www.allaboutcookies.org"
+            // target="_blank"
             style={{ textDecoration: "underline", fontWeight: "bold" }}
           >
             www.allaboutcookies.org
@@ -318,6 +398,7 @@ proceedings). `,
     },
   },
   {
+    id: 38,
     component: Descriptors,
     componentProps: {
       listItem: "Blocking advertising ID use in your mobile settings",
@@ -325,6 +406,7 @@ proceedings). `,
     },
   },
   {
+    id: 39,
     component: Descriptors,
     componentProps: {
       listItem: "  Using privacy plug ins or browsers",
@@ -337,8 +419,8 @@ proceedings). `,
           You can also opt out of Google Analytics by downloading and installing
           the browser plug in available at:{" "}
           <a
-            href=" https://tools.google.com/dlpage/gaoptout"
-            target="_blank"
+            // href=" https://tools.google.com/dlpage/gaoptout"
+            // target="_blank"
             style={{ textDecoration: "underline", fontWeight: "bold" }}
           >
             https://tools.google.com/dlpage/gaoptout`
@@ -348,6 +430,7 @@ proceedings). `,
     },
   },
   {
+    id: 40,
     component: Descriptors,
     componentProps: {
       listItem: "  Platform opt outs",
@@ -361,8 +444,8 @@ proceedings). `,
             {" "}
             Google :{" "}
             <a
-              href=" www.adsettings.google.com"
-              target="_blank"
+              // href=" https://www.adsettings.google.com"
+              // target="_blank"
               style={{ textDecoration: "underline", fontWeight: "bold" }}
             >
               www.adsettings.google.com{" "}
@@ -376,8 +459,8 @@ proceedings). `,
             {" "}
             Facebook :{" "}
             <a
-              href="www.facebook.com/about/ads"
-              target="_blank"
+              // href="https://www.facebook.com/about/ads"
+              // target="_blank"
               style={{ textDecoration: "underline", fontWeight: "bold" }}
             >
               {" "}
@@ -392,8 +475,8 @@ proceedings). `,
             {" "}
             Twitter :{" "}
             <a
-              href="www.twitter.com/settings/personalization"
-              target="_blank"
+              // href="https://www.twitter.com/settings/personalization"
+              // target="_blank"
               style={{ textDecoration: "underline", fontWeight: "bold" }}
             >
               : www.twitter.com/settings/personalization
@@ -404,6 +487,7 @@ proceedings). `,
     },
   },
   {
+    id: 41,
     component: Descriptors,
     componentProps: {
       listItem: " Advertising industry opt out tools",
@@ -411,50 +495,68 @@ proceedings). `,
     },
   },
   {
+    id: 42,
     component: ListsItems,
     componentProps: {
       style: { marginRight: 3 },
       items: [
-        <>
-          Digital Advertising Alliance for Websites:{" "}
-          <a
-            href=" outout.aboutads.info"
-            target="_blank"
-            style={{ textDecoration: "underline", fontWeight: "bold" }}
-          >
-            outout.aboutads.info
-          </a>
-        </>,
-        <>
-          Digital Advertising Alliance for Mobile Apps:{" "}
-          <a
-            href="https://youradchoices.com/appchoices"
-            target="_blank"
-            style={{ textDecoration: "underline", fontWeight: "bold" }}
-          >
-            https://youradchoices.com/appchoices
-          </a>
-        </>,
-        <>
-          Network Advertising Initiative:{" "}
-          <a
-            href="optout.networkadvertising.org"
-            target="_blank"
-            style={{ textDecoration: "underline", fontWeight: "bold" }}
-          >
-            optout.networkadvertising.org
-          </a>
-        </>,
+        {
+          id: 1,
+          value: (
+            <>
+              Digital Advertising Alliance for Websites:{" "}
+              <a
+                // href=" https://outout.aboutads.info"
+                // target="_blank"
+                style={{ textDecoration: "underline", fontWeight: "bold" }}
+              >
+                outout.aboutads.info
+              </a>
+            </>
+          ),
+        },
+        {
+          id: 2,
+          value: (
+            <>
+              Digital Advertising Alliance for Mobile Apps:{" "}
+              <a
+                // href="https://youradchoices.com/appchoices"
+                // target="_blank"
+                style={{ textDecoration: "underline", fontWeight: "bold" }}
+              >
+                https://youradchoices.com/appchoices
+              </a>
+            </>
+          ),
+        },
+        {
+          id: 3,
+          value: (
+            <>
+              Network Advertising Initiative:{" "}
+              <a
+                // href="https://optout.networkadvertising.org/"
+                // target="_blank"
+                style={{ textDecoration: "underline", fontWeight: "bold" }}
+              >
+                optout.networkadvertising.org
+              </a>
+            </>
+          ),
+        },
       ],
     },
   },
   {
+    id: 43,
     component: Descriptors,
     componentProps: {
       description: `Note that because these opt out mechanisms are specific to the device or browser on which they are exercised, you will need to opt out on every browser and device that you use.`,
     },
   },
   {
+    id: 44,
     component: Descriptors,
     componentProps: {
       heading: "Do Not Track",
@@ -465,8 +567,8 @@ proceedings). `,
           Do Not Track or similar signals. To find out more about Do Not Track,
           please visit{" "}
           <a
-            href="http://www.allaboutdnt.com"
-            target="_blank"
+            // href="http://www.allaboutdnt.com"
+            // target="_blank"
             style={{ textDecoration: "underline", fontWeight: "bold" }}
           >
             http://www.allaboutdnt.com.
@@ -476,6 +578,7 @@ proceedings). `,
     },
   },
   {
+    id: 45,
     component: Descriptors,
     componentProps: {
       heading: "Your Rights ",
@@ -483,6 +586,7 @@ proceedings). `,
     },
   },
   {
+    id: 46,
     component: Descriptors,
     componentProps: {
       listItem: " Right to access",
@@ -490,6 +594,7 @@ proceedings). `,
     },
   },
   {
+    id: 47,
     component: Descriptors,
     componentProps: {
       listItem: " Right to rectification",
@@ -497,6 +602,7 @@ proceedings). `,
     },
   },
   {
+    id: 48,
     component: Descriptors,
     componentProps: {
       listItem: " Right to erasure",
@@ -504,6 +610,7 @@ proceedings). `,
     },
   },
   {
+    id: 49,
     component: Descriptors,
     componentProps: {
       listItem: " Right to data portability",
@@ -511,12 +618,14 @@ proceedings). `,
     },
   },
   {
+    id: 50,
     component: Descriptors,
     componentProps: {
       description: `To exercise these rights or for any questions or concerns regarding your personal information, please contact us using the information provided below.  `,
     },
   },
   {
+    id: 51,
     component: Descriptors,
     componentProps: {
       mainHeading: "Other Sites and Services",
@@ -526,6 +635,7 @@ operated by third parties, and we are not responsible for their actions. `,
     },
   },
   {
+    id: 52,
     component: Descriptors,
     componentProps: {
       mainHeading: "Security ",
@@ -534,6 +644,7 @@ guarantee the security of your personal information. `,
     },
   },
   {
+    id: 53,
     component: Descriptors,
     componentProps: {
       mainHeading: "Children ",
@@ -542,6 +653,7 @@ consent of the child s parent or guardian as required by law, we will delete it.
     },
   },
   {
+    id: 54,
     component: Descriptors,
     componentProps: {
       mainHeading: "Changes to This Privacy Policy",
@@ -550,6 +662,7 @@ the website `,
     },
   },
   {
+    id: 55,
     component: Descriptors,
     componentProps: {
       mainHeading: "How to Contact Us",
@@ -557,7 +670,7 @@ the website `,
         <>
           You can reach us by email at:{" "}
           <a
-            href="mailto:legal@accountshelpsquad.co.uk"
+            // href="mailto:legal@accountshelpsquad.co.uk"
             style={{ textDecoration: "underline", fontWeight: "bold" }}
           >
             legal@accountshelpsquad.co.uk{" "}

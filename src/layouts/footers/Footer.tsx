@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <>
       <Box
-        sx={{ backgroundColor: "#2B2B33" }}
+        sx={{ backgroundColor: "primary.main" }}
         paddingX={{ xs: 1, md: 5 }}
         paddingY={{ xs: 1, md: 3 }}
       >
