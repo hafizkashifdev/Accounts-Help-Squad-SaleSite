@@ -6,8 +6,6 @@ export const PrivacyPolicyHeader = () => {
         <Typography
           sx={{
             color: "primary.main",
-            // fontSize: "3rem",
-            // fontWeight: 600,
             marginX: 1,
             marginBottom: { xs: 1, md: 2 },
           }}

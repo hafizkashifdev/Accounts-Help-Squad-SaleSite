@@ -9,7 +9,6 @@ export const ListsItems = ({ items, ...props }: any) => {
       <ul>
         {items?.map((x: any) => (
           <li {...props} key={x} style={{ marginBottom: 8 }}>
-            {" "}
             {x}
           </li>
         ))}

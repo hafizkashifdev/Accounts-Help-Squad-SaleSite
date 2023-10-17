@@ -1,9 +1,10 @@
 "use client";
+
 import { Box, Grid } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
 import { useRequestADemoForm } from "./useRequestADemoForm";
 import { LoadingButton } from "@mui/lab";
-// import logo from "../../../assets/sections/request-a-demo/images/bg.svg";
+
 export const RequestADemoForm = () => {
   const {
     methods,

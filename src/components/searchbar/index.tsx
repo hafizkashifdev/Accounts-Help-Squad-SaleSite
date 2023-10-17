@@ -11,9 +11,8 @@ const Searchbar = () => {
           width: "100%",
           minWidth: { xs: "100%", lg: 513 },
           maxWidth: 513,
-          background: "#F0F0F280",
-          opacity: ".5",
-          borderRadius:"8px"
+          background: "#F0F0F2",
+          borderRadius: "8px",
         },
         startAdornment: (
           <InputAdornment position="start">

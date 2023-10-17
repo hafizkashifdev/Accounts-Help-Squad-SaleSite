@@ -1,12 +1,11 @@
 "use client";
-
 import Image from "next/image";
 import Logo from "@root/assets/layout/images/logo.svg";
-import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { MenuItem } from "./menu-item/MenuItem";
+import { DropDownMenu } from "./dropdown-menu/DropDownMenu";
 
 export const HeaderMobileUp = () => {
   const router = useRouter();

@@ -22,8 +22,6 @@ export const Descriptors = ({
       {!!heading?.length && (
         <Typography
           sx={{
-            // fontSize: "1.2rem",
-            // fontWeight: 600,
             color: "primary.main",
             marginY: 1,
           }}

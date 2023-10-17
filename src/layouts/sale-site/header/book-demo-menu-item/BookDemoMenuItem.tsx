@@ -3,7 +3,7 @@
 import { Typography, MenuItem, Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import Image from "next/image";
-import LogoIcon from "@root/assets/layout/images/logo-icon.svg";
+import BookADemo from "@root/assets/layout/images/book-a-demo.svg";
 
 export const BookDemoMenuItem = ({
   itemOnClick,
@@ -31,9 +31,13 @@ export const BookDemoMenuItem = ({
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          sx={{ backgroundColor: "common.ghost", borderRadius: "4px" }}
+          sx={{
+            backgroundColor: "common.ghost",
+            borderRadius: "4px",
+            padding: 1.5,
+          }}
         >
-          <Image src={LogoIcon} alt="brand-logo" width={20} height={20} />
+          <Image src={BookADemo} alt="book-a-demo" width={20} height={20} />
         </Box>
         <Box>
           <Typography
@@ -46,6 +50,7 @@ export const BookDemoMenuItem = ({
               color: "primary.lighter",
               fontsize: "14px",
               fontWeight: "500",
+              whiteSpace: "wrap",
             }}
           >
             {itemDescription || "Discover AccountHelpSquad with our experts"}
@@ -53,7 +58,12 @@ export const BookDemoMenuItem = ({
         </Box>
       </Box>
       <Box>
-        <Button variant="contained" type="button" onClick={() => btnClick?.()}>
+        <Button
+          variant="contained"
+          type="button"
+          onClick={() => btnClick?.()}
+          sx={{ borderRadius: "10px" }}
+        >
           {btnText || "Request a Demo"}
         </Button>
       </Box>
