@@ -30,7 +30,12 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
         {data.map((step: any, index: number) => (
           <div key={step.name}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Grid container spacing={12.9}>
+              <Grid
+                container
+                spacing={{ xs: 2.29, md: 6.9, xl: 12.9 }}
+                flexDirection={{ xs: "column-reverse", md: "row" }}
+                mb={{ xs: 6, md: 4, lg: 0 }}
+              >
                 <Grid
                   item
                   xs={12}
@@ -92,13 +97,17 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
                       display: "inline-block",
                       borderRadius: "12px",
                       background: "rgba(240, 240, 242, 0.40)",
+                      width: "100%",
+                      height: "100%",
                     }}
                   >
                     <Image
+                      style={{ width: "100%" }}
                       src={step?.image}
                       alt={step?.name}
                       width={446}
                       height={391}
+                      objectFit="cover"
                     />
                   </Box>
                 </Grid>
@@ -111,9 +120,11 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
         sx={{
           display: "inline-block",
           position: "absolute",
-          bottom: isRowRevers ? "auto" : 0,
-          top: isRowRevers ? 0 : "auto",
-          right: "50%",
+          bottom: isRowRevers
+            ? { xs: 0, md: "auto" }
+            : { xs: 0, md: "-3%", xl: 0 },
+          top: isRowRevers ? { xs: "auto",md:"95%", lg: 0 } : "auto",
+          right: { xs: "35%", sm: "45%", lg: "50%" },
         }}
       >
         <MobileStepper
