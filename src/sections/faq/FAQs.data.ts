@@ -6,8 +6,8 @@ export const faqsTabsData = [
   "CashFlow Management",
   "R&D Tax Claim",
 ];
-export const faqsTabsChildren: {[index: string]:any} = {
-  "General": [
+export const faqsTabsChildren: { [index: string]: any } = {
+  General: [
     {
       que: "What is Accounts Help Squad?",
       ans: "Accounts Help Squad is your trusted online platform for a wide range of financial and business services. Learn More",

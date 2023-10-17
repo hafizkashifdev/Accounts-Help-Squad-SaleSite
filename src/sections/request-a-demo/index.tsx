@@ -1,15 +1,13 @@
 "use client";
+
 import { Box } from "@mui/material";
 import { RequestADemoForm } from "./request-a-demo-form/RequestADemoForm";
 import { RequestADemoHeader } from "./request-a-demo-header/RequestADemoHeader";
-import BgImage from "../../assets/sections/request-a-demo/images/bg.svg";
+import BgImage from "@root/assets/sections/request-a-demo/images/bg.svg";
+
 const RequestDemo = () => {
   return (
-    <Box
-    // sx={{
-    //   marginX: { xs: 1, md: 5 },
-    // }}
-    >
+    <Box>
       <RequestADemoHeader />
       <Box
         display={"flex"}
@@ -18,7 +16,6 @@ const RequestDemo = () => {
         sx={{
           backgroundImage: `url(${BgImage?.src})`,
           backgroundPositionY: "bottom",
-          // backgroundSize: "50% 80%",
           backgroundSize: "50% 75%",
           backgroundRepeat: "repeat-x",
           paddingBottom: { xs: "1rem", md: "8rem" },
@@ -28,7 +25,6 @@ const RequestDemo = () => {
       </Box>
     </Box>
   );
-  // return <>Request a demo</>;
 };
 
 export default RequestDemo;

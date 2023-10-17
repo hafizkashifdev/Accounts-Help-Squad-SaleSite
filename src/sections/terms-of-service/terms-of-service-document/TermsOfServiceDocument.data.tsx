@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { ListsItems } from "../lists-items/ListsItems";
 import { Descriptors } from "../descriptors/Descriptors";
 

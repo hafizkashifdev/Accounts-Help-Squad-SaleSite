@@ -15,7 +15,7 @@ export const HeaderMobile = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
-  // console.log({ isVisible });
+
   return (
     <Box>
       <Box

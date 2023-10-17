@@ -9,10 +9,8 @@ export const ListsItems = ({ items, ...props }: any) => {
     >
       <ul>
         {items?.map((x: any, index: any) => {
-          // console.log(x);
           return (
             <li key={x?.id + index} style={{ marginBottom: 8 }}>
-              {" "}
               {x?.value}
             </li>
           );

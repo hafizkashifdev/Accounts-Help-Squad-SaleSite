@@ -4,11 +4,7 @@ import { ContactUsHeader } from "./contact-us-header/ContactUsHeader";
 import { ContactUsForm } from "./contact-us-form/ContactUsForm";
 const ContactUs = () => {
   return (
-    <Box
-    // sx={{
-    //   marginX: { xs: 1, md: 5 },
-    // }}
-    >
+    <Box>
       <ContactUsHeader />
       <Box
         display={"flex"}

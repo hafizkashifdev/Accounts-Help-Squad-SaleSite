@@ -9,15 +9,18 @@ import { menuItemsData } from "./DropDownMenu.data";
 import { BookDemoMenuItem } from "../book-demo-menu-item/BookDemoMenuItem";
 import { useRouter } from "next/navigation";
 
-export const DropDownMenu = () => {
+export const DropDownMenu = ({ setMenuClose }: any) => {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+    setMenuClose?.(true);
   };
 
   return (
@@ -56,7 +59,7 @@ export const DropDownMenu = () => {
           ".MuiMenu-paper": {
             maxWidth: { md: "600px" },
             borderRadius: "10px",
-            padding: 1,
+            padding: { xs: 0.1, md: 1 },
           },
         }}
       >
