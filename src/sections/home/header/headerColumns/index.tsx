@@ -9,9 +9,24 @@ const HeaderColumns = () => {
   const { flexCenter, headerText, imageWrapper, image }: any = styles();
   return (
     <div>
-      <Grid container sx={{ ...flexCenter, justifyContent: "space-between" }}>
+      <Grid
+        container
+        sx={{
+          ...flexCenter,
+          justifyContent: "space-between",
+          spacing: 6,
+          gap: { xs: 2, md: 3, lg: 0 },
+        }}
+      >
         <Grid item xs={12} lg={6}>
-          <Typography variant="h1" lineHeight={"76.8px"} pb={1.6}>
+          <Typography
+            sx={{
+              lineHeight: { xs: "36px", md: "76.8px" },
+              fontSize: { xs: "2rem", md: "4rem" },
+              pb: { xs: 1.6 },
+            }}
+            variant="h1"
+          >
             Welcome to
             <br /> Accounts Help Squad
           </Typography>
@@ -28,7 +43,10 @@ const HeaderColumns = () => {
           item
           xs={12}
           lg={6}
-          sx={{ ...flexCenter, justifyContent: "flex-end" }}
+          sx={{
+            ...flexCenter,
+            justifyContent: { xs: "center", lg: "flex-end" },
+          }}
         >
           <Box sx={{ ...imageWrapper, position: "relative" }}>
             <Image

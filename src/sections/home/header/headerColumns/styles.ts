@@ -11,12 +11,12 @@ const styles = () => {
         },
         headerText: {
             color: palette?.primary?.lighter,
-            fontSize: 20, pb: 4.6,
+            fontSize: 20, pb: { xs: 2.6, md: 4.6 },
         },
         imageWrapper: {
             width: { xs: "100%" },
-            minWidth: { xs: "100%", lg: "783px" },
-            minHeight: 486,
+            minWidth: { xs: "100%", xl: "783px" },
+            minHeight: { xs: "260px", sm: 340, md: 486 },
             position: "relative",
         },
         image: {

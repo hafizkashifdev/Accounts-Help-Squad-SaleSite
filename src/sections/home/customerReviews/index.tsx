@@ -6,12 +6,12 @@ const CustomerReviews = () => {
   return (
     <Box
       sx={{
-        px: 11.6,
+        px: { xs: 1.6, md: 3.6, xl: 11.6 },
         display: "flex",
         justifyContent: "center",
         alignItems: "space-between",
         flexDirection: "column",
-        gap: 6.4,
+        gap: { xs: 2.6, md: 3.6, xl: 6.4 },
       }}
     >
       <SectionHeading

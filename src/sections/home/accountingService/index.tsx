@@ -6,7 +6,7 @@ import { accountingServiceData } from "./accountingService.data";
 
 const AccountingService = () => {
   return (
-    <div>
+    <Box px={{ xs: 1.6, md: 3.6, xl: 11.6 }}>
       <SectionHeading
         heading="Our Comprehensive Accounting Services"
         text="At Accounts Help Squad, we offer a range of services designed to meet your business's financial needs. Whether you're just starting or looking to optimize your operations, we've got you covered"
@@ -30,7 +30,7 @@ const AccountingService = () => {
           />
         ))}
       </Box>
-    </div>
+    </Box>
   );
 };
 

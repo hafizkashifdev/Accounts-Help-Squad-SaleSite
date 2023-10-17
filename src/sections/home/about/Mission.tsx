@@ -9,7 +9,7 @@ const Mission = () => {
     <Box
       sx={{
         background: "#F0F0F266",
-        p: "40px 60px",
+        p: { xs: "20px 24px", md: "30px 48px", xl: "40px 60px" },
         borderRadius: "20px",
         maxWidth: 835,
       }}
