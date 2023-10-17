@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import AccountsReceivableMagic from "@root/assets/services/images/accounts-receivable/AccountsReceivableMagic.png";
+import AccountsPayableMagic from "@root/assets/services/images/accounts-payable/AccountsPayableMagic.png";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { dataArray } from "./black-section.data";
 
@@ -24,18 +24,17 @@ const BlackSection = () => {
       <Grid container>
         <Grid item xs={12} md={6} margin={"auto"} paddingX={{ xs: 1, md: 5 }}>
           <Typography variant="h2">
-            Your Accounts Receivable Dashboard - Where Financial Insights Come
-            to Life
+            Your Accounts Payable Dashboard - Where Financial Control Begins
           </Typography>
           <Typography variant="body1" mt={1} color={"common.ghost"}>
-            Managing your accounts receivable has never been easier. Here's what
+            Taking control of your expenses has never been easier. Here's what
             you can expect:
           </Typography>
           <List>
             {dataArray?.map((item: any) => (
               <ListItem alignItems="flex-start" key={item?.id}>
                 <ListItemAvatar
-                  sx={{ "&.MuiListItemAvatar-root": { minWidth: "30px" } }}
+                  sx={{ "&.MuiListItemAvatar-root": { minWidth: "30 px" } }}
                 >
                   <StopRoundedIcon sx={{ fontSize: "8px" }} />
                 </ListItemAvatar>
@@ -61,8 +60,8 @@ const BlackSection = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
-            src={AccountsReceivableMagic}
-            alt={"Accounts Receivable"}
+            src={AccountsPayableMagic}
+            alt={"Accounts Payable"}
             width={0}
             height={0}
             style={{ width: "90%", height: "90%" }}
