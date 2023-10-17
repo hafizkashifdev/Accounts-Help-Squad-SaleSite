@@ -16,7 +16,7 @@ const SignIn = () => {
     <Container maxWidth="sm" style={formContainerStyle}>
       <Grid container sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
         <Grid item>
-          <Typography sx={{ whiteSpace: "nowrap", fontSize: "32px", fontWeight: 600, fontStyle: "normal", color: "#666" }}>Sign In to
+          <Typography sx={{ whiteSpace: { xs: "wrap", sm: "wrap", md: "nowrap", lg: "nowrap" }, fontSize: "32px", fontWeight: 600, fontStyle: "normal", color: "#666" }}>Sign In to
             <span style={{ fontSize: "32px", fontWeight: 600, fontStyle: "normal", color: "#000" }}> AccountHelpSquad!</span></Typography>
           <Typography sx={{
             whiteSpace: "nowrap", fontSize: "14px", fontWeight: 400, fontStyle: "normal", display: "flex",
