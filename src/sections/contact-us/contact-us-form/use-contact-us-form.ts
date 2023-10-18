@@ -5,7 +5,7 @@ import {
   contactUsDefaultFormValuesFunction,
   contactUsFormFieldsDataFunction,
   contactUsFormSchema,
-} from "./ContactUsForm.data";
+} from "./contact-us-form.data";
 
 export const useContactUsForm = () => {
   const methods: any = useForm({

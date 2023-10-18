@@ -1,5 +1,5 @@
-import { ListsItems } from "../lists-items/ListsItems";
-import { Descriptors } from "../descriptors/Descriptors";
+import { ListsItems } from "../lists-items";
+import { Descriptors } from "../descriptors";
 
 export const termsOfServiceDocumentData = [
   {

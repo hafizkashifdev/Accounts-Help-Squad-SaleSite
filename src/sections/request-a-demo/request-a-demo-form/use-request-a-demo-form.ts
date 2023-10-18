@@ -5,7 +5,7 @@ import {
   requestADemoDefaultFormValuesFunction,
   requestADemoFormFieldsDataFunction,
   requestADemoFormSchema,
-} from "./RequestADemoForm.data";
+} from "./request-a-demo-form.data";
 
 export const useRequestADemoForm = () => {
   const methods: any = useForm({

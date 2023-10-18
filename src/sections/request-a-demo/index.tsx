@@ -1,8 +1,8 @@
 "use client";
 
 import { Box } from "@mui/material";
-import { RequestADemoForm } from "./request-a-demo-form/RequestADemoForm";
-import { RequestADemoHeader } from "./request-a-demo-header/RequestADemoHeader";
+import { RequestADemoForm } from "./request-a-demo-form";
+import { RequestADemoHeader } from "./request-a-demo-header";
 import BgImage from "@root/assets/sections/request-a-demo/images/bg.svg";
 
 const RequestDemo = () => {

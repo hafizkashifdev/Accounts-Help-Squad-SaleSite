@@ -3,8 +3,8 @@
 import { LoadingButton } from "@mui/lab";
 import { Grid, Typography, Box } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
-import { useGetStarted } from "./useGetStarted";
-import { getStartedStyles } from "./GetStarted.styles";
+import { useGetStarted } from "./use-get-started";
+import { getStartedStyles } from "./get-started.styles";
 
 const GetStarted = () => {
   const {

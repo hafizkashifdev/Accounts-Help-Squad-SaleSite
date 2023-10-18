@@ -6,7 +6,7 @@ import {
   getStartedDefaultFormValuesFunction,
   getStartedFormFieldsDataFunction,
   getStartedFormSchema,
-} from "./GetStarted.data";
+} from "./get-started.data";
 
 export const useGetStarted = () => {
   const methods: any = useForm({

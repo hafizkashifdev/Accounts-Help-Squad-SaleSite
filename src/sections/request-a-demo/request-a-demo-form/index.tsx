@@ -2,7 +2,7 @@
 
 import { Box, Grid } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
-import { useRequestADemoForm } from "./useRequestADemoForm";
+import { useRequestADemoForm } from "./use-request-a-demo-form";
 import { LoadingButton } from "@mui/lab";
 
 export const RequestADemoForm = () => {
