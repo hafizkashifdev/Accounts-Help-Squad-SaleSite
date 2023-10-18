@@ -35,8 +35,12 @@ const FAQs = () => {
               tabsDataArray={faqsTabsData}
               setActiveTab={setActiveTab}
             />
-            {faqsTabsChildren[activeTab].map((item: any) => (
-              <FaqsItem title={item.que} description={item.ans} />
+            {faqsTabsChildren[activeTab].map((item: any, index: any) => (
+              <FaqsItem
+                key={index + item.que}
+                title={item.que}
+                description={item.ans}
+              />
             ))}
           </Grid>
         </Grid>
