@@ -4,12 +4,12 @@ import { Container, Grid, Typography ,Box} from '@mui/material'
 const OurStory = () => {
   return (
   <>
-  <div style={{background:'#FCFCFC'}}>
-<Container maxWidth="lg">
+  
+<Container maxWidth="lg" >
 
         <Grid container sx={{mt:'150px'}}>
           
-        <Grid item xs={12}sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+        <Grid item xs={12}sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', }}>
   <Typography
     variant='h1'
     sx={{
@@ -25,11 +25,11 @@ const OurStory = () => {
 
         </Grid>
     </Container>
-<Grid xs={12} sx={{  }}>
+<Grid xs={12} >
   <Box
     sx={{
       backgroundColor: "#2B2B33",
-      height: '20vh',
+      height: '24vh',
       marginTop: '74px',
       display: {
         xl: 'flex',
@@ -40,8 +40,8 @@ const OurStory = () => {
 </Grid>
 
 
-<Container maxWidth="md" sx={{ }}> 
-  <Grid container sx={{ mt: { xl: '-270px', xs: '26px' } }}>
+<Container maxWidth="md" > 
+  <Grid container sx={{ mt: { xl: '-270px', xs: '26px' }, }}>
     <Grid item>
       <Box
         sx={{
@@ -83,7 +83,7 @@ const OurStory = () => {
   </Grid>
 </Container>
 
-</div>
+
   </>
   )
 }

@@ -1,4 +1,4 @@
-// missionData.ts
+
 export interface Mission {
     title: string;
     description: string;

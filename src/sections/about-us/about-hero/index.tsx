@@ -28,7 +28,6 @@ const AboutHero= () => {
         textAlign: 'center',
         fontSize: '20px',
         fontWeight: 500,
-        lineHeight: '140%', 
         mt:'16px',
       }}
       >
