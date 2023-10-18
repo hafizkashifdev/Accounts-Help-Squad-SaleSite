@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, Grid, Typography } from "@mui/material";
-import { getStartedStyles } from "../get-started/GetStarted.styles";
+import { getStartedStyles } from "../get-started/get-started.styles";
 import HorizontalTabs from "@root/components/tabs/horizontal-tabs/HorizontalTabs";
-import { faqsTabsChildren, faqsTabsData } from "./FAQs.data";
+import { faqsTabsChildren, faqsTabsData } from "./faq.data";
 import { useState } from "react";
 import { FaqsItem } from "@root/components/faqs-item";
 import Searchbar from "@root/components/searchbar";
@@ -15,7 +15,7 @@ const FAQs = () => {
     <Grid container>
       <Grid item xs={12} sx={getStartedStyles.heroContainer}>
         <Typography variant="h1" color="common.main">
-          Let’s Get Started
+          Let's Get Started
         </Typography>
         <Typography variant="h6" color="common.light" maxWidth="799px">
           Welcome to Accounts Help Squad, your gateway to seamless
@@ -35,8 +35,12 @@ const FAQs = () => {
               tabsDataArray={faqsTabsData}
               setActiveTab={setActiveTab}
             />
-            {faqsTabsChildren[activeTab].map((item: any) => (
-              <FaqsItem title={item.que} description={item.ans} />
+            {faqsTabsChildren[activeTab].map((item: any, index: any) => (
+              <FaqsItem
+                key={index + item.que}
+                title={item.que}
+                description={item.ans}
+              />
             ))}
           </Grid>
         </Grid>

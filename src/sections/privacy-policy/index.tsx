@@ -1,7 +1,7 @@
 "use client";
 
-import { PrivacyPolicyDocument } from "./privacy-policy-document/PrivacyPolicyDocument";
-import { PrivacyPolicyHeader } from "./privacy-policy-header/PrivacyPolicyHeader";
+import { PrivacyPolicyDocument } from "./privacy-policy-document";
+import { PrivacyPolicyHeader } from "./privacy-policy-header";
 import { Box } from "@mui/material";
 
 const PrivacyPolicy = () => {
