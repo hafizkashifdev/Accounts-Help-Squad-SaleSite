@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import BgImage from "../../assets/sections/request-a-demo/images/bg.svg";
-import { ContactUsHeader } from "./contact-us-header/ContactUsHeader";
-import { ContactUsForm } from "./contact-us-form/ContactUsForm";
+import { ContactUsHeader } from "./contact-us-header";
+import { ContactUsForm } from "./contact-us-form";
 const ContactUs = () => {
   return (
     <Box>

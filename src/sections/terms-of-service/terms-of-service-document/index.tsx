@@ -1,4 +1,4 @@
-import { termsOfServiceDocumentData } from "./TermsOfServiceDocument.data";
+import { termsOfServiceDocumentData } from "./terms-of-service-document.data";
 
 export const TermsOfServiceDocument = () => {
   return (

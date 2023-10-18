@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, Grid, Typography } from "@mui/material";
-import { getStartedStyles } from "../get-started/GetStarted.styles";
+import { getStartedStyles } from "../get-started/get-started.styles";
 import HorizontalTabs from "@root/components/tabs/horizontal-tabs/HorizontalTabs";
-import { faqsTabsChildren, faqsTabsData } from "./FAQs.data";
+import { faqsTabsChildren, faqsTabsData } from "./faq.data";
 import { useState } from "react";
 import { FaqsItem } from "@root/components/faqs-item";
 import Searchbar from "@root/components/searchbar";

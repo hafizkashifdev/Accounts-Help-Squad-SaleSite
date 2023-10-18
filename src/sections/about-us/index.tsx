@@ -1,4 +1,3 @@
-
 import AboutHero from "./about-hero";
 import OurStory from "./our-story";
 import OurMission from "./our-mission";
@@ -13,14 +12,19 @@ const AboutUs = () => {
       <AboutHero />
       <OurStory />
       <OurMission />
-      <div style={{ background: 'linear-gradient(0deg, rgba(246, 252, 255, 0.00) 0%, #F7F7F7 100%)' }}>
+      <div
+        style={{
+          background:
+            "linear-gradient(0deg, rgba(246, 252, 255, 0.00) 0%, #F7F7F7 100%)",
+        }}
+      >
         <OurTeam />
-        <OurValues/>
-        <ChooseUs/>
-        <JoinUs/>
+        <OurValues />
+        <ChooseUs />
+        <JoinUs />
       </div>
     </>
-  )
+  );
 };
 
 export default AboutUs;

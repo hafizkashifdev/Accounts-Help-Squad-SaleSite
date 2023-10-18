@@ -1,7 +1,7 @@
 "use client";
 import { Box, Grid, Typography } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
-import { useContactUsForm } from "./useContactUsForm";
+import { useContactUsForm } from "./use-contact-us-form";
 import { LoadingButton } from "@mui/lab";
 // import logo from "../../../assets/sections/request-a-demo/images/bg.svg";
 export const ContactUsForm = () => {

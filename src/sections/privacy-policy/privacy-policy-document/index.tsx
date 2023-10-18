@@ -1,4 +1,4 @@
-import { privacyPolicyDocumentData } from "./PrivacyPolicyDocument.data";
+import { privacyPolicyDocumentData } from "./privacy-policy-document.data";
 
 export const PrivacyPolicyDocument = () => {
   return (
