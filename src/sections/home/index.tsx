@@ -6,8 +6,8 @@ import CustomerReviews from "./customerReviews";
 import EngageWithService from "./engageWithService";
 import FeaturedPost from "./featuredPost";
 import { Box, Stack } from "@mui/material";
-import { ContactUsForm } from "../contact-us/contact-us-form/ContactUsForm";
 import BgImage from "@root/assets/sections/request-a-demo/images/bg.svg";
+import { ContactUsForm } from "../contact-us/contact-us-form";
 
 const HomeSection = () => {
   return (
