@@ -1,39 +1,76 @@
-import React from 'react';
-import { Container, Grid, Typography, Box } from '@mui/material';
-import { SignInForm } from './sign-in-form/SignInForm';
+import React from "react";
+import { Container, Grid, Typography, Box } from "@mui/material";
+import { SignInForm } from "./sign-in-form/SignInForm";
 
 const formContainerStyle = {
   background: "white",
-  padding: '20px',
-  borderRadius: '16px',
-  boxShadow: '1px solid rgba(204, 204, 204, 0.50);',
-  height: '465px',
-  border: '1px solid rgba(204, 204, 204, 0.50);',
+  padding: "20px",
+  borderRadius: "16px",
+  boxShadow: "1px solid rgba(204, 204, 204, 0.50);",
+  height: "465px",
+  border: "1px solid rgba(204, 204, 204, 0.50);",
 };
 
 const SignIn = () => {
-  return <>
+  return (
     <Container maxWidth="sm" style={formContainerStyle}>
-      <Grid container sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Grid item>
-          <Typography sx={{ whiteSpace: { xs: "wrap", sm: "wrap", md: "nowrap", lg: "nowrap" }, fontSize: "32px", fontWeight: 600, fontStyle: "normal", color: "#666" }}>Sign In to
-            <span style={{ fontSize: "32px", fontWeight: 600, fontStyle: "normal", color: "#000" }}> AccountHelpSquad!</span></Typography>
-          <Typography sx={{
-            whiteSpace: "nowrap", fontSize: "14px", fontWeight: 400, fontStyle: "normal", display: "flex",
-            justifyContent: "center", alignItems: "center", py: "13px", color: "#4C4C4C"
-          }}>
+          <Typography
+            sx={{
+              whiteSpace: {
+                xs: "wrap",
+                sm: "wrap",
+                md: "nowrap",
+                lg: "nowrap",
+              },
+              fontSize: "32px",
+              fontWeight: 600,
+              fontStyle: "normal",
+              color: "#666",
+            }}
+          >
+            Sign In to
+            <span
+              style={{
+                fontSize: "32px",
+                fontWeight: 600,
+                fontStyle: "normal",
+                color: "#000",
+              }}
+            >
+              AccountHelpSquad!
+            </span>
+          </Typography>
+          <Typography
+            sx={{
+              whiteSpace: "nowrap",
+              fontSize: "14px",
+              fontWeight: 400,
+              fontStyle: "normal",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              py: "13px",
+              color: "#4C4C4C",
+            }}
+          >
             Welcome Back
           </Typography>
         </Grid>
         <Grid item>
           <SignInForm />
-
         </Grid>
       </Grid>
-
     </Container>
-
-  </>;
+  );
 };
 
 export default SignIn;

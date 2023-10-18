@@ -1,62 +1,45 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Buttons from "./Buttons";
 import { HeaderColumnImage } from "@root/assets/export";
 import Image from "next/image";
-import styles from "./styles";
 
 const HeaderColumns = () => {
-  const { flexCenter, headerText, imageWrapper, image }: any = styles();
   return (
     <div>
-      <Grid
-        container
-        sx={{
-          ...flexCenter,
-          justifyContent: "space-between",
-          spacing: 6,
-          gap: { xs: 2, md: 3, lg: 0 },
-        }}
-      >
-        <Grid item xs={12} lg={6}>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6} margin={"auto"}>
           <Typography
             sx={{
-              lineHeight: { xs: "36px", md: "76.8px" },
-              fontSize: { xs: "2rem", md: "4rem" },
-              pb: { xs: 1.6 },
+              pb: { xs: 2 },
             }}
-            variant="h1"
+            variant="h2"
           >
             Welcome to
             <br /> Accounts Help Squad
           </Typography>
-          <Typography variant="h3" fontWeight={500} pb={2.1}>
+          <Typography variant="h3" fontWeight={500} pb={2}>
             -Your Trusted Accounting Solutions Partner
           </Typography>
-          <Typography sx={{ ...headerText }}>
+          <Typography
+            variant={"h5"}
+            color={"primary.lighter"}
+            pb={2}
+            fontWeight={400}
+          >
             At Accounts Help Squad, we're dedicated to simplifying your
             financial journey.
           </Typography>
           <Buttons />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          lg={6}
-          sx={{
-            ...flexCenter,
-            justifyContent: { xs: "center", lg: "flex-end" },
-          }}
-        >
-          <Box sx={{ ...imageWrapper, position: "relative" }}>
-            <Image
-              style={{ ...image }}
-              src={HeaderColumnImage.src}
-              alt="header image"
-              width={783}
-              height={286}
-            />
-          </Box>
+        <Grid item xs={12} md={6} textAlign={"end"}>
+          <Image
+            style={{ width: "90%", height: "90%" }}
+            src={HeaderColumnImage.src}
+            alt="header image"
+            width={0}
+            height={0}
+          />
         </Grid>
       </Grid>
     </div>

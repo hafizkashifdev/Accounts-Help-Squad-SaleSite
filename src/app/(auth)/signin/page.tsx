@@ -1,8 +1,5 @@
-import SignIn from '@root/sections/sign-in'
-import React from 'react'
+import SignIn from "@root/sections/sign-in";
 
 export default function SignInPage() {
-  return (
-    <div><SignIn /></div>
-  )
+  return <SignIn />;
 }

@@ -1,9 +1,5 @@
-import SignIn from '@root/sections/sign-in'
-import SignUp from '@root/sections/sign-up'
-import React from 'react'
+import WelcomeScreen from "@root/sections/welcome-screen";
 
 export default function SignInPage() {
-  return (
-    <div><SignUp /></div>
-  )
+  return <WelcomeScreen />;
 }

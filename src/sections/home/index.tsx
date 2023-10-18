@@ -5,19 +5,13 @@ import AccountingService from "./accountingService";
 import CustomerReviews from "./customerReviews";
 import EngageWithService from "./engageWithService";
 import FeaturedPost from "./featuredPost";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+import { ContactUsForm } from "../contact-us/contact-us-form/ContactUsForm";
+import BgImage from "@root/assets/sections/request-a-demo/images/bg.svg";
 
 const HomeSection = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "space-between",
-        flexDirection: "column",
-        gap: { xs: 3.5, md: 5, lg: 8, xl: 15 },
-      }}
-    >
+    <Stack rowGap={10}>
       <Header />
       <About />
       <Team />
@@ -25,7 +19,21 @@ const HomeSection = () => {
       <CustomerReviews />
       <EngageWithService />
       <FeaturedPost />
-    </Box>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        sx={{
+          backgroundImage: `url(${BgImage?.src})`,
+          backgroundPositionY: "bottom",
+          backgroundSize: "50% 75%",
+          backgroundRepeat: "repeat-x",
+          paddingBottom: { xs: "1rem", md: "10rem" },
+        }}
+      >
+        <ContactUsForm />
+      </Box>
+    </Stack>
   );
 };
 
