@@ -1,18 +1,20 @@
 import { RHFTextField } from "@root/components/react-hook-form";
 import * as Yup from "yup";
 
-export const requestADemoDefaultFormValues = {
-  firstname: "",
-  lastname: "",
-  businessname: "",
-  businessemail: "",
-  businessdomain: "",
-  phonenumber: "",
-  noofemployees: "",
-  country: "",
+export const defaultValues = {
+  firstname: "", //1
+  lastname: "", //2
+  businessname: "", //3
+  businessemail: "", //4
+  businessdomain: "", //5
+  phonenumber: "", //6
+  noofemployees: "", //7
+  country: "", //8
+  state: "", //9
+  city: "", //10
 };
 
-export const requestADemoFormSchema: any = Yup.object().shape({
+export const validationSchema: any = Yup.object().shape({
   firstname: Yup.string().required("Please enter a First Name"),
   lastname: Yup.string().required("Please enter a Last Name"),
   businessname: Yup.string().required("Please enter a Business Name"),
@@ -21,122 +23,109 @@ export const requestADemoFormSchema: any = Yup.object().shape({
   phonenumber: Yup.string().required("Please enter a Phone number"),
   noofemployees: Yup.string().required("Please enter a No of Employess"),
   country: Yup.string().required("Please enter a Country Name"),
+  state: Yup.string().required("Please enter a State Name"),
+  city: Yup.string().required("Please enter a City Name"),
 });
 
-export const requestADemoDefaultFormValuesFunction = (
-  data: any = requestADemoDefaultFormValues
-) => {
-  return {
-    firstname: data?.firstname,
-    lastname: data?.lastname,
-    businessname: data?.businessname,
-    businessemail: data?.businessemail,
-    businessdomain: data?.businessdomain,
-    phonenumber: data?.phonenumber,
-    noofemployees: data?.noofemployees,
-    country: data?.country,
-  };
-};
-
-export const requestADemoFormFieldsDataFunction = (
-  showPassword: any,
-  setShowPassword: any,
-  handleToggleVisibility: any
-) => [
+export const dataArray = [
   {
     id: 1,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "firstname",
       label: "First Name",
       placeholder: "Enter First Name",
-      required: true,
     },
   },
   {
     id: 2,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "lastname",
       label: "Last Name",
       placeholder: "Enter Last Name",
-      required: true,
     },
   },
   {
     id: 3,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "businessname",
       label: "Business Name",
       placeholder: "Enter Business Name",
-      required: true,
     },
   },
   {
     id: 4,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "businessemail",
       label: "Business Email",
       placeholder: "Enter Business Email",
-      required: true,
     },
   },
   {
     id: 5,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "businessdomain",
       label: "Business Domain",
       placeholder: "Enter Business Domain",
-      required: true,
     },
   },
   {
     id: 6,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "phonenumber",
       label: "Phone Number",
       placeholder: "Enter Phone Number",
-      required: true,
     },
   },
   {
     id: 7,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "noofemployees",
       label: "No. of Employees",
       placeholder: "Enter No. of Employees",
-      required: true,
     },
   },
   {
     id: 8,
     component: RHFTextField,
-    gridLength: 12,
+    md: 6,
     componentProps: {
-      fullWidth: true,
       name: "country",
       label: "Country",
       placeholder: "Enter Country",
-      required: true,
+    },
+  },
+  {
+    id: 9,
+    component: RHFTextField,
+    md: 6,
+    componentProps: {
+      name: "state",
+      label: "State",
+      placeholder: "Enter State",
+    },
+  },
+  {
+    id: 10,
+    component: RHFTextField,
+    md: 6,
+    componentProps: {
+      name: "city",
+      label: "City",
+      placeholder: "Enter City",
     },
   },
 ];
