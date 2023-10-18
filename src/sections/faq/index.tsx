@@ -15,7 +15,7 @@ const FAQs = () => {
     <Grid container>
       <Grid item xs={12} sx={getStartedStyles.heroContainer}>
         <Typography variant="h1" color="common.main">
-          Let’s Get Started
+          Let's Get Started
         </Typography>
         <Typography variant="h6" color="common.light" maxWidth="799px">
           Welcome to Accounts Help Squad, your gateway to seamless
