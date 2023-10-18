@@ -6,7 +6,7 @@ import { accountingServiceData } from "./accountingService.data";
 
 const AccountingService = () => {
   return (
-    <Box px={{ xs: 1.6, md: 3.6, xl: 11.6 }}>
+    <Box px={{ xs: 1, md: 5 }}>
       <SectionHeading
         heading="Our Comprehensive Accounting Services"
         text="At Accounts Help Squad, we offer a range of services designed to meet your business's financial needs. Whether you're just starting or looking to optimize your operations, we've got you covered"
@@ -16,9 +16,9 @@ const AccountingService = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 2.4,
+          gap: 2,
           flexWrap: "wrap",
-          mt: 6.8,
+          mt: 7,
         }}
       >
         {accountingServiceData?.map(({ icon, heading, text }) => (

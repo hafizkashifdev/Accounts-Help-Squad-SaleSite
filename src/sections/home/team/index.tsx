@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 
 const Team = () => {
   return (
-    <Box px={{ xs: 1.6, md: 3.6, xl: 11.6 }}>
+    <Box px={{ xs: 1, md: 5 }}>
       <SectionHeading heading="Meet Our Team" />
       <Box
         sx={{

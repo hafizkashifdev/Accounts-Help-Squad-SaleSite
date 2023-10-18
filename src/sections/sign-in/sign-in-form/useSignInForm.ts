@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import {
@@ -20,7 +20,11 @@ export const useSignInForm = () => {
   });
 
   const { handleSubmit } = methods;
-  const requestADemoFormFieldsData = requestADemoFormFieldsDataFunction(showPassword, setShowPassword, handleToggleVisibility);
+  const requestADemoFormFieldsData = requestADemoFormFieldsDataFunction(
+    showPassword,
+    setShowPassword,
+    handleToggleVisibility
+  );
   const submitRequestADemoForm: any = async (data: any) => {
     console.log(data);
   };
