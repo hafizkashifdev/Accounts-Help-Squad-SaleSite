@@ -1,10 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import FormationBookHeroImg from "@root/assets/services/images/formation-book/FormationBookHero.png";
+import FormationBookHeroImg from "@root/assets/services/images/formation-book/FormationBookHero.svg";
 
 const Hero = () => {
   return (
-    <Grid container>
+    <Grid container height={"100%"}>
       <Grid
         item
         xs={12}
@@ -29,13 +29,13 @@ const Hero = () => {
           simplifies the process, saving you time and effort.
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6} textAlign={"end"}>
+      <Grid item xs={12} md={6}>
         <Image
-          src={FormationBookHeroImg}
+          src={FormationBookHeroImg?.src}
           alt={"Formation Book"}
-          width={0}
           height={0}
-          style={{ width: "90%", height: "90%" }}
+          width={0}
+          style={{ width: "100%", height: "100%" }}
         />
       </Grid>
     </Grid>

@@ -4,7 +4,7 @@ import { dataArray } from "./services.data";
 
 const Services = () => {
   return (
-    <Box paddingX={{ xs: 1, md: 5 }} color={"primary.main"}>
+    <Box paddingX={{ xs: 1, md: 5 }} color={"primary.main"} mt={10}>
       <Typography variant="h2" textAlign={"center"}>
         Our Comprehensive Services Include
       </Typography>

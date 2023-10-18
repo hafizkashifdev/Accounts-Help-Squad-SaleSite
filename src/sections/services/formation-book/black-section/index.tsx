@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import FormationBookMagic from "@root/assets/services/images/formation-book/FormationBookMagic.png";
+import FormationBookMagic from "@root/assets/services/images/formation-book/FormationBookMagic.svg";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { dataArray } from "./black-section.data";
 
@@ -60,7 +60,7 @@ const BlackSection = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
-            src={FormationBookMagic}
+            src={FormationBookMagic?.src}
             alt={"Formation Book"}
             width={0}
             height={0}

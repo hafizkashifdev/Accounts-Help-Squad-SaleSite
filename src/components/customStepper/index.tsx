@@ -103,7 +103,7 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
                   >
                     <Image
                       style={{ width: "100%" }}
-                      src={step?.image}
+                      src={step?.image?.src}
                       alt={step?.name}
                       width={446}
                       height={391}
@@ -123,7 +123,7 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
           bottom: isRowRevers
             ? { xs: 0, md: "auto" }
             : { xs: 0, md: "-3%", xl: 0 },
-          top: isRowRevers ? { xs: "auto",md:"95%", lg: 0 } : "auto",
+          top: isRowRevers ? { xs: "auto", md: "95%", lg: 0 } : "auto",
           right: { xs: "35%", sm: "45%", lg: "50%" },
         }}
       >

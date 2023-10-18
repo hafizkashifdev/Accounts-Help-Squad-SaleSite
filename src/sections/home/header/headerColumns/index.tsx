@@ -2,7 +2,6 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Buttons from "./Buttons";
 import { HeaderColumnImage } from "@root/assets/export";
-import HeroImg from "@root/assets/home/images/HomeHero.png";
 import Image from "next/image";
 
 const HeaderColumns = () => {
