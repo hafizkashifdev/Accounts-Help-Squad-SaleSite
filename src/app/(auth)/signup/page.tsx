@@ -1,5 +1,5 @@
-import WelcomeScreen from "@root/sections/sign-up/welcome-screen";
+import SignUp from "@root/sections/sign-up";
 
 export default function SignInPage() {
-  return <WelcomeScreen />;
+  return <SignUp />;
 }

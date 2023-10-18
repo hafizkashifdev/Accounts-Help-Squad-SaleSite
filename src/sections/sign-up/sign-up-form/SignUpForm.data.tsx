@@ -1,131 +1,119 @@
 import { RHFTextField } from "@root/components/react-hook-form";
 import * as Yup from "yup";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
 export const defaultValues = {
-  firstname: "", //1
-  lastname: "", //2
-  businessname: "", //3
-  businessemail: "", //4
-  businessdomain: "", //5
-  phonenumber: "", //6
-  noofemployees: "", //7
-  country: "", //8
-  state: "", //9
-  city: "", //10
+  business_name: "Accountant Help Squad", //1
+  first_name: "", //2
+  last_name: "", //3
+  email: "", //4
+  password: "", //5
+  password_confirmation: "", //6
 };
 
 export const validationSchema: any = Yup.object().shape({
-  firstname: Yup.string().required("Please enter a First Name"),
-  lastname: Yup.string().required("Please enter a Last Name"),
-  businessname: Yup.string().required("Please enter a Business Name"),
-  businessemail: Yup.string().required("Please enter a Business Email"),
-  businessdomain: Yup.string().required("Please enter a Business Domain"),
-  phonenumber: Yup.string().required("Please enter a Phone number"),
-  noofemployees: Yup.string().required("Please enter a No of Employess"),
-  country: Yup.string().required("Please enter a Country Name"),
-  state: Yup.string().required("Please enter a State Name"),
-  city: Yup.string().required("Please enter a City Name"),
+  business_name: Yup.string(),
+  first_name: Yup.string().required("First Name is Requried"),
+  last_name: Yup.string().required("Last Name is Required"),
+  email: Yup.string().required("Email is Required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
+  password_confirmation: Yup.string()
+    .oneOf([Yup.ref("password")], "Passwords must match")
+    .required("Confirm Password is required"),
 });
 
-export const dataArray = [
+export const dataArrayFunction = ({
+  showPassword,
+  togglePassword,
+  showConfirmPassword,
+  toggleConfirmPassword,
+}: any) => [
   {
     id: 1,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "firstname",
-      label: "First Name",
-      placeholder: "Enter First Name",
+      name: "business_name",
+      label: "Business Name",
+      placeholder: "Enter Business Name",
+      disabled: true,
     },
   },
   {
     id: 2,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "lastname",
-      label: "Last Name",
-      placeholder: "Enter Last Name",
+      name: "first_name",
+      label: "First Name",
+      placeholder: "Enter First Name",
     },
   },
   {
     id: 3,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "businessname",
-      label: "Business Name",
-      placeholder: "Enter Business Name",
+      name: "last_name",
+      label: "Last Name",
+      placeholder: "Enter Last Name",
     },
   },
   {
     id: 4,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "businessemail",
-      label: "Business Email",
-      placeholder: "Enter Business Email",
+      name: "email",
+      label: "Email",
+      placeholder: "Enter Email",
     },
   },
   {
     id: 5,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "businessdomain",
-      label: "Business Domain",
-      placeholder: "Enter Business Domain",
+      name: "password",
+      label: "Password",
+      placeholder: "Enter Password",
+      type: showPassword ? "text" : "password",
+      InputProps: {
+        endAdornment: (
+          <InputAdornment position="end">
+            <IconButton edge="end" onClick={togglePassword}>
+              {showPassword ? (
+                <RemoveRedEyeOutlinedIcon />
+              ) : (
+                <VisibilityOffOutlinedIcon />
+              )}
+            </IconButton>
+          </InputAdornment>
+        ),
+      },
     },
   },
   {
     id: 6,
     component: RHFTextField,
-    md: 6,
     componentProps: {
-      name: "phonenumber",
-      label: "Phone Number",
-      placeholder: "Enter Phone Number",
-    },
-  },
-  {
-    id: 7,
-    component: RHFTextField,
-    md: 6,
-    componentProps: {
-      name: "noofemployees",
-      label: "No. of Employees",
-      placeholder: "Enter No. of Employees",
-    },
-  },
-  {
-    id: 8,
-    component: RHFTextField,
-    md: 6,
-    componentProps: {
-      name: "country",
-      label: "Country",
-      placeholder: "Enter Country",
-    },
-  },
-  {
-    id: 9,
-    component: RHFTextField,
-    md: 6,
-    componentProps: {
-      name: "state",
-      label: "State",
-      placeholder: "Enter State",
-    },
-  },
-  {
-    id: 10,
-    component: RHFTextField,
-    md: 6,
-    componentProps: {
-      name: "city",
-      label: "City",
-      placeholder: "Enter City",
+      name: "password_confirmation",
+      label: "Confirm Password",
+      placeholder: "Enter Confirm Password",
+      type: showConfirmPassword ? "text" : "password",
+      InputProps: {
+        endAdornment: (
+          <InputAdornment position="end">
+            <IconButton edge="end" onClick={toggleConfirmPassword}>
+              {showConfirmPassword ? (
+                <RemoveRedEyeOutlinedIcon />
+              ) : (
+                <VisibilityOffOutlinedIcon />
+              )}
+            </IconButton>
+          </InputAdornment>
+        ),
+      },
     },
   },
 ];

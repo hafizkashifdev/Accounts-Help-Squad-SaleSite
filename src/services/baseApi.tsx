@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URL } from "@root/config";
 
 // Tags
-export const TAGS = ["USER"];
+export const TAGS: any = ["CONTACT-US", "SIGNUP", "SIGNIN"];
 
 // Create our baseQuery instance
 const baseQuery = fetchBaseQuery({
