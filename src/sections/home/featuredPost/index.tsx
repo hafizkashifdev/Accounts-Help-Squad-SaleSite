@@ -6,8 +6,8 @@ import { Box } from "@mui/material";
 
 const FeaturedPost = () => {
   return (
-    <Box sx={{ px: { xs: 1.6, xl: 11.6 } }}>
-      <SectionHeading heading="Meet Our Team" />
+    <Box px={{ xs: 1, md: 5 }}>
+      <SectionHeading heading="Featured Blog Posts" />
       <Box
         sx={{
           display: "flex",

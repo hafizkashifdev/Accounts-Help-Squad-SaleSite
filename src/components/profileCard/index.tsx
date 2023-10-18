@@ -28,8 +28,8 @@ const ProfileCard: FC<{
           mb: 2.4,
         }}
         component="img"
-        height="260"
-        width={323}
+        height="100%"
+        width={"100%"}
         image={image?.src}
         alt={name}
       />

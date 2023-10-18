@@ -1,7 +1,5 @@
-
 import { RHFTextField } from "@root/components/react-hook-form";
 import * as Yup from "yup";
-
 
 export const requestADemoDefaultFormValues = {
   firstname: "",
@@ -12,8 +10,6 @@ export const requestADemoDefaultFormValues = {
   phonenumber: "",
   noofemployees: "",
   country: "",
-
-
 };
 
 export const requestADemoFormSchema: any = Yup.object().shape({
@@ -25,7 +21,6 @@ export const requestADemoFormSchema: any = Yup.object().shape({
   phonenumber: Yup.string().required("Please enter a Phone number"),
   noofemployees: Yup.string().required("Please enter a No of Employess"),
   country: Yup.string().required("Please enter a Country Name"),
-
 });
 
 export const requestADemoDefaultFormValuesFunction = (
@@ -40,11 +35,14 @@ export const requestADemoDefaultFormValuesFunction = (
     phonenumber: data?.phonenumber,
     noofemployees: data?.noofemployees,
     country: data?.country,
-
   };
 };
 
-export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPassword: any, handleToggleVisibility: any) => [
+export const requestADemoFormFieldsDataFunction = (
+  showPassword: any,
+  setShowPassword: any,
+  handleToggleVisibility: any
+) => [
   {
     id: 1,
     component: RHFTextField,
@@ -68,7 +66,6 @@ export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPas
       placeholder: "Enter Last Name",
       required: true,
     },
-
   },
   {
     id: 3,
@@ -141,5 +138,5 @@ export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPas
       placeholder: "Enter Country",
       required: true,
     },
-  }
+  },
 ];

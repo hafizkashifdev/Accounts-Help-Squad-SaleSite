@@ -1,13 +1,19 @@
-import React from "react";
+"use client";
+
 import { Box, Button } from "@mui/material";
-import styles from "./styles";
+import { useRouter } from "next/navigation";
+
 const Buttons = () => {
-  const { flexCenter } = styles();
+  const router = useRouter();
 
   return (
-    <Box sx={{ ...flexCenter, display: "inline-flex", gap: 1.8 }}>
+    <Box sx={{ display: "inline-flex", gap: 1.8 }}>
       <Button variant="outlined">Book a Demo</Button>
-      <Button color="primary" variant="contained">
+      <Button
+        color="primary"
+        variant="contained"
+        onClick={() => router.push("/get-started")}
+      >
         Get started
       </Button>
     </Box>

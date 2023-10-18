@@ -1,18 +1,13 @@
-
-import React, { useState } from 'react';
 import { RHFTextField } from "@root/components/react-hook-form";
 import * as Yup from "yup";
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-
-
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
 export const requestADemoDefaultFormValues = {
   name: "",
   password: "",
-
 };
 
 export const requestADemoFormSchema: any = Yup.object().shape({
@@ -29,7 +24,11 @@ export const requestADemoDefaultFormValuesFunction = (
   };
 };
 
-export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPassword: any, handleToggleVisibility: any) => [
+export const requestADemoFormFieldsDataFunction = (
+  showPassword: any,
+  setShowPassword: any,
+  handleToggleVisibility: any
+) => [
   {
     id: 2,
     component: RHFTextField,
@@ -54,11 +53,12 @@ export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPas
       InputProps: {
         endAdornment: (
           <InputAdornment position="end" sx={{ py: 2 }}>
-            <IconButton
-              edge="end"
-              onClick={handleToggleVisibility}
-            >
-              {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+            <IconButton edge="end" onClick={handleToggleVisibility}>
+              {showPassword ? (
+                <RemoveRedEyeOutlinedIcon />
+              ) : (
+                <VisibilityOffOutlinedIcon />
+              )}
             </IconButton>
           </InputAdornment>
         ),
@@ -66,5 +66,5 @@ export const requestADemoFormFieldsDataFunction = (showPassword: any, setShowPas
     },
     gridLength: 12,
     component: RHFTextField,
-  }
+  },
 ];
