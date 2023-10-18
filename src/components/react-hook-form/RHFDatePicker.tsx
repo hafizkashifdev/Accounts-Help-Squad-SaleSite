@@ -1,52 +1,57 @@
-// form
 import { useFormContext, Controller } from "react-hook-form";
-// @mui
 import { DatePicker } from "@mui/x-date-pickers";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import CustomLabel from "./Label";
+import ErrorIcon from "@mui/icons-material/Error";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 
-// ----------------------------------------------------------------------
+export default function RHFDatePicker({ name, label, ...other }: any) {
+  const theme: any = useTheme();
 
-export default function RHFDatePicker({
-  name,
-  label,
-  required,
-  ...other
-}: any) {
   const { control } = useFormContext();
+
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
-        <>
-          {label && (
-            <CustomLabel label={label} error={error} required={required} />
-          )}
-          <DatePicker
-            {...field}
-            {...other}
-            slotProps={{
-              textField: {
-                helperText: (
-                  <Typography
-                    component={"span"}
-                    sx={{ display: "block", mt: -1, ml: -1 }}
-                  >
-                    {error?.message}
-                  </Typography>
-                ),
-                error: error,
-                fullWidth: other.fullWidth,
-                size: other.size,
-                label: "",
-                inputProps: { style: { height: 27 } },
-              },
-            }}
-            label={label}
-          />
-        </>
-      )}
-    />
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <Controller
+        name={name}
+        control={control}
+        render={({ field, fieldState: { error } }) => (
+          <>
+            {label && <CustomLabel label={label} error={error} />}
+            <DatePicker
+              {...field}
+              {...other}
+              sx={{ width: "100%" }}
+              slots={{
+                openPickerIcon: CalendarMonthRoundedIcon,
+              }}
+              slotProps={{
+                textField: {
+                  variant: "standard",
+                  helperText: (
+                    <Typography
+                      component={"span"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      fontWeight={500}
+                    >
+                      {error?.message && (
+                        <ErrorIcon
+                          sx={{ color: theme?.palette?.error?.main }}
+                        />
+                      )}
+                      {error?.message}
+                    </Typography>
+                  ),
+                  error: error,
+                },
+              }}
+            />
+          </>
+        )}
+      />
+    </LocalizationProvider>
   );
 }
