@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import Aboutmainimg from "../../../assets/about-us/about-main.png";
+import Aboutmainimg from "../../../assets/about-us/about-us-hero.svg";
 import Image from "next/image";
 
 const AboutHero = () => {
@@ -45,7 +45,13 @@ const AboutHero = () => {
           sx={{ display: "flex", justifyContent: "center", mt: "36px" }}
         >
           <Grid item sx={{}}>
-            <Image src={Aboutmainimg} alt="About us img" />
+            <Image
+              src={Aboutmainimg.src}
+              alt="About us img"
+              width={0}
+              height={0}
+              style={{ width: "100%", height: "100%" }}
+            />
           </Grid>
         </Grid>
       </Container>

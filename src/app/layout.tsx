@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://accountanthelpsquad.co.uk/",
     siteName: "Accounts Help Squad",
     images: [
-      { url: "../assets/layout/images/og-logo.png", width: 800, height: 600 },
+      { url: "/og-logo.png", width: 800, height: 600 },
     ],
   },
 };

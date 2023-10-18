@@ -2,6 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Buttons from "./Buttons";
 import { HeaderColumnImage } from "@root/assets/export";
+import HeroImg from "@root/assets/home/images/HomeHero.png";
 import Image from "next/image";
 
 const HeaderColumns = () => {
@@ -36,7 +37,7 @@ const HeaderColumns = () => {
           <Image
             style={{ width: "90%", height: "90%" }}
             src={HeaderColumnImage.src}
-            alt="header image"
+            alt="Hero Image"
             width={0}
             height={0}
           />
