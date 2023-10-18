@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import Aboutmainimg from "../../../assets/about-us/about-us-hero.svg";
+import Aboutmainimg from "@root/assets/about-us/about-us-hero.svg";
 import Image from "next/image";
 
 const AboutHero = () => {
