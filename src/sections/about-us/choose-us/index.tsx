@@ -11,15 +11,25 @@ const ChooseUs = () => {
    
       <Container maxWidth="xl">
         <Grid container spacing={0} sx={{ mt: '180px',}} >
-        <Grid item lg={4} sx={{ position: 'relative'}}>
-  <Image src={chooseimg} alt="choose us img" style={{ position: 'absolute', zIndex: 1,width:'100%' }} />
-  <Image src={circle} style={{ position: 'absolute', top: '30%', left: '50%', zIndex: 0 }} alt="circle img" />
-</Grid>
+        <Grid item lg={4} md={6} xs={12} sx={{ position: 'relative' }}>
+    <Image src={chooseimg} alt="choose us img" style={{ position: 'absolute', zIndex: 1, width: '100%' }} />
+    <Box
+      sx={{
+        position: 'absolute',
+        top: '30%',
+        left: '50%',
+        zIndex: 0,
+        display: { xs: 'none', md: 'block' }, 
+      }}
+    >
+      <Image src={circle} alt="circle img" />
+    </Box>
+  </Grid>
 
 
 
-          <Grid item lg={8} sx={{  }}>
-           <Box sx={{background:'#2B2B33', mt:'130px' ,pl:'190px',py:'34px'}}>
+          <Grid item lg={8} md={6} xs={12} sx={{  }}>
+           <Box sx={{background:'#2B2B33', mt:{lg:'130px',md:'100px',xs:'680px'} ,pl:{xl:'190px',lg:'120px',md:'90px',xs:'40px'},py:'34px'}}>
             <Typography
               sx={{
                 color: '#FFF',

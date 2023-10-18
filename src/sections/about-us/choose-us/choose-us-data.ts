@@ -1,4 +1,4 @@
-// missionData.ts
+
 export interface ChooseUsI {
     title: string;
     description: string;

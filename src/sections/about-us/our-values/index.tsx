@@ -1,13 +1,12 @@
-import { Avatar, Box, Container, Grid, Typography } from '@mui/material'
+import { Avatar, Box, Card, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import {ourValuesData} from './our-values.data'
-import ServiceCard from '@root/components/serviceCard'
 import Image from 'next/image';
 
 const OurValues = () => {
   return (
     <Container maxWidth="xl">
-    <Grid container sx={{ mt: '117px' }}>
+    <Grid container sx={{ mt: '117px' }} spacing={2}>
       <Grid item xs={12} sx={{ mt: '57px' }}>
         <Typography
           sx={{
@@ -24,30 +23,31 @@ const OurValues = () => {
         <Typography
           sx={{
             color: '#1D293F',
-            fontSize: '16px',
+            fontSize: '20px',
             fontWeight: 500,
             textAlign: 'center',
-            display: 'flex',
             justifyContent: 'center', 
           }}
         >
     At Accounts Help Squad, our values are the foundation of everything we do:
         </Typography>
       </Grid>
-      <Grid item xs={12} sx={{mt:'64px'}}>
-      <div>
       {ourValuesData.map((value, index) => (
-        <Box
+      <Grid item lg={4} md={6} xs={12} sx={{mt:'68px'}}>
+     
+     
+        <Card
           key={index}
           sx={{
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            boxShadow: "0 17px 30px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: '8px', 
+            background: '#FFF',
+            boxShadow: '0px 31.00949px 62.01899px 0px rgba(0, 0, 0, 0.03)', 
             p: 3.2,
-            borderRadius: "12px",
-            width: { xs: "100%", xl: "30%" },
+            width:'100%'
             
           }}
         >
@@ -86,10 +86,10 @@ const OurValues = () => {
           <Typography textAlign="center" fontSize={14} color={"primary.lighter"}>
             {value.text}
           </Typography>
-        </Box>
-      ))}
-    </div>
-      </Grid>
+        </Card>
+     
+   
+      </Grid> ))}
     </Grid>
   </Container>
   )
