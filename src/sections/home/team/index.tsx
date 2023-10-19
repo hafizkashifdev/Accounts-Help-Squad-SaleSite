@@ -1,23 +1,13 @@
 import ProfileCard from "@root/components/profileCard";
 import SectionHeading from "@root/components/sectionHeading";
-import React from "react";
 import { teamData } from "./team.data";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 const Team = () => {
   return (
     <Box px={{ xs: 1, md: 5 }}>
       <SectionHeading heading="Meet Our Team" />
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 2.4,
-          flexWrap: "wrap",
-          mt: { xs: 2.4, md: 4.8, xl: 6.8 },
-        }}
-      >
+      <Grid container spacing={4}>
         {teamData?.map(({ image, name, desgination }) => (
           <ProfileCard
             key={name + desgination}
@@ -26,7 +16,7 @@ const Team = () => {
             desgination={desgination}
           />
         ))}
-      </Box>
+      </Grid>
     </Box>
   );
 };

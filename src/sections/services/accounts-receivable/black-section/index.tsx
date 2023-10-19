@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import AccountsReceivableMagic from "@root/assets/services/images/accounts-receivable/AccountsReceivableMagic.png";
+import AccountsReceivableMagic from "@root/assets/services/images/accounts-receivable/AccountsReceivableMagic.svg";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { dataArray } from "./black-section.data";
 
@@ -61,7 +61,7 @@ const BlackSection = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
-            src={AccountsReceivableMagic}
+            src={AccountsReceivableMagic?.src}
             alt={"Accounts Receivable"}
             width={0}
             height={0}

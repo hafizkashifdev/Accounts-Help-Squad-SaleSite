@@ -1,13 +1,13 @@
-import { Avatar, Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
 import { ourValuesData } from "./our-values.data";
 import Image from "next/image";
 
 const OurValues = () => {
   return (
-    <Container maxWidth="xl">
-      <Grid container sx={{ mt: "117px" }} spacing={2}>
-        <Grid item xs={12} sx={{ mt: "57px" }}>
+    <Box px={{ xs: 1, md: 5 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
           <Typography
             sx={{
               color: "#1D293F",
@@ -87,7 +87,7 @@ const OurValues = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

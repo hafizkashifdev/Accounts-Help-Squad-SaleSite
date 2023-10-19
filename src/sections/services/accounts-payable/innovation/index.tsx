@@ -1,6 +1,6 @@
 import { Grid, Typography, Button, Box } from "@mui/material";
 import Image from "next/image";
-import AccountsPayableInnovation from "@root/assets/services/images/accounts-payable/AccountsPayableInnovation.png";
+import AccountsPayableInnovation from "@root/assets/services/images/accounts-payable/AccountsPayableInnovation.svg";
 import { Fragment } from "react";
 import { dataArray } from "./innovation.data";
 
@@ -9,7 +9,7 @@ const Innovation = () => {
     <Grid container spacing={4} paddingX={{ xs: 1, md: 5 }} marginY={5}>
       <Grid item xs={12} md={6}>
         <Image
-          src={AccountsPayableInnovation}
+          src={AccountsPayableInnovation?.src}
           alt={"Innovation"}
           width={0}
           height={0}

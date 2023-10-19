@@ -5,25 +5,19 @@ import OurTeam from "./our-team";
 import ChooseUs from "./choose-us";
 import JoinUs from "./join-us";
 import OurValues from "./our-values";
+import { Stack } from "@mui/material";
 
 const AboutUs = () => {
   return (
-    <>
+    <Stack rowGap={10}>
       <AboutHero />
       <OurStory />
       <OurMission />
-      <div
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(246, 252, 255, 0.00) 0%, #F7F7F7 100%)",
-        }}
-      >
-        <OurTeam />
-        <OurValues />
-        <ChooseUs />
-        <JoinUs />
-      </div>
-    </>
+      <OurTeam />
+      <OurValues />
+      <ChooseUs />
+      <JoinUs />
+    </Stack>
   );
 };
 

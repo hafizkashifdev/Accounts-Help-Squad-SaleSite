@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import RNDTaxClaimHeroImg from "@root/assets/services/images/rnd-tax-claim/RNDTaxClaimHero.png";
+import RNDTaxClaimHeroImg from "@root/assets/services/images/rnd-tax-claim/RNDTaxClaimHero.svg";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
       </Grid>
       <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
-          src={RNDTaxClaimHeroImg}
+          src={RNDTaxClaimHeroImg?.src}
           alt={"R&D Tax Claim"}
           width={0}
           height={0}

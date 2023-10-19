@@ -1,35 +1,22 @@
-import React from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
-import mssionimg from "../../../assets/about-us/mission.png";
+import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { missionData } from "./mission-data";
+import MissionImage from "@root/assets/about-us/our-mission.svg";
 
 const OurMission = () => {
   return (
-    <Container maxWidth="xl">
-      <Grid container spacing={2} sx={{ pt: "117px", pb: "116px" }}>
-        <Grid
-          item
-          lg={6}
-          xs={12}
-          sx={{
-            display: "flex",
-            justifyContent: { lg: "left", xs: "center" },
-          }}
-        >
-          <Image src={mssionimg} alt="mission us img" />
+    <Box px={{ xs: 1, md: 5 }}>
+      <Grid container spacing={10}>
+        <Grid item md={6} xs={12} margin={"auto"}>
+          <Image
+            src={MissionImage?.src}
+            alt="mission us img"
+            width={0}
+            height={0}
+            style={{ width: "80%", height: "80%" }}
+          />
         </Grid>
-        <Grid
-          item
-          lg={6}
-          xs={12}
-          sx={{
-            mt: "57px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: { lg: "left", xs: "center" },
-          }}
-        >
+        <Grid item md={6} xs={12} margin={"auto"}>
           <Typography
             sx={{
               color: "#1D293F",
@@ -96,7 +83,7 @@ const OurMission = () => {
           ))}
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

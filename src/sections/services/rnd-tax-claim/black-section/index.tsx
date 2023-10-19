@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import RNDTaxClaimMagic from "@root/assets/services/images/rnd-tax-claim/RNDTaxClaimMagic.png";
+import RNDTaxClaimMagic from "@root/assets/services/images/rnd-tax-claim/RNDTaxClaimMagic.svg";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { dataArray } from "./black-section.data";
 
@@ -61,7 +61,7 @@ const BlackSection = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
-            src={RNDTaxClaimMagic}
+            src={RNDTaxClaimMagic?.src}
             alt={"R&D Tax Claim"}
             width={0}
             height={0}

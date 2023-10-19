@@ -39,7 +39,13 @@ const TeamCards = () => {
                 background: "rgba(240, 240, 242, 0.40)",
               }}
             >
-              <Image src={team.image} alt={team.title} />
+              <Image
+                src={team.image.src}
+                alt={team.title}
+                width={0}
+                height={0}
+                style={{ width: "100%", height: "100%" }}
+              />
             </Box>
 
             <CardContent>

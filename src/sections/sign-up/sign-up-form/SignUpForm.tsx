@@ -4,10 +4,20 @@ import { Box, Grid } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { defaultValues, dataArray, validationSchema } from "./SignUpForm.data";
+import {
+  defaultValues,
+  dataArrayFunction,
+  validationSchema,
+} from "./SignUpForm.data";
 import { LoadingButton } from "@mui/lab";
+import { useState } from "react";
+import { useSignupApiMutation } from "@root/services/auth/signup/SignupApi";
+import { enqueueSnackbar } from "notistack";
 
 export const SignUpForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setConfirmShowPassword] = useState(false);
+
   const methods: any = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues,
@@ -15,8 +25,32 @@ export const SignUpForm = () => {
 
   const { handleSubmit } = methods;
 
+  const togglePassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const toggleConfirmPassword = () => {
+    setConfirmShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const dataArray = dataArrayFunction({
+    showPassword,
+    togglePassword,
+    showConfirmPassword,
+    toggleConfirmPassword,
+  });
+
+  const [postSignup] = useSignupApiMutation();
+
   const onSubmit = async (data: any) => {
-    console.log(data);
+    try {
+      await postSignup(data).unwrap();
+      enqueueSnackbar("Successfull! Check Email for Varification", {
+        variant: "success",
+      });
+    } catch (e: any) {
+      enqueueSnackbar("Something Went Wrong!", { variant: "error" });
+    }
   };
 
   return (
@@ -24,7 +58,7 @@ export const SignUpForm = () => {
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={4}>
           {dataArray?.map((item: any) => (
-            <Grid item xs={12} md={item?.md} key={item?.id}>
+            <Grid item xs={12} key={item?.id}>
               <item.component {...item.componentProps} />
             </Grid>
           ))}

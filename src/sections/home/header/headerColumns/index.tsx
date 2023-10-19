@@ -1,7 +1,6 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
 import Buttons from "./Buttons";
-import { HeaderColumnImage } from "@root/assets/export";
+import HeroImage from "@root/assets/home/images/hero/HeroImage.svg";
 import Image from "next/image";
 
 const HeaderColumns = () => {
@@ -34,9 +33,9 @@ const HeaderColumns = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"}>
           <Image
-            style={{ width: "90%", height: "90%" }}
-            src={HeaderColumnImage.src}
-            alt="header image"
+            style={{ width: "100%", height: "100%" }}
+            src={HeroImage?.src}
+            alt="Hero Image"
             width={0}
             height={0}
           />
