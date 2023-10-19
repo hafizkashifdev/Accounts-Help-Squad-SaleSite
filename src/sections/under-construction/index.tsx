@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Typography, Button } from "@mui/material";
-import ConstructionIcon from "@mui/icons-material/Construction";
 import HomeIcon from "@mui/icons-material/Home";
 import LogoutIcon from "@mui/icons-material/Logout";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
@@ -24,14 +23,8 @@ function UnderConstruction() {
         backgroundPositionY: "bottom",
       }}
     >
-      <Typography
-        variant="h2"
-        color={"primary.main"}
-        display={"flex"}
-        alignItems={"center"}
-      >
-        Exciting News - Our Website is Getting a Makeover!{" "}
-        <ConstructionIcon fontSize="large" sx={{ color: "primary.lighter" }} />
+      <Typography variant="h2" color={"primary.main"} textAlign={"center"}>
+        Exciting News - Our Website is Getting a Makeover!
       </Typography>
       <Typography
         variant="h6"
@@ -42,7 +35,7 @@ function UnderConstruction() {
       >
         Thanks a bunch! for reaching out to us. We have got your info and we are
         thrilled to connect with you soon! Our friendly representative will be
-        in touch with all the awesome details and information you need
+        in touch with all the awesome details and information you need.
       </Typography>
       <Typography
         variant="body1"

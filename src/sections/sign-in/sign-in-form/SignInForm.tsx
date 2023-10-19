@@ -37,27 +37,22 @@ export const SignInForm = () => {
   const [postSigin] = useSigninApiMutation();
 
   const onSubmit: any = async (data: any) => {
-    const updatedData: any = {
-      email: data?.email,
-      password: data?.password,
-      business_name: "Accountant Help Squad",
-    };
-
-    try {
-      const res: any = await postSigin(updatedData).unwrap();
-
-      const authToken = res?.data?.token;
-
-      localStorage.setItem("authToken", authToken);
-
-      enqueueSnackbar("Login Successfull!", {
-        variant: "success",
-      });
-
-      router.push("/under-construction");
-    } catch (e: any) {
-      enqueueSnackbar("Something Went Wrong!", { variant: "error" });
-    }
+    // const updatedData: any = {
+    //   email: data?.email,
+    //   password: data?.password,
+    //   business_name: "Accountant Help Squad",
+    // };
+    // try {
+    //   const res: any = await postSigin(updatedData).unwrap();
+    //   const authToken = res?.data?.token;
+    //   localStorage.setItem("authToken", authToken);
+    //   enqueueSnackbar("Login Successfull!", {
+    //     variant: "success",
+    //   });
+    //   router.push("/under-construction");
+    // } catch (e: any) {
+    //   enqueueSnackbar("Something Went Wrong!", { variant: "error" });
+    // }
   };
 
   return (
