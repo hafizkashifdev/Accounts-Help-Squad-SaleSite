@@ -5,7 +5,7 @@ const useCustomHook = () => {
 
   const handleNext = (maxSteps: number) => {
     setActiveStep((prevActiveStep) =>
-      prevActiveStep < maxSteps ? prevActiveStep + 1 : 0
+      prevActiveStep < maxSteps - 1 ? prevActiveStep + 1 : 0
     );
   };
 
