@@ -24,7 +24,7 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
-        onChangeIndex={handleStepChange}
+        // onChangeIndex={handleStepChange}
         enableMouseEvents
       >
         {data.map((step: any, index: number) => (
@@ -134,7 +134,10 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
           activeStep={activeStep}
           sx={{ background: "transparent" }}
           nextButton={
-            <Box onClick={handleNext} sx={{ cursor: "pointer" }}>
+            <Box
+              onClick={() => handleNext(maxSteps)}
+              sx={{ cursor: "pointer" }}
+            >
               {theme.direction === "rtl" ? (
                 <ArrowCircleLeft />
               ) : (
@@ -143,7 +146,11 @@ const CustomStepper: FC<{ data: any; isRowRevers?: boolean }> = (props) => {
             </Box>
           }
           backButton={
-            <Box onClick={handleBack} sx={{ cursor: "pointer" }} pr={1.2}>
+            <Box
+              onClick={() => handleBack(maxSteps)}
+              sx={{ cursor: "pointer" }}
+              pr={1.2}
+            >
               {theme.direction === "rtl" ? (
                 <ArrowCircleRight />
               ) : (
