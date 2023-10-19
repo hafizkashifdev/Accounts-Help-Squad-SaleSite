@@ -4,12 +4,12 @@ export interface TeamMemberI {
   text: string;
 }
 
-import teamone from "../../../../assets/about-us/image 1.png";
-import teamtwo from "../../../../assets/about-us/image 2.png";
-import teamthree from "../../../../assets/about-us/image 3.png";
-import teamfour from "../../../../assets/about-us/image 4.png";
-import teamfive from "../../../../assets/about-us/image 5.png";
-import teamsix from "../../../../assets/about-us/image 6.png";
+import teamone from "@root/assets/home/images/team/team-one.svg";
+import teamtwo from "@root/assets/home/images/team/team-two.svg";
+import teamthree from "@root/assets/home/images/team/team-three.svg";
+import teamfour from "@root/assets/home/images/team/team-four.svg";
+import teamfive from "@root/assets/home/images/team/team-five.svg";
+import teamsix from "@root/assets/home/images/team/team-six.svg";
 
 export const teamData: TeamMemberI[] = [
   {

@@ -1,6 +1,6 @@
-import expertise from "../../../assets/about-us/announceme.png";
-import setting from "../../../assets/about-us/settings.png";
-import chart from "../../../assets/about-us/chart.png";
+import expertise from "@root/assets/services/icons/announcement.svg";
+import setting from "@root/assets/services/icons/blue.svg";
+import chart from "@root/assets/services/icons/red.svg";
 
 export const ourValuesData = [
   {

@@ -1,42 +1,28 @@
 import React from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
-import chooseimg from "../../../assets/about-us/choose.png";
-import circle from "../../../assets/about-us/Oval.png";
+import { Box, Grid, Typography } from "@mui/material";
+import chooseimg from "@root/assets/about-us/why-choose-us.svg";
 import Image from "next/image";
 import { chooseUsData } from "./choose-us-data";
 
 const ChooseUs = () => {
   return (
-    <Container maxWidth="xl">
-      <Grid container spacing={0} sx={{ mt: "180px" }}>
-        <Grid item lg={4} md={6} xs={12} sx={{ position: "relative" }}>
+    <Box px={{ xs: 1, md: 5 }}>
+      <Grid container spacing={0}>
+        <Grid item lg={4} md={6} xs={12}>
           <Image
-            src={chooseimg}
+            src={chooseimg?.src}
             alt="choose us img"
-            style={{ position: "absolute", zIndex: 1, width: "100%" }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: "30%",
-              left: "50%",
-              zIndex: 0,
-              display: { xs: "none", md: "block" },
+            width={0}
+            height={0}
+            style={{
+              width: "100%",
+              height: "100%",
             }}
-          >
-            <Image src={circle} alt="circle img" />
-          </Box>
+          />
         </Grid>
 
-        <Grid item lg={8} md={6} xs={12} sx={{}}>
-          <Box
-            sx={{
-              background: "primary.main",
-              mt: { lg: "130px", md: "100px", xs: "680px" },
-              pl: { xl: "190px", lg: "120px", md: "90px", xs: "40px" },
-              py: "34px",
-            }}
-          >
+        <Grid item lg={8} md={6} xs={12} margin={"auto"}>
+          <Box bgcolor={"primary.main"} p={2}>
             <Typography
               sx={{
                 color: "#FFF",
@@ -99,7 +85,7 @@ const ChooseUs = () => {
           </Box>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 
