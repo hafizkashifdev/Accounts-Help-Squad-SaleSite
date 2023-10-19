@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import CashflowManagementMagic from "@root/assets/services/images/cashflow-management/CashflowManagementMagic.png";
+import CashflowManagementMagic from "@root/assets/services/images/cashflow-management/CashflowManagementMagic.svg";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { dataArray } from "./black-section.data";
 
@@ -60,7 +60,7 @@ const BlackSection = () => {
         </Grid>
         <Grid item xs={12} md={6} textAlign={"end"} marginY={"auto"}>
           <Image
-            src={CashflowManagementMagic}
+            src={CashflowManagementMagic?.src}
             alt={"Cashflow Management"}
             width={0}
             height={0}

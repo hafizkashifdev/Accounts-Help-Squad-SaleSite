@@ -29,13 +29,13 @@ const Hero = () => {
           simplifies the process, saving you time and effort.
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
           src={FormationBookHeroImg?.src}
           alt={"Formation Book"}
           height={0}
           width={0}
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "90%", height: "90%" }}
         />
       </Grid>
     </Grid>

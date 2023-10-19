@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import AccountsPayableHeroImg from "@root/assets/services/images/accounts-payable/AccountsPayableHero.png";
+import AccountsPayableHeroImg from "@root/assets/services/images/accounts-payable/AccountsPayableHero.svg";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
       </Grid>
       <Grid item xs={12} md={6} textAlign={"end"}>
         <Image
-          src={AccountsPayableHeroImg}
+          src={AccountsPayableHeroImg?.src}
           alt={"Accounts Payable"}
           width={0}
           height={0}

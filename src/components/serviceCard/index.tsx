@@ -10,6 +10,7 @@ const ServiceCard: FC<{ icon: any; heading: string; text: string }> = (
     <Grid item xs={12} md={4}>
       <Box
         boxShadow={"0 17px 30px 0 rgba(0, 0, 0, 0.05)"}
+        bgcolor={"common.white"}
         p={2}
         borderRadius={3}
       >
