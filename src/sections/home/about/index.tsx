@@ -13,12 +13,10 @@ const About = () => {
         text="With a rich history of providing top-notch accounting solutions, we've been serving businesses of all sizes since 2021."
       />
       <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mt: 2.4,
-        }}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        mt={2}
       >
         <Mission />
       </Box>

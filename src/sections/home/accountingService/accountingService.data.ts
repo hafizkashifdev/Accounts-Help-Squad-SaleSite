@@ -1,4 +1,4 @@
-import { LogoIcon } from "@root/assets/export";
+import LogoIcon from "@root/assets/home/icons/accounts/logo.svg";
 
 export const accountingServiceData = [
   {

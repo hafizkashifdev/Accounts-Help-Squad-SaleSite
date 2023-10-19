@@ -1,4 +1,4 @@
-import { Box, CardMedia, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { FC } from "react";
 
@@ -9,49 +9,41 @@ const ProfileCard: FC<{
   textAlign?: string;
 }> = (props) => {
   const { image, name, desgination, textAlign = "center" }: any = props;
+
   return (
-    <Box
-      sx={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        boxShadow: "0 17px 30px 0 rgba(0, 0, 0, 0.05)",
-        p: { xs: 1.6, md: 2.4, xl: 3.2 },
-        borderRadius: "12px",
-        width: { xs: "100%", md: "40%", xl: "30%" },
-      }}
-    >
-      <CardMedia
-        sx={{
-          background: "rgba(240, 240, 242, 0.4)",
-          mb: 2.4,
-        }}
-        component="img"
-        height="100%"
-        width={"100%"}
-        image={image?.src}
-        alt={name}
-      />
-      <Typography
-        variant="h5"
-        fontSize={20}
-        color={"primary.main"}
-        pb={0.4}
-        width={"100%"}
-        textAlign={textAlign}
+    <Grid item xs={12} md={4}>
+      <Box
+        boxShadow={"0 17px 30px 0 rgba(0, 0, 0, 0.05)"}
+        p={2}
+        borderRadius={3}
       >
-        {name}
-      </Typography>
-      <Typography
-        fontSize={14}
-        color={"primary.lighter"}
-        width={"100%"}
-        textAlign={textAlign}
-      >
-        {desgination}
-      </Typography>
-    </Box>
+        <Image
+          src={image?.src}
+          width={0}
+          height={0}
+          style={{ width: "100%", height: "100%" }}
+          alt={name}
+        />
+        <Typography
+          variant="h5"
+          fontSize={20}
+          color={"primary.main"}
+          py={1}
+          width={"100%"}
+          textAlign={textAlign}
+        >
+          {name}
+        </Typography>
+        <Typography
+          variant="body1"
+          color={"primary.lighter"}
+          width={"100%"}
+          textAlign={textAlign}
+        >
+          {desgination}
+        </Typography>
+      </Box>
+    </Grid>
   );
 };
 

@@ -1,55 +1,31 @@
 import React, { FC } from "react";
-import { Avatar, Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import Image from "next/image";
 
 const ServiceCard: FC<{ icon: any; heading: string; text: string }> = (
   props
 ) => {
   const { icon: Icon, heading, text } = props;
   return (
-    <Box
-      sx={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        boxShadow: "0 17px 30px 0 rgba(0, 0, 0, 0.05)",
-        p: { xs: 1.6, md: 2.4, xl: 3.2 },
-        borderRadius: "12px",
-        width: { xs: "100%", md: "40%", xl: "30%" },
-      }}
-    >
+    <Grid item xs={12} md={4}>
       <Box
-        sx={{
-          background: "rgba(240, 240, 242, 0.4)",
-          borderRadius: "12px, 12px, 0px, 0px",
-        }}
+        boxShadow={"0 17px 30px 0 rgba(0, 0, 0, 0.05)"}
+        p={2}
+        borderRadius={3}
       >
-        <Avatar
-          variant="square"
-          sx={{
-            width: 80,
-            height: 80,
-            background: "#F0F0F2",
-            opacity: 0.7,
-            borderRadius: 2,
-          }}
+        <Image src={Icon?.src} alt={"logo"} width={80} height={80} />
+        <Typography variant="h5" color={"primary.main"} py={2}>
+          {heading}
+        </Typography>
+        <Typography
+          textAlign="center"
+          variant="body1"
+          color={"primary.lighter"}
         >
-          <Icon />
-        </Avatar>
+          {text}
+        </Typography>
       </Box>
-      <Typography
-        variant="h5"
-        fontSize={20}
-        color={"primary.main"}
-        pb={0.4}
-        pt={2.4}
-      >
-        {heading}
-      </Typography>
-      <Typography textAlign="center" fontSize={14} color={"primary.lighter"}>
-        {text}
-      </Typography>
-    </Box>
+    </Grid>
   );
 };
 

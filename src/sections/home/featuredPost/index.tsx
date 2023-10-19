@@ -2,22 +2,13 @@ import ProfileCard from "@root/components/profileCard";
 import SectionHeading from "@root/components/sectionHeading";
 import React from "react";
 import { featuredPostData } from "./FeaturedPost.data";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 const FeaturedPost = () => {
   return (
     <Box px={{ xs: 1, md: 5 }}>
       <SectionHeading heading="Featured Blog Posts" />
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 2.4,
-          flexWrap: "wrap",
-          mt: 6.8,
-        }}
-      >
+      <Grid container spacing={4}>
         {featuredPostData?.map(({ image, title, text }) => (
           <ProfileCard
             key={title}
@@ -27,7 +18,7 @@ const FeaturedPost = () => {
             textAlign="left"
           />
         ))}
-      </Box>
+      </Grid>
     </Box>
   );
 };

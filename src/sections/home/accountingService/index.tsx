@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import SectionHeading from "@root/components/sectionHeading";
 import ServiceCard from "@root/components/serviceCard";
 import React from "react";
@@ -11,15 +11,12 @@ const AccountingService = () => {
         heading="Our Comprehensive Accounting Services"
         text="At Accounts Help Squad, we offer a range of services designed to meet your business's financial needs. Whether you're just starting or looking to optimize your operations, we've got you covered"
       />
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 2,
-          flexWrap: "wrap",
-          mt: 7,
-        }}
+      <Grid
+        container
+        spacing={4}
+        textAlign={"center"}
+        justifyContent={"center"}
+        mt={2}
       >
         {accountingServiceData?.map(({ icon, heading, text }) => (
           <ServiceCard
@@ -29,7 +26,7 @@ const AccountingService = () => {
             text={text}
           />
         ))}
-      </Box>
+      </Grid>
     </Box>
   );
 };
