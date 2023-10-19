@@ -6,27 +6,26 @@ import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
 export const requestADemoDefaultFormValues = {
-  name: "",
+  email: "",
   password: "",
 };
 
 export const requestADemoFormSchema: any = Yup.object().shape({
-  name: Yup.string().required("Please enter a correct Email Address"),
-  password: Yup.string().required("Please enter a correct Password"),
+  email: Yup.string().required("Email is Required"),
+  password: Yup.string().required("Password is required"),
 });
 
 export const requestADemoDefaultFormValuesFunction = (
   data: any = requestADemoDefaultFormValues
 ) => {
   return {
-    name: data?.name,
+    email: data?.email,
     password: data?.password,
   };
 };
 
 export const requestADemoFormFieldsDataFunction = (
   showPassword: any,
-  setShowPassword: any,
   handleToggleVisibility: any
 ) => [
   {
@@ -34,22 +33,18 @@ export const requestADemoFormFieldsDataFunction = (
     component: RHFTextField,
     gridLength: 12,
     componentProps: {
-      fullWidth: true,
-      name: "name",
+      name: "email",
       label: "Business Email",
       placeholder: "Enter Email",
-      required: true,
     },
   },
   {
     id: 920,
     componentProps: {
-      fullWidth: true,
       name: "password",
       label: "Create Password",
       placeholder: "Enter Password",
       type: showPassword ? "text" : "password",
-      required: true,
       InputProps: {
         endAdornment: (
           <InputAdornment position="end" sx={{ py: 2 }}>

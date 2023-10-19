@@ -23,7 +23,7 @@ export const SignUpForm = () => {
     defaultValues,
   });
 
-  const { handleSubmit } = methods;
+  const { handleSubmit, reset } = methods;
 
   const togglePassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -45,7 +45,8 @@ export const SignUpForm = () => {
   const onSubmit = async (data: any) => {
     try {
       await postSignup(data).unwrap();
-      enqueueSnackbar("Successfull! Check Email for Varification", {
+      reset(defaultValues);
+      enqueueSnackbar("Successfull! Check Email for Verification", {
         variant: "success",
       });
     } catch (e: any) {

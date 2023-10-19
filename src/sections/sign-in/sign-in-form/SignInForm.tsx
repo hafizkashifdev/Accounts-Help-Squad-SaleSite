@@ -1,61 +1,82 @@
 "use client";
+
 import { Box, Grid } from "@mui/material";
 import { FormProvider } from "@root/components/react-hook-form";
-import { useSignInForm } from "./useSignInForm";
+import { useState } from "react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import {
+  requestADemoDefaultFormValuesFunction,
+  requestADemoFormFieldsDataFunction,
+  requestADemoFormSchema,
+} from "./SignInForm.data";
+import { enqueueSnackbar } from "notistack";
 import { LoadingButton } from "@mui/lab";
+import { useSigninApiMutation } from "@root/services/auth/signin/SignInApi";
+import { useRouter } from "next/navigation";
 
 export const SignInForm = () => {
-  const {
-    methods,
-    handleSubmit,
-    submitRequestADemoForm,
-    requestADemoFormFieldsData,
-  } = useSignInForm();
+  const router = useRouter();
+
+  const [showPassword, setShowPassword] = useState(false);
+  const handleToggleVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const methods: any = useForm({
+    resolver: yupResolver(requestADemoFormSchema),
+    defaultValues: requestADemoDefaultFormValuesFunction(),
+  });
+
+  const { handleSubmit } = methods;
+  const requestADemoFormFieldsData = requestADemoFormFieldsDataFunction(
+    showPassword,
+    handleToggleVisibility
+  );
+
+  const [postSigin] = useSigninApiMutation();
+
+  const onSubmit: any = async (data: any) => {
+    const updatedData: any = {
+      email: data?.email,
+      password: data?.password,
+      business_name: "Accountant Help Squad",
+    };
+
+    try {
+      await postSigin(updatedData).unwrap();
+      enqueueSnackbar("Login Successfull!", {
+        variant: "success",
+      });
+      router.push("/under-construction");
+    } catch (e: any) {
+      enqueueSnackbar("Something Went Wrong!", { variant: "error" });
+    }
+  };
+
   return (
     <Box sx={{ py: "30px" }}>
-      <FormProvider
-        methods={methods}
-        onSubmit={handleSubmit(submitRequestADemoForm())}
-      >
-        <Grid container spacing={3}>
-          {requestADemoFormFieldsData?.map((form: any) => {
-            return (
-              <Grid item xs={12} md={form?.gridLength} key={form?.id}>
-                <form.component
-                  {...form.componentProps}
-                  size="small"
-                  onSubmit={handleSubmit(submitRequestADemoForm())}
-                >
-                  {form?.componentProps?.select
-                    ? form?.componentProps?.options?.map((option: any) => (
-                        <option key={option?.id} value={option?.value}>
-                          {option?.label}
-                        </option>
-                      ))
-                    : form?.heading
-                    ? form?.heading
-                    : null}
-                </form.component>
-              </Grid>
-            );
-          })}
-          <LoadingButton
-            fullWidth
-            sx={{
-              marginTop: 4,
-              marginLeft: 2,
-              padding: "16px 32px",
-              borderRadius: "8px",
-              background: "#A6A6B3",
-              color: "#FFF",
-            }}
-            type="submit"
-            variant="contained"
-            onClick={handleSubmit(submitRequestADemoForm())}
-          >
-            Sign In
-          </LoadingButton>
+      <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
+        <Grid container spacing={4}>
+          {requestADemoFormFieldsData?.map((form: any) => (
+            <Grid item xs={12} key={form?.id}>
+              <form.component {...form.componentProps} size="small" />
+            </Grid>
+          ))}
         </Grid>
+        <LoadingButton
+          fullWidth
+          sx={{
+            padding: "16px 32px",
+            borderRadius: "8px",
+            marginTop: 2,
+            backgroundColor: "primary.lighter",
+          }}
+          type="submit"
+          variant="contained"
+        >
+          Sign In
+        </LoadingButton>
       </FormProvider>
     </Box>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { SignUpForm } from "./sign-up-form/SignUpForm";
 
 const SignUp = () => {
