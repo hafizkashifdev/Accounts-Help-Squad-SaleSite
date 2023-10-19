@@ -44,10 +44,16 @@ export const SignInForm = () => {
     };
 
     try {
-      await postSigin(updatedData).unwrap();
+      const res: any = await postSigin(updatedData).unwrap();
+
+      const authToken = res?.data?.token;
+
+      localStorage.setItem("authToken", authToken);
+
       enqueueSnackbar("Login Successfull!", {
         variant: "success",
       });
+
       router.push("/under-construction");
     } catch (e: any) {
       enqueueSnackbar("Something Went Wrong!", { variant: "error" });

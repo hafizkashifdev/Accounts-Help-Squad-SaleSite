@@ -81,7 +81,10 @@ function UnderConstruction() {
             mx: 2,
           }}
           startIcon={<LogoutIcon />}
-          onClick={() => router.push("/")}
+          onClick={() => {
+            localStorage.removeItem("authToken");
+            router.push("/");
+          }}
         >
           Logout
         </Button>

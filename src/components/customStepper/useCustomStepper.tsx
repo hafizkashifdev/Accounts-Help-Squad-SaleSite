@@ -15,14 +15,10 @@ const useCustomHook = () => {
     );
   };
 
-  const handleStepChange = (step: number) => {
-    setActiveStep(step);
-  };
   return {
     activeStep,
     handleNext,
     handleBack,
-    handleStepChange,
   };
 };
 export default useCustomHook;

@@ -9,7 +9,9 @@ const CustomerReviews = () => {
         heading="Customer reviews"
         text="Accounts Help Squad has been a game-changer for our business. Their expertise in accounting and the efficiency of their software modules have saved us both time and money. Highly recommended!"
       />
-      <CustomStepper data={customReviwesData} />
+      <Box mt={4}>
+        <CustomStepper data={customReviwesData} />
+      </Box>
     </Box>
   );
 };
