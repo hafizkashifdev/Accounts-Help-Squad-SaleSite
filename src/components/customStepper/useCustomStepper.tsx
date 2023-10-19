@@ -3,12 +3,16 @@ import { useState } from "react";
 const useCustomHook = () => {
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  const handleNext = (maxSteps: number) => {
+    setActiveStep((prevActiveStep) =>
+      prevActiveStep < maxSteps ? prevActiveStep + 1 : 0
+    );
   };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  const handleBack = (maxSteps: number) => {
+    setActiveStep((prevActiveStep) =>
+      prevActiveStep === 0 ? maxSteps - 1 : prevActiveStep - 1
+    );
   };
 
   const handleStepChange = (step: number) => {
