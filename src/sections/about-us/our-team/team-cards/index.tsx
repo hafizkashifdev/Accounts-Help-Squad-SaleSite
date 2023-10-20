@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
 import Image from "next/image";
-import { teamData } from "./team-cards.data";
+import { teamData } from "../team.data";
 
 const TeamCards = () => {
   return (

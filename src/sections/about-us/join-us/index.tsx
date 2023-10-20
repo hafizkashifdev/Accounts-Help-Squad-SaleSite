@@ -1,11 +1,16 @@
-import { Button, Box, Grid, Typography } from "@mui/material";
-import React from "react";
+"use client";
+
+import { Button, Box, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 const JoinUs = () => {
+  const router = useRouter();
+
   return (
     <Box
       mx={{ xs: 1, md: 5 }}
-      py={4}
+      mb={4}
+      p={4}
       borderRadius={2}
       bgcolor={"common.white"}
       boxShadow={"0px 31.00949px 62.01899px 0px rgba(0, 0, 0, 0.03)"}
@@ -51,9 +56,17 @@ const JoinUs = () => {
         Help Squad.
       </Typography>
       <Button
+        onClick={() => router.push("/contact-us")}
         variant="contained"
-        type="button"
-        sx={{ padding: "16px 32px", marginTop: 2 }}
+        sx={{
+          fontFamily: "__Exo_2_b9bafb",
+          bgcolor: "primary.main",
+          color: "common.white",
+          borderRadius: 2,
+          padding: "16px 32px",
+          mt: 2,
+          ":hover": { bgcolor: "#565666" },
+        }}
       >
         Contact Us
       </Button>

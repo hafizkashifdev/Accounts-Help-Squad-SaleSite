@@ -2,7 +2,8 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import teamceo from "@root/assets/about-us/team-ceo.svg";
 import Image from "next/image";
-import TeamCards from "./team-cards";
+import { teamData } from "./team.data";
+import ProfileCard from "@root/components/profileCard";
 
 const OurTeam = () => {
   return (
@@ -88,10 +89,15 @@ const OurTeam = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container>
-        <Grid item xs={12} mt={6}>
-          <TeamCards />
-        </Grid>
+      <Grid container spacing={4} mt={2}>
+        {teamData?.map(({ image, name, desgination }) => (
+          <ProfileCard
+            key={name + desgination}
+            image={image}
+            name={name}
+            desgination={desgination}
+          />
+        ))}
       </Grid>
     </Box>
   );

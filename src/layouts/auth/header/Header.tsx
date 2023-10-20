@@ -26,6 +26,20 @@ export const HeaderAuth = () => {
           style={{ cursor: "pointer" }}
         />
         <Button
+          sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            borderRadius: 2,
+            backgroundColor: `${
+              pathname === "/signin" ? "primary.main" : "transparent"
+            }`,
+            ":hover": {
+              border: `${pathname === "/signin" ? "none" : "unset"}`,
+              bgcolor: `${pathname === "/signin" ? "#565666" : "#F0F0F2"}`,
+            },
+            color: `${
+              pathname === "/signin" ? "common.white" : "primary.main"
+            }`,
+          }}
           variant={pathname === "/signin" ? "contained" : "outlined"}
           onClick={() =>
             router.push(pathname === "/signin" ? "/signup" : "/signin")

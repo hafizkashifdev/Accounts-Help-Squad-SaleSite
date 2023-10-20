@@ -27,38 +27,29 @@ export const RequestADemoForm = () => {
         methods={methods}
         onSubmit={handleSubmit(submitRequestADemoForm)}
       >
-        <Grid container spacing={{ xs: 1.5, md: 4 }}>
-          {requestADemoFormFieldsData?.map((form: any) => {
-            return (
-              <Grid item xs={12} md={form?.gridLength} key={form?.id}>
-                <form.component {...form.componentProps} size="small">
-                  {form?.componentProps?.select
-                    ? form?.componentProps?.options?.map((option: any) => (
-                        <option key={option?.id} value={option?.value}>
-                          {option?.label}
-                        </option>
-                      ))
-                    : form?.heading
-                    ? form?.heading
-                    : null}
-                </form.component>
-              </Grid>
-            );
-          })}
-          <LoadingButton
-            fullWidth
-            sx={{
-              marginTop: 3,
-              marginLeft: 2,
-              padding: 1,
-              borderRadius: "10px",
-            }}
-            type="submit"
-            variant="contained"
-          >
-            Submit
-          </LoadingButton>
+        <Grid container spacing={4}>
+          {requestADemoFormFieldsData?.map((form: any) => (
+            <Grid item xs={12} md={form?.gridLength} key={form?.id}>
+              <form.component {...form.componentProps} size="small" />
+            </Grid>
+          ))}
         </Grid>
+        <LoadingButton
+          fullWidth
+          sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "primary.main",
+            color: "common.white",
+            borderRadius: 2,
+            padding: "16px 32px",
+            mt: 2,
+            ":hover": { bgcolor: "#565666" },
+          }}
+          type="submit"
+          variant="contained"
+        >
+          Submit
+        </LoadingButton>
       </FormProvider>
     </Box>
   );

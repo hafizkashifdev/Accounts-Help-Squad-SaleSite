@@ -15,6 +15,7 @@ const ProfileCard: FC<{
       <Box
         boxShadow={"0 17px 30px 0 rgba(0, 0, 0, 0.05)"}
         bgcolor={"common.white"}
+        height={"100%"}
         p={2}
         borderRadius={3}
       >
@@ -22,7 +23,7 @@ const ProfileCard: FC<{
           src={image?.src}
           width={0}
           height={0}
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "auto" }}
           alt={name}
         />
         <Typography

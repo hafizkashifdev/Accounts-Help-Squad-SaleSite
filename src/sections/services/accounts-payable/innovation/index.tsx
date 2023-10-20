@@ -44,8 +44,15 @@ const Innovation = () => {
         ))}
         <Button
           variant="outlined"
-          type="button"
-          sx={{ padding: "16px 32px", marginTop: 2 }}
+          sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "transparent",
+            color: "primary.main",
+            borderRadius: 2,
+            padding: "16px 32px",
+            mt: 2,
+            ":hover": { border: "none", bgcolor: "#F0F0F2" },
+          }}
         >
           Master Your Expenses Today
         </Button>

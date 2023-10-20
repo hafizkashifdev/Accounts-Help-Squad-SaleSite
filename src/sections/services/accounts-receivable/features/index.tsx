@@ -16,9 +16,16 @@ const MoreFeatures = () => {
             innovative features
           </Typography>
           <Button
-            variant="contained"
             type="button"
-            sx={{ padding: "16px 32px", marginTop: 2 }}
+            sx={{
+              fontFamily: "__Exo_2_b9bafb",
+              bgcolor: "primary.main",
+              color: "common.white",
+              borderRadius: 2,
+              padding: "16px 32px",
+              mt: 2,
+              ":hover": { bgcolor: "#565666" },
+            }}
           >
             Optimize Your Receivables with Accounts Receivable
           </Button>
