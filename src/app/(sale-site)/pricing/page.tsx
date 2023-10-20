@@ -1,7 +1,7 @@
-import UnderConstruction from "@root/sections/under-construction";
+import Pricing from "@root/sections/pricing";
 
 const PricingPage = () => {
-  return <UnderConstruction />;
+  return <Pricing />;
 };
 
 export default PricingPage;
