@@ -9,10 +9,11 @@ const Searchbar = () => {
         sx: {
           height: 32,
           width: "100%",
-          minWidth: { xs: "100%", lg: 513 },
+          minWidth: { xs: "100%", md: 513 },
           maxWidth: 513,
           background: "#F0F0F2",
           borderRadius: "8px",
+          "& fieldset": { border: "none" },
         },
         startAdornment: (
           <InputAdornment position="start">

@@ -26,7 +26,7 @@ const HomeSection = () => {
         sx={{
           backgroundImage: `url(${BgImage?.src})`,
           backgroundPositionY: "bottom",
-          backgroundSize: "50% 75%",
+          backgroundSize: "80% 75%",
           backgroundRepeat: "repeat-x",
           paddingBottom: { xs: "1rem", md: "10rem" },
         }}

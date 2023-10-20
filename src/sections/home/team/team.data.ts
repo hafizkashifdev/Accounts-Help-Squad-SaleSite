@@ -13,7 +13,7 @@ export const teamData = [
   },
   {
     image: teamtwo,
-    name: "Mark Barren",
+    name: "Kathryn Murphy",
     desgination: "Marketing Lead",
   },
   {
@@ -33,7 +33,7 @@ export const teamData = [
   },
   {
     image: teamsix,
-    name: "Kane Williamson",
+    name: "Leslie Alexander",
     desgination: "Project Coordinator",
   },
 ];

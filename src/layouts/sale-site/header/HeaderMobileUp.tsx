@@ -12,63 +12,81 @@ export const HeaderMobileUp = () => {
   const pathname = usePathname();
 
   return (
-    <Box>
+    <Box
+      display={"flex"}
+      alignItems={"center"}
+      flexDirection={{ xs: "column", lg: "row" }}
+      justifyContent={{ xs: "center", lg: "space-between" }}
+      flexWrap={"wrap"}
+      gap={2}
+    >
+      <Image
+        src={Logo}
+        alt="brand-logo"
+        onClick={() => router.push("/")}
+        style={{ cursor: "pointer" }}
+      />
       <Box
-        display={"flex"}
+        display={{ xs: "none", md: "flex" }}
+        flexDirection={{ xs: "column", md: "row" }}
         alignItems={"center"}
-        flexDirection={{ xs: "column", lg: "row" }}
-        justifyContent={{ xs: "center", lg: "space-between" }}
-        flexWrap={"wrap"}
-        gap={2}
+        gap={2.5}
       >
-        <Image
-          src={Logo}
-          alt="brand-logo"
-          onClick={() => router.push("/")}
-          style={{ cursor: "pointer" }}
+        <MenuItem
+          menuOnClick={() => router.push("/")}
+          isActive={pathname === "/"}
+          menuItemName="Home"
         />
-        <Box
-          display={{ xs: "none", md: "flex" }}
-          flexDirection={{ xs: "column", md: "row" }}
-          alignItems={"center"}
-          gap={2.5}
+        <MenuItem
+          menuOnClick={() => router.push("/about-us")}
+          isActive={pathname.startsWith("/about-us")}
+          menuItemName="About Us"
+        />
+        <DropDownMenu />
+        <MenuItem
+          menuOnClick={() => router.push("/pricing")}
+          isActive={pathname.startsWith("/pricing")}
+          menuItemName="Pricing"
+        />
+        <MenuItem
+          menuOnClick={() => router.push("/contact-us")}
+          isActive={pathname.startsWith("/contact-us")}
+          menuItemName="Contact Us"
+        />
+      </Box>
+      <Box
+        display={{ xs: "none", md: "flex" }}
+        alignItems={"center"}
+        justifyContent={"space-around"}
+        gap={2}
+        flexWrap={"wrap"}
+      >
+        <Button
+          onClick={() => router.push("/signin")}
+          variant="outlined"
+          sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "transparent",
+            color: "primary.main",
+            borderRadius: 2,
+            ":hover": { border: "none", bgcolor: "#F0F0F2" },
+          }}
         >
-          <MenuItem
-            menuOnClick={() => router.push("/")}
-            isActive={pathname === "/"}
-            menuItemName="Home"
-          />
-          <MenuItem
-            menuOnClick={() => router.push("/about-us")}
-            isActive={pathname.startsWith("/about-us")}
-            menuItemName="About Us"
-          />
-          <DropDownMenu />
-          <MenuItem
-            menuOnClick={() => router.push("/pricing")}
-            isActive={pathname.startsWith("/pricing")}
-            menuItemName="Pricing"
-          />
-          <MenuItem
-            menuOnClick={() => router.push("/contact-us")}
-            isActive={pathname.startsWith("/contact-us")}
-            menuItemName="Contact Us"
-          />
-        </Box>
-        <Box
-          display={{ xs: "none", md: "flex" }}
-          alignItems={"center"}
-          justifyContent={"space-around"}
-          gap={2}
-          flexWrap={"wrap"}
+          Sign In
+        </Button>
+        <Button
+          onClick={() => router.push("/signup")}
+          variant="contained"
+          sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "primary.main",
+            color: "common.white",
+            borderRadius: 2,
+            ":hover": { bgcolor: "#565666" },
+          }}
         >
-          <Button variant="outlined" onClick={() => router.push("/signin")}>
-            Sign In
-          </Button>
-          <Button variant="contained" onClick={() => router.push("/signup")}>
-            Sign Up
-          </Button>
-        </Box>
+          Sign Up
+        </Button>
       </Box>
     </Box>
   );

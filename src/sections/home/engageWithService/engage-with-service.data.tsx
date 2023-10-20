@@ -128,7 +128,7 @@ export const serviceData = [
     image: ServiceSix,
   },
   {
-    name: "Vide Introduction",
+    name: "Video Introduction",
     designation: "“Meet the Faces Behind Accounts Help Squad”",
     bullets: [
       "We're not just a name; we're a team of dedicated professionals eager to serve you. Get to know us better by watching our short video introduction.",

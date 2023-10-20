@@ -11,6 +11,7 @@ const ServiceCard: FC<{ icon: any; heading: string; text: string }> = (
       <Box
         boxShadow={"0 17px 30px 0 rgba(0, 0, 0, 0.05)"}
         bgcolor={"common.white"}
+        height={"100%"}
         p={2}
         borderRadius={3}
       >

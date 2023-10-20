@@ -43,14 +43,17 @@ export const ContactUsForm = () => {
         </Grid>
         <LoadingButton
           fullWidth
-          sx={{
-            padding: "16px 32px",
-            borderRadius: "8px",
-            marginTop: 2,
-            backgroundColor: "primary.lighter",
-          }}
           type="submit"
           variant="contained"
+          sx={{
+            padding: "16px 32px",
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "primary.main",
+            color: "common.white",
+            borderRadius: 2,
+            mt: 2,
+            ":hover": { bgcolor: "#565666" },
+          }}
         >
           Submit
         </LoadingButton>

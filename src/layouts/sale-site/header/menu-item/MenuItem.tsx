@@ -10,7 +10,8 @@ export const MenuItem = ({ menuOnClick, isActive, menuItemName }: any) => {
         fontsize: "18px",
         fontWeight: "600",
         backgroundColor: "transparent",
-        "&:hover": { backgroundColor: "transparent" },
+        fontFamily: "__Exo_2_b9bafb",
+        "&:hover": { backgroundColor: "transparent", color: "primary.lighter" },
       }}
     >
       {menuItemName}

@@ -34,9 +34,23 @@ export const DropDownMenu = ({ setMenuClose }: any) => {
         disableRipple
         endIcon={
           open ? (
-            <KeyboardArrowUpIcon sx={{ color: "primary.main" }} />
+            <KeyboardArrowUpIcon
+              sx={{
+                color: "primary.main",
+                "&:hover": {
+                  color: "primary.lighter",
+                },
+              }}
+            />
           ) : (
-            <KeyboardArrowDownIcon sx={{ color: "primary.main" }} />
+            <KeyboardArrowDownIcon
+              sx={{
+                color: "primary.main",
+                "&:hover": {
+                  color: "primary.lighter",
+                },
+              }}
+            />
           )
         }
         sx={{
@@ -44,7 +58,11 @@ export const DropDownMenu = ({ setMenuClose }: any) => {
           fontsize: "18px",
           fontWeight: "600",
           backgroundColor: "transparent",
-          "&:hover": { backgroundColor: "transparent" },
+          fontFamily: "__Exo_2_b9bafb",
+          "&:hover": {
+            backgroundColor: "transparent",
+            color: "primary.lighter",
+          },
         }}
       >
         Services

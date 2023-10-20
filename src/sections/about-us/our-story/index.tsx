@@ -3,7 +3,7 @@ import { Container, Grid, Typography, Box } from "@mui/material";
 
 const OurStory = () => {
   return (
-    <Box px={{ xs: 1, md: 5 }}>
+    <Box>
       <Container maxWidth="lg">
         <Grid container>
           <Grid
