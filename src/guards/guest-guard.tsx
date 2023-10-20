@@ -4,7 +4,7 @@ import Loading from "@root/app/loading";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const AuthGuard = ({ children }: any) => {
+const GuestGuard = ({ children }: any) => {
   const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -12,8 +12,8 @@ const AuthGuard = ({ children }: any) => {
   useEffect(() => {
     const isAuthenticated = localStorage.getItem("authToken");
 
-    if (!isAuthenticated) {
-      router.push("/");
+    if (isAuthenticated) {
+      router.push("/under-construction");
       return;
     }
 
@@ -25,4 +25,4 @@ const AuthGuard = ({ children }: any) => {
   return <>{children}</>;
 };
 
-export default AuthGuard;
+export default GuestGuard;

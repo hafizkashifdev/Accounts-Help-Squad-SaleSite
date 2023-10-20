@@ -3,12 +3,12 @@
 import store from "@root/redux/store";
 import { Provider } from "react-redux";
 import { SnackbarProvider } from "notistack";
-// import AuthGuard from "@root/guards/auth-guard";
+import AuthGuard from "@root/guards/auth-guard";
 
 export default function Layout({ children }: any) {
   return (
     <Provider {...{ store }}>
-      {/* <AuthGuard> */}
+      <AuthGuard>
         <SnackbarProvider
           anchorOrigin={{
             horizontal: "center",
@@ -17,7 +17,7 @@ export default function Layout({ children }: any) {
         >
           {children}
         </SnackbarProvider>
-      {/* </AuthGuard> */}
+      </AuthGuard>
     </Provider>
   );
 }

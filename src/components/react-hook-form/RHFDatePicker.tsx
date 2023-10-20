@@ -23,7 +23,12 @@ export default function RHFDatePicker({ name, label, ...other }: any) {
             <DatePicker
               {...field}
               {...other}
-              sx={{ width: "100%" }}
+              sx={{
+                width: "100%",
+                "& .MuiInput-root": {
+                  ":hover": { backgroundColor: "#F0F0F2" },
+                },
+              }}
               slots={{
                 openPickerIcon: CalendarMonthRoundedIcon,
               }}

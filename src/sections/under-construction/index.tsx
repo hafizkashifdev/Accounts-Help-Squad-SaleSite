@@ -55,10 +55,13 @@ function UnderConstruction() {
         <Button
           variant="contained"
           sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "primary.main",
+            color: "common.white",
+            borderRadius: 2,
             padding: "16px 32px",
-            borderRadius: "8px",
-            marginTop: 2,
             mx: 2,
+            ":hover": { bgcolor: "#565666" },
           }}
           startIcon={<HomeIcon />}
           onClick={() => router.push("/")}
@@ -68,10 +71,13 @@ function UnderConstruction() {
         <Button
           variant="outlined"
           sx={{
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "transparent",
+            color: "primary.main",
+            borderRadius: 2,
             padding: "16px 32px",
-            borderRadius: "8px",
-            marginTop: 2,
             mx: 2,
+            ":hover": { border: "none", bgcolor: "#F0F0F2" },
           }}
           startIcon={<LogoutIcon />}
           onClick={() => {

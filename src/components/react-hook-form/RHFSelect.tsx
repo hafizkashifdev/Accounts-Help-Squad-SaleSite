@@ -81,6 +81,11 @@ export default function RHFSelect({
                   {...params}
                   label=""
                   placeholder={!multiple ? other?.placeholder : ""}
+                  sx={{
+                    "& .MuiInput-root": {
+                      ":hover": { backgroundColor: "#F0F0F2" },
+                    },
+                  }}
                   variant="standard"
                   error={!!error}
                   helperText={

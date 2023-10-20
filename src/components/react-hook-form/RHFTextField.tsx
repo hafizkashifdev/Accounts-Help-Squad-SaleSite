@@ -20,6 +20,9 @@ export default function RHFTextField({ name, ...other }: any) {
             variant="standard"
             placeholder={other?.placeholder}
             error={!!error}
+            sx={{
+              "& .MuiInput-root": { ":hover": { backgroundColor: "#F0F0F2" } },
+            }}
             helperText={
               <Typography
                 component={"span"}

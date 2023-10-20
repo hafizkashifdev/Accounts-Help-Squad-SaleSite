@@ -44,11 +44,14 @@ export const SignInForm = () => {
     };
     try {
       const res: any = await postSigin(updatedData).unwrap();
+
       const authToken = res?.data?.token;
       localStorage.setItem("authToken", authToken);
+
       enqueueSnackbar("Login Successfull!", {
         variant: "success",
       });
+
       router.push("/under-construction");
     } catch (e: any) {
       enqueueSnackbar("Something Went Wrong!", { variant: "error" });
@@ -67,14 +70,17 @@ export const SignInForm = () => {
         </Grid>
         <LoadingButton
           fullWidth
-          sx={{
-            padding: "16px 32px",
-            borderRadius: "8px",
-            marginTop: 2,
-            backgroundColor: "primary.lighter",
-          }}
           type="submit"
           variant="contained"
+          sx={{
+            padding: "16px 32px",
+            fontFamily: "__Exo_2_b9bafb",
+            bgcolor: "primary.main",
+            color: "common.white",
+            borderRadius: 2,
+            mt: 2,
+            ":hover": { bgcolor: "#565666" },
+          }}
         >
           Sign In
         </LoadingButton>
